@@ -1,0 +1,175 @@
+﻿table.dataTable {
+}
+
+#tabla_wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 100%;
+}
+
+.tabla-main {
+    flex: 1;
+    height: 100%;
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+.contenedor-footer .tabla-footer {
+    flex: 1;
+}
+
+.tabla-footer {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-left: 0.5rem;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+    .tabla-footer .dataTables_info {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+    }
+
+    .tabla-footer .dataTables_paginate {
+    }
+
+        .tabla-footer .dataTables_paginate.paging_simple {
+            display: flex;
+            flex-direction: row;
+        }
+
+/*.tabla-footer .dataTables_paginate.paging_simple .btn-paginacion {
+                height: 32px;
+                width: 32px;
+                text-align: center;
+                vertical-align: middle;
+                padding: 0;
+                margin: 0;
+                border-radius: 32px;
+                line-height: 32px;
+            }
+
+                .tabla-footer .dataTables_paginate.paging_simple .btn-paginacion i {
+                    line-height: 32px;
+                }*/
+
+
+/*.btn-tabla {
+    padding: 0;
+    width: 36px;
+    height: 36px;
+}
+
+    .btn-tabla .material-icons {
+        font-size: 1.3rem;
+    }*/
+
+.iconoTabla {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    vertical-align: middle;
+}
+
+    .iconoTabla.material-icons {
+        font-size: 1.5rem;
+    }
+
+.DTFC_ScrollWrapper {
+    height: initial;
+}
+
+thead {
+    white-space: nowrap;
+}
+
+table.dataTable {
+    border-bottom: 0px solid black !important;
+}
+
+    table.dataTable thead tr th {
+        height: 48px;
+        padding: 0;
+        padding-left: 16px !important;
+        padding-right: 8px !important;
+        min-height: 48px;
+        max-height: 48px;
+        font-weight: 500;
+        border-bottom: 1px solid rgba(0,0,0,0.2);
+    }
+
+        table.dataTable thead tr th.negrita {
+            font-weight: 600;
+        }
+
+
+    table.dataTable tbody tr {
+        -webkit-transition: background-color 0.3s linear !important;
+        -moz-transition: background-color 0.3s linear !important;
+        -o-transition: background-color 0.3s linear !important;
+        -ms-transition: background-color 0.3s linear !important;
+        transition: background-color 0.3s linear !important;
+    }
+
+        table.dataTable tbody tr.active {
+            background-color: #EEEEEE;
+        }
+
+            table.dataTable tbody tr.active:hover {
+                background-color: #EEEEEE;
+            }
+
+        table.dataTable tbody tr:hover {
+            background-color: #EEEEEE;
+        }
+
+        table.dataTable tbody tr td {
+            padding: 0 !important;
+            margin: 0 !important;
+            padding-left: 16px !important;
+            padding-right: 8px !important;
+            max-height: 48px;
+            height: 48px;
+            min-height: 48px;
+            border-bottom: 1px solid rgba(0,0,0,0.2);
+        }
+
+            table.dataTable tbody tr td div {
+                max-height: 48px;
+                height: 48px;
+                min-height: 48px;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+            }
+
+                table.dataTable tbody tr td div span {
+                    max-height: 48px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
+                    font-weight: 400;
+                }
+
+                    table.dataTable tbody tr td div span.negrita {
+                        font-weight: 500;
+                    }
+
+td .contenedor-botones {
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: row;
+    padding-right: 4px;
+    padding-left: 8px;
+    margin: 0;
+}
+
+    td .contenedor-botones .btn:not(:last-child), td .contenedor-botones .btn-flat:not(:last-child) {
+        margin-right: 8px;
+    }

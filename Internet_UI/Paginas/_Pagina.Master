@@ -1,0 +1,153 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="_Pagina.Master.cs" Inherits="Internet_UI.Paginas.Pagina" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui" />
+
+    <meta name="author" content="Municipalidad de Córdoba" />
+    <meta name="description" content="#CBA147" />
+    <meta name="twitter:creator" content="@municba" />
+    <meta property="fb:admins" content="MuniCba" />
+
+    <link href="<%=ResolveUrl("~/Resources/Imagenes/icono_cba147.png") %>" rel="shortcut icon" />
+
+    <link href="<%=ResolveUrl("~/Libs/Styles/materialize.min.css") %>" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/2.4.85/css/materialdesignicons.min.css" rel="stylesheet" />
+
+    <link href="<%=ResolveUrl("~/Utils/Styles/utils.css") %>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/Utils/Styles/utils_dialogo.css") %>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/Paginas/Styles/_Master.css") %>" rel="stylesheet" />
+
+    <script type="text/javascript" src="<%=ResolveUrl("~/Libs/Scripts/jquery-3.0.0.min.js") %>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/Libs/Scripts/jquery.validate.min.js") %>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/Libs/Scripts/jquery.validate.aditional.min.js") %>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/Libs/Scripts/materialize.min.js") %>"></script>
+
+    <script type="text/javascript" src="<%=ResolveUrl("~/Utils/Scripts/utils.js") %>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/Utils/Scripts/utils_dialogo.js") %>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/Paginas/Scripts/_Master.js") %>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/Scripts/Libs/underscore-min.js") %>"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="fondo">
+    </div>
+    <div class="contenedorBody">
+        <script type="text/javascript">
+            let baseUrl = "<%= ResolveUrl("~/") %>";
+            let urlCordobaFiles = "<%= ConfigurationManager.AppSettings["URL_CORDOBA_FILES"] %>";
+            const KEY_GOOGLE_MAPS = "<%= ConfigurationManager.AppSettings["KEY_GOOGLE_MAPS"] %>";
+        </script>
+
+        <form if="form1" runat="server">
+            <asp:ScriptManager runat="server" EnablePartialRendering="True" EnablePageMethods="true" ID="scriptManager" />
+        </form>
+
+        <div id="header">
+            <div class="progress">
+                <div class="indeterminate"></div>
+            </div>
+
+            <div class="content">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolderBoton" runat="server">
+                </asp:ContentPlaceHolder>
+                <div class="logo waves-effect">
+                    <div class="imagen"></div>
+                    <div class="textos">
+                        <label class="nombre_Sistema">#CBA147</label>
+                        <label class="texto_Muni">Municipalidad de Córdoba</label>
+                    </div>
+                </div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolderHeader" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+            <div class="contenedor_Apps">
+
+                <div class="contenedor_BotonApps  waves-effect">
+                    <div class="contenedor_Icono">
+                        <i class="material-icons">apps</i>
+                    </div>
+                </div>
+
+            </div>
+            <div class="contenedor_Usuario waves-effect"></div>
+        </div>
+        <div id="contenedor_template_AppsMuniOnline" style="display: none">
+            <div id="template_AppsMuniOnline" ></div>
+        </div>
+        <div id="content">
+            <div id="mensaje" class="card">
+                <a class="btn btn-transparent btn-round waves-effect"><i class="mdi mdi-close"></i></a>
+                <label>Requerimiento cancelado correctamente</label>
+            </div>
+
+            <div id="body">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+
+        <div id="contenedor_Error">
+            <i class="mdi mdi-alert-circle-outline"></i>
+            <label></label>
+            <a class="boton btn waves-effect"></a>
+        </div>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <div id="contenedor_Cargando">
+            <div class="preloader-wrapper small active">
+                <div class="spinner-layer spinner-green-only">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <label>Cargando</label>
+        </div>
+
+        <script type="text/javascript">
+            initJs();
+        </script>
+    </div>
+
+    <%--Template dialogo--%>
+    <div id="template_Dialogo" style="display: none">
+        <div class="dialogo-flotante">
+            <div class="fondo visible"></div>
+            <div class="content">
+                <div class="header">
+                    <a class="btn btn-quadrate btn-transparent btn-close waves-effect"><i class="mdi mdi-arrow-left"></i></a>
+                    <label class="texto_Titulo"></label>
+                    <a class="btn btn-round btn-transparent btn-close waves-effect"><i class="mdi mdi-close"></i></a>
+                </div>
+                <div class="content">
+                </div>
+                <div class="botones"></div>
+            </div>
+        </div>
+    </div>
+
+    <%--Template app--%>
+    <div id="template_App" style="display: none">
+        <div class="app">
+            <div class="iconoApp">
+            </div>
+            <label class="nombreApp"></label>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+﻿
+  
+  .tabla-contenedor .busqueda {
+        display: flex;
+
+    }
+
+  .tabla-contenedor .busqueda .row {
+          margin: 1rem!important;
+    margin-bottom: 2rem!important;
+  }
+
+
+        .tabla-contenedor .busqueda > div {
+            flex: 1;
+        }
+

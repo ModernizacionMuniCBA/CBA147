@@ -1,0 +1,119 @@
+﻿/* Datos basicos*/
+._Numero {
+    font-size: 2rem !important;
+}
+
+
+/* Ubicacion */
+.mapa {
+    width: 100%;
+    min-height: 15rem;
+    background-color: #ccc;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    border-radius: 1rem 1rem 0 0;
+    cursor: pointer;
+}
+
+#dialogoUbicacion .contenedor_Mapa,
+#dialogoUbicacion .contenedor_Mapa > div {
+    height: 100%;
+}
+
+#dialogoUbicacion > .content {
+    overflow: hidden;
+    max-width: 90%;
+}
+
+
+/* Imagenes */
+#contenedor_Imagenes .content-body {
+    display: block;
+    padding-bottom: 0;
+    width: auto;
+    white-space: nowrap;
+}
+
+#contenedor_Imagenes .content-imagen {
+    margin: 0 1rem 1rem 0;
+}
+
+#visor_Foto {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 200;
+    pointer-events: none;
+}
+
+    #visor_Foto > .fondo {
+        background-color: black;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        transition: all 0.3s;
+    }
+
+    #visor_Foto > .foto {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        transform: scale(0.7);
+        transition: all 0.3s;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: 1rem;
+    }
+
+    #visor_Foto .btn {
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        opacity: 0;
+        transform: scale(0.7);
+        transition: all 0.3s;
+    }
+
+    #visor_Foto.visible {
+        pointer-events: all;
+    }
+
+        #visor_Foto.visible > .fondo {
+            opacity: 0.8;
+        }
+
+        #visor_Foto.visible > .foto {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        #visor_Foto.visible .btn {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+
+/* Acciones */
+.btn-reenviar,
+.btn-reenviar:hover,
+.btn-reenviar:focus {
+    color: var(--colorMuniVerde);
+}
+
+.btn-cancelar,
+.btn-cancelar:hover,
+.btn-cancelar:focus {
+    color: var(--colorError);
+}

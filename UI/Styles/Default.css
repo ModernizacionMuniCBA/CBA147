@@ -1,0 +1,21 @@
+﻿#main, #iframePagina {
+    position: relative;
+}
+
+
+#main {
+    overflow: hidden !important;
+}
+
+#contenedor_IndicadorCargando {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+
+#contenedor-principal {
+    width: 100%;
+}

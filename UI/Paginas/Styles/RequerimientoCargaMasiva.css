@@ -1,0 +1,201 @@
+﻿#main {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden !important;
+}
+
+#cardFormulario {
+    opacity: 0;
+    transform: translateY(5rem);
+    transition: all 0.3s;
+    pointer-events: none;
+}
+
+    #cardFormulario.visible {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: all;
+    }
+
+    #cardFormulario .contenedor-main {
+        padding: 1rem;
+    }
+
+    #cardFormulario .contenedor-header {
+        background-color: rgba(0,0,0,0.025);
+        margin: 0;
+        padding: 0.5rem;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+
+    #cardFormulario #indicadorCargando {
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s;
+        z-index: 100;
+    }
+
+        #cardFormulario #indicadorCargando.visible {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+#SelectorMotivo_ContenedorManual > div > div > div > div:nth-child(1), #SelectorMotivo_ContenedorManual > div > div > div > div:nth-child(2) {
+    padding-right: 1rem !important;
+}
+
+.tooltipAyuda {
+    margin-left: 0.5rem !important;
+}
+
+.colorAyuda {
+    color: #757575;
+    font-size: 20px !important;
+}
+
+.col {
+    padding: 0 !important;
+}
+
+.col-seccion .header {
+    display: flex;
+    align-items: center;
+}
+
+.col-seccion .contenedor-mantener {
+    margin-left: 0.5rem;
+}
+
+#contenedor_DomicilioNoSeleccionado {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+#contenedor_DomicilioSeleccionado {
+    display: flex;
+    flex-direction: row;
+}
+
+    #contenedor_DomicilioSeleccionado .mapa {
+        width: 10rem;
+        height: 10rem;
+        margin-right: 1rem;
+        background: white;
+        border-radius: 1rem;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    #contenedor_DomicilioSeleccionado .contenido {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+    }
+
+
+#btn_SeleccionarDomicilio, #btn_CancelarDomicilio {
+    margin-top: 1rem;
+}
+
+
+#errorFormulario_Domicilio {
+    margin-top: 1rem;
+}
+
+
+#contenedorDescripcionMotivo {
+    overflow: hidden;
+    max-height: 0;
+    margin: 0 !important;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+    #contenedorDescripcionMotivo.visible {
+        opacity: 1;
+        margin-top: 1rem !important;
+        max-height: 10rem;
+    }
+
+
+#cardAlerta {
+    align-self: center;
+    margin-left: 1rem;
+    max-width: calc(100% - 2rem);
+    max-height: 0;
+    min-height: 0;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.7);
+    transition: opacity 0.3s, max-height 0.3s 0.3s, min-height 0.3s,margin 0.3s 0.3s, transform 0.3s;
+    margin: 0;
+    width: 35rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+    #cardAlerta.visible {
+        transform: scale(1);
+        max-height: 35rem;
+        min-height: fit-content;
+        opacity: 1;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        pointer-events: all;
+        transition: opacity 0.3s 0.3s, max-height 0.3s, min-height 0.3s, margin 0.3s, transform 0.3s 0.3s;
+    }
+
+    #cardAlerta .contenedor-main {
+        display: flex;
+        flex-direction: column;
+    }
+
+        #cardAlerta .contenedor-main .numero {
+            font-size: 2rem;
+            text-decoration: underline;
+            cursor: pointer;
+            align-self: baseline;
+            transition: all 0.3s;
+        }
+
+            #cardAlerta .contenedor-main .numero:hover {
+                font-weight: 600;
+            }
+
+    #cardAlerta .contenedor-header > i {
+        color: var(--colorVerde);
+        font-size: 2rem;
+        margin-right: 0.5rem;
+    }
+
+    #cardAlerta .contenedor-header .titulo {
+        flex: 1;
+    }
+
+    #cardAlerta .contenedor_Mail {
+        display: flex;
+    }
+
+        #cardAlerta .contenedor_Mail .mail {
+            margin-left: 0.5rem;
+        }
+
+
+#contenedorFormulario_EstadoDescripcion {
+    opacity: 0;
+    max-height: 0;
+    pointer-events: none;
+    overflow: hidden;
+    transition: opacity 0.3s, max-height 0.3s 0.3s;
+}
+
+    #contenedorFormulario_EstadoDescripcion.visible {
+        opacity: 1;
+        max-height: 20rem;
+        pointer-events: all;
+        transition: opacity 0.3s 0.3s, max-height 0.3s;
+    }

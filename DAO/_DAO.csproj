@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{98F8DA53-DA1D-446B-BE4F-FC0A98241783}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DAO</RootNamespace>
+    <AssemblyName>DAO</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Test|AnyCPU'">
+    <OutputPath>bin\Test\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentNHibernate, Version=2.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentNHibernate.2.0.3.0\lib\net40\FluentNHibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FubarCoder.RestSharp.Portable.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=be81bb0f53eab22f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FubarCoder.RestSharp.Portable.Core.4.0.8\lib\net45\FubarCoder.RestSharp.Portable.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FubarCoder.RestSharp.Portable.HttpClient, Version=4.0.0.0, Culture=neutral, PublicKeyToken=be81bb0f53eab22f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FubarCoder.RestSharp.Portable.HttpClient.4.0.8\lib\net45\FubarCoder.RestSharp.Portable.HttpClient.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.4.0.0.4000\lib\net40\Iesi.Collections.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.4.0.4.4000\lib\net40\NHibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAO\ConfiguracionEstadoCreacionOTDAO.cs" />
+    <Compile Include="DAO\ConfiguracionBandejaPorAreaDAO.cs" />
+    <Compile Include="DAO\EmpleadoPorFlotaDAO.cs" />
+    <Compile Include="DAO\EstadoFlotaDAO.cs" />
+    <Compile Include="DAO\EstadoFlotaHistorialDAO.cs" />
+    <Compile Include="DAO\FlotaPorOrdenTrabajoDAO.cs" />
+    <Compile Include="DAO\FlotaDAO.cs" />
+    <Compile Include="DAO\ReferenteProvisorioDAO.cs" />
+    <Compile Include="DAO\DescripcionPorRequerimientoDAO.cs" />
+    <Compile Include="DAO\CategoriaMotivoAreaDAO.cs" />
+    <Compile Include="DAO\UsuarioReferentePorRequerimientoDAO.cs" />
+    <Compile Include="DAO\TerritorioIncumbenciaDAO.cs" />
+    <Compile Include="DAO\RubroMotivoDAO.cs" />
+    <Compile Include="DAO\MotivoPorRubroMotivoDAO.cs" />
+    <Compile Include="DAO\GrupoRubroMotivoDAO.cs" />
+    <Compile Include="DAO\CampoPorMotivoPorRequerimientoDAO.cs" />
+    <Compile Include="DAO\CampoPorMotivoDAO.cs" />
+    <Compile Include="DAO\ArchivoPorRequerimientoDAO.cs" />
+    <Compile Include="DAO\AjustesDAO.cs" />
+    <Compile Include="DAO\EdificioMunicipalDAO.cs" />
+    <Compile Include="DAO\CategoriaEdificioMunicipalDAO.cs" />
+    <Compile Include="DAO\EmpleadoPorOrdenTrabajoDAO.cs" />
+    <Compile Include="DAO\EmpleadoDAO .cs" />
+    <Compile Include="DAO\CatalogosDAO.cs" />
+    <Compile Include="DAO\EstadoEmpleadoDAO.cs" />
+    <Compile Include="DAO\EstadoEmpleadoHistorialDAO.cs" />
+    <Compile Include="DAO\TareaPorAreaPorRequerimientoDAO.cs" />
+    <Compile Include="DAO\TareaPorAreaDAO.cs" />
+    <Compile Include="DAO\FuncionPorEmpleadoDAO.cs" />
+    <Compile Include="DAO\FuncionPorAreaDAO.cs" />
+    <Compile Include="DAO\CerrojoAreaDAO.cs" />
+    <Compile Include="DAO\CerrojoAmbitoDAO.cs" />
+    <Compile Include="DAO\FCMTokenDAO.cs" />
+    <Compile Include="DAO\TipoCampoPorMotivoDAO.cs" />
+    <Compile Include="DAO\_VecinoVirtualUsuarioDAO.cs" />
+    <Compile Include="DAO\CerrojoUsuarioEstadisticaTVDAO.cs" />
+    <Compile Include="DAO\EstadoMovilDAO.cs" />
+    <Compile Include="DAO\EstadoMovilHistorialDAO.cs" />
+    <Compile Include="DAO\EstadoOrdenInspeccionDAO.cs" />
+    <Compile Include="DAO\InformacionOrganicaDAO.cs" />
+    <Compile Include="DAO\InformacionOrganicaDireccionDAO.cs" />
+    <Compile Include="DAO\NotaOrdenInspeccionDAO.cs" />
+    <Compile Include="DAO\NotaPorMovilDAO.cs" />
+    <Compile Include="DAO\OrdenInspeccionDAO.cs" />
+    <Compile Include="DAO\PermisoEstadoOrdenInspeccionDAO.cs" />
+    <Compile Include="DAO\RequerimientoPorOrdenInspeccionDAO.cs" />
+    <Compile Include="DAO\TUVPorMovilDAO.cs" />
+    <Compile Include="DAO\ITVPorMovilDAO.cs" />
+    <Compile Include="DAO\MovilDAO.cs" />
+    <Compile Include="DAO\MovilXOrdenTrabajoDAO.cs" />
+    <Compile Include="DAO\PermisoEstadoOrdenTrabajoDAO.cs" />
+    <Compile Include="DAO\RequerimientoFavoritoPorUsuarioDAO.cs" />
+    <Compile Include="DAO\NotificacionParaUsuarioDAO.cs" />
+    <Compile Include="DAO\EstadoOrdenEspecialDAO.cs" />
+    <Compile Include="DAO\EstadoOrdenEspecialHistorialDAO.cs" />
+    <Compile Include="DAO\LimiteRequerimientosPorUsuarioDAO.cs" />
+    <Compile Include="DAO\BarrioPorZonaDAO.cs" />
+    <Compile Include="DAO\NotaPorRequerimientoDAO.cs" />
+    <Compile Include="DAO\NotaOrdenTrabajoDAO.cs" />
+    <Compile Include="DAO\OrdenEspecialDAO.cs" />
+    <Compile Include="DAO\OrigenPorAmbitoDAO.cs" />
+    <Compile Include="DAO\OrigenPorUsuarioDAO.cs" />
+    <Compile Include="DAO\OrigenPorAreaDAO.cs" />
+    <Compile Include="DAO\RangoCriticidadServicioDAO.cs" />
+    <Compile Include="DAO\RecursoPorOrdenTrabajoDAO.cs" />
+    <Compile Include="DAO\PersonalDAO.cs" />
+    <Compile Include="DAO\RequerimientoPorOrdenEspecialDAO.cs" />
+    <Compile Include="DAO\RequerimientoPorOrdenTrabajoDAO.cs" />
+    <Compile Include="DAO\EstadoRequerimientoDAO.cs" />
+    <Compile Include="DAO\EstadoOrdenTrabajoDAO.cs" />
+    <Compile Include="DAO\EstadoOrdenTrabajoHistorialDAO.cs" />
+    <Compile Include="DAO\EstadoRequerimientoHistorialDAO.cs" />
+    <Compile Include="DAO\BarrioDAO.cs" />
+    <Compile Include="DAO\BaseDAO.cs" />
+    <Compile Include="DAO\CpcDAO.cs" />
+    <Compile Include="DAO\DomicilioDAO.cs" />
+    <Compile Include="DAO\MotivoDAO.cs" />
+    <Compile Include="DAO\PersonaFisicaDAO.cs" />
+    <Compile Include="DAO\OrdenTrabajoDAO.cs" />
+    <Compile Include="DAO\RequerimientoDAO.cs" />
+    <Compile Include="DAO\InformacionOrganicaSecretariaDAO.cs" />
+    <Compile Include="DAO\KilometrajePorMovilDAO.cs" />
+    <Compile Include="DAO\ReparacionPorMovilDAO.cs" />
+    <Compile Include="DAO\ValuacionPorMovilDAO.cs" />
+    <Compile Include="DAO\SeccionDAO.cs" />
+    <Compile Include="DAO\ServicioDAO.cs" />
+    <Compile Include="DAO\SubzonaDAO.cs" />
+    <Compile Include="DAO\TemaDAO.cs" />
+    <Compile Include="DAO\TipoMovilDAO.cs" />
+    <Compile Include="DAO\TipoDocumentoDAO.cs" />
+    <Compile Include="DAO\TipoDAO.cs" />
+    <Compile Include="DAO\EstadisticaDAO.cs" />
+    <Compile Include="DAO\VersionSistemaDAO.cs" />
+    <Compile Include="DAO\OrigenDAO.cs" />
+    <Compile Include="DAO\PermisoEstadoRequerimientoDAO.cs" />
+    <Compile Include="DAO\ZonaDAO.cs" />
+    <Compile Include="Maps\ConfiguracionEstadoCreacionOTMap.cs" />
+    <Compile Include="Maps\ConfiguracionBandejaPorAreaMap.cs" />
+    <Compile Include="Maps\CategoriaMotivoAreaMap.cs" />
+    <Compile Include="Maps\EmpleadoPorFlotaMap.cs" />
+    <Compile Include="Maps\FlotaPorOrdenTrabajoMap.cs" />
+    <Compile Include="Maps\EstadoFlotaHistorialMap.cs" />
+    <Compile Include="Maps\EstadoFlotaMap.cs" />
+    <Compile Include="Maps\FlotaMap.cs" />
+    <Compile Include="Maps\DescripcionPorRequerimientoMap.cs" />
+    <Compile Include="Maps\ReferenteProvisorioMap.cs" />
+    <Compile Include="Maps\UsuarioReferentePorRequerimientoMap.cs" />
+    <Compile Include="Maps\TerritorioIncumbenciaMap.cs" />
+    <Compile Include="Maps\GrupoRubroMotivoMap.cs" />
+    <Compile Include="Maps\MotivoPorRubroMotivoMap.cs" />
+    <Compile Include="Maps\RubroMotivoMap.cs" />
+    <Compile Include="Maps\CampoPorMotivoPorRequerimientoMap.cs" />
+    <Compile Include="Maps\TipoCampoPorMotivoMap.cs" />
+    <Compile Include="Maps\CerrojoAreaMap.cs" />
+    <Compile Include="Maps\CerrojoAmbitoMap.cs" />
+    <Compile Include="Maps\CategoriaEdificioMunicipalMap.cs" />
+    <Compile Include="Maps\CampoPorMotivoMap.cs" />
+    <Compile Include="Maps\EdificioMunicipalMap.cs" />
+    <Compile Include="Maps\TareaPorAreaPorRequerimientoMap.cs" />
+    <Compile Include="Maps\TareaPorAreaMap.cs" />
+    <Compile Include="Maps\SisiMailAjustesMap.cs" />
+    <Compile Include="Maps\SisiMailMap.cs" />
+    <Compile Include="Maps\SisiOcupacionMap.cs" />
+    <Compile Include="Maps\SisiExperienciaLaboralMap.cs" />
+    <Compile Include="Maps\SisiEstudiosAlcanzadosMap.cs" />
+    <Compile Include="Maps\SisiCursoMap.cs" />
+    <Compile Include="Maps\SisiPreinscripcionMap.cs" />
+    <Compile Include="Maps\SisiProgramaMap.cs" />
+    <Compile Include="Maps\SisiUsuarioMap.cs" />
+    <Compile Include="Maps\EmpleadoPorOrdenTrabajoMap.cs" />
+    <Compile Include="Maps\EstadoEmpleadoHistorialMap.cs" />
+    <Compile Include="Maps\EstadoEmpleadoMap.cs" />
+    <Compile Include="Maps\FuncionPorEmpleadoMap.cs" />
+    <Compile Include="Maps\FuncionPorAreaMap.cs" />
+    <Compile Include="Maps\EmpleadoPorAreaMap.cs" />
+    <Compile Include="Maps\FCMTokenMap.cs" />
+    <Compile Include="Maps\_VecinoVirtualUsuarioMap.cs" />
+    <Compile Include="Maps\ColorMap.cs" />
+    <Compile Include="Maps\EstadoMovilHistorialMap.cs" />
+    <Compile Include="Maps\EstadoOrdenInspeccionMap.cs" />
+    <Compile Include="Maps\EstadoOrdenInspeccionHistorialMap.cs" />
+    <Compile Include="Maps\ITVPorMovilMap.cs" />
+    <Compile Include="Maps\NotaPorMovilMap.cs" />
+    <Compile Include="Maps\NotaPorOrdenInspeccionMap.cs" />
+    <Compile Include="Maps\OrdenInspeccionMap.cs" />
+    <Compile Include="Maps\PermisoEstadoOrdenInspeccionMap.cs" />
+    <Compile Include="Maps\PermisoEstadoOrdenInspeccionPorEstadoMap.cs" />
+    <Compile Include="Maps\ReparacionPorMovilMap.cs" />
+    <Compile Include="Maps\RequerimientoPorOrdenInspeccionMap.cs" />
+    <Compile Include="Maps\ValuacionPorMovilMap.cs" />
+    <Compile Include="Maps\TUVPorMovilMap.cs" />
+    <Compile Include="Maps\KilometrajePorMovilMap.cs" />
+    <Compile Include="Maps\InformacionOrganicaDireccionMap.cs" />
+    <Compile Include="Maps\InformacionOrganicaSecretariaMap.cs" />
+    <Compile Include="Maps\InformacionOrganicaMap.cs" />
+    <Compile Include="Maps\PermisoEstadoOrdenTrabajoMap.cs" />
+    <Compile Include="Maps\PermisoEstadoRequerimientoMap.cs" />
+    <Compile Include="Maps\PermisoEstadoOrdenTrabajoPorEstadoMap.cs" />
+    <Compile Include="Maps\PermisoEstadoRequerimientoPorEstadoMap.cs" />
+    <Compile Include="Maps\ArchivoPorRequerimientoMap.cs" />
+    <Compile Include="Maps\AjustesMap.cs" />
+    <Compile Include="Maps\EstadoMovilMap.cs" />
+    <Compile Include="Maps\MovilPorOrdenTrabajoMap.cs" />
+    <Compile Include="Maps\NotificacionSistemaMap.cs" />
+    <Compile Include="Maps\BarrioPorZonaMap.cs" />
+    <Compile Include="Maps\EstadoOrdenEspecialHistorialMap.cs" />
+    <Compile Include="Maps\EstadoOrdenEspecialMap.cs" />
+    <Compile Include="Maps\MensajePorRequerimientoMap.cs" />
+    <Compile Include="Maps\LimiteRequerimientosPorUsuarioMap.cs" />
+    <Compile Include="Maps\OrdenEspecialMap.cs" />
+    <Compile Include="Maps\OrigenPorAmbitoMap.cs" />
+    <Compile Include="Maps\OrigenPorUsuarioMap.cs" />
+    <Compile Include="Maps\OrigenPorAreaMap.cs" />
+    <Compile Include="Maps\PersonalMap.cs" />
+    <Compile Include="Maps\NotaPorRequerimientoMap.cs" />
+    <Compile Include="Maps\NotaPorOrdenTrabajoMap.cs" />
+    <Compile Include="Maps\BarrioMap.cs" />
+    <Compile Include="Maps\BaseEntityMap.cs" />
+    <Compile Include="Maps\RangoCriticidadServicioMap.cs" />
+    <Compile Include="Maps\RecursoPorOrdenTrabajoMap.cs" />
+    <Compile Include="Maps\RequerimientoPorOrdenEspecialMap.cs" />
+    <Compile Include="Maps\RequerimientoPorOrdenTrabajoMap.cs" />
+    <Compile Include="Maps\CpcMap.cs" />
+    <Compile Include="Maps\DomicilioMap.cs" />
+    <Compile Include="Maps\EstadoRequerimientoMap.cs" />
+    <Compile Include="Maps\EstadoOrdenTrabajoMap.cs" />
+    <Compile Include="Maps\EstadoOrdenTrabajoHistorialMap.cs" />
+    <Compile Include="Maps\EstadoRequerimientoHistorialMap.cs" />
+    <Compile Include="Maps\MotivoMap.cs" />
+    <Compile Include="Maps\PersonaFisicaMap.cs" />
+    <Compile Include="Maps\OrdenTrabajoMap.cs" />
+    <Compile Include="Maps\RequerimientoMap.cs" />
+    <Compile Include="Maps\SeccionMap.cs" />
+    <Compile Include="Maps\ServicioMap.cs" />
+    <Compile Include="Maps\SubzonaMap.cs" />
+    <Compile Include="Maps\TemaMap.cs" />
+    <Compile Include="Maps\TipoDocumentoMap.cs" />
+    <Compile Include="Maps\MovilMap.cs" />
+    <Compile Include="Maps\TipoMovilMap.cs" />
+    <Compile Include="Maps\TipoRequerimientoMap.cs" />
+    <Compile Include="Maps\VersionSistemaMap.cs" />
+    <Compile Include="Maps\OrigenMap.cs" />
+    <Compile Include="Maps\RequerimientoFavoritoPorUsuarioMap.cs" />
+    <Compile Include="Maps\ZonaMap.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="SessionManager.cs" />
+    <Compile Include="Sisi_DAO\BaseDAO.cs" />
+    <Compile Include="Sisi_DAO\MailAjustesDAO.cs" />
+    <Compile Include="Sisi_DAO\MailDAO.cs" />
+    <Compile Include="Sisi_DAO\CursoDAO.cs" />
+    <Compile Include="Sisi_DAO\OcupacionDAO.cs" />
+    <Compile Include="Sisi_DAO\EstudiosAlcanzadosDAO.cs" />
+    <Compile Include="Sisi_DAO\PreinscripcionDAO .cs" />
+    <Compile Include="Sisi_DAO\ExperienciaLaboralDAO.cs" />
+    <Compile Include="Sisi_DAO\ProgramaDAO.cs" />
+    <Compile Include="Sisi_DAO\UsuarioSisiDAO.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Model\_Model.csproj">
+      <Project>{8ee908c5-d4c1-4caf-b8e5-f32b0aded1a9}</Project>
+      <Name>_Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

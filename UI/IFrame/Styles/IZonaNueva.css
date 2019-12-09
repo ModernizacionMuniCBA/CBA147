@@ -1,0 +1,94 @@
+﻿
+/*:root {
+    --h_row: 28px;
+}*/
+
+
+#contenedor {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+#contenedor_Form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 17px 2px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+
+#contenedor_Mapa {
+    min-width: 30rem;
+    max-width: 30rem;
+}
+
+#contenedor_Barrios {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.tabla-contenedor {
+    flex: 1;
+}
+
+
+.encabezado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+    .encabezado > .titulo {
+        flex: 1;
+        color: black;
+        font-size: 1.2rem;
+    }
+
+    .encabezado > .contenedor_Busqueda {
+        margin-left: 1rem;
+        min-width: 15rem;
+        max-width: 15rem;
+    }
+
+#mapa {
+    height: 100%;
+}
+
+
+
+
+#contenedor_TablaSeleccionados {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#contenedor_TablaDisponibles {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#contenedor_Encabezado {
+    background-color: rgba(0,0,0,0.05);
+}
+
+
+#contenedor_Acciones{
+    padding: 0.5rem;
+}
+
+.link {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+    .link:hover {
+        font-weight: 600;
+    }

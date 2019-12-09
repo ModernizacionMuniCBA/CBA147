@@ -1,0 +1,98 @@
+﻿.row {
+    width: 100%;
+}
+
+#contenedor_Encabezado {
+    display: flex;
+    background-color: rgba(0,0,0,0.05);
+    border-bottom: 1px dotted black;
+    overflow: hidden;
+    transition: all 0.3s;
+    max-height: 20rem;
+}
+
+    #contenedor_Encabezado.oculto {
+        max-height: 4.5rem;
+    }
+
+        #contenedor_Encabezado.oculto #btn_Buscar {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        #contenedor_Encabezado.oculto #contenedor_Numero, #contenedor_Encabezado.oculto #contenedor_Fecha {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        #contenedor_Encabezado.oculto .indicador {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+
+        #contenedor_Encabezado.oculto #btn_OcultarEncabezado {
+            transform: rotate(90deg);
+        }
+
+
+#contenedor_Busqueda {
+    flex: 1;
+}
+
+    #contenedor_Busqueda #contenedor_Numero, #contenedor_Busqueda #contenedor_Fecha {
+        transition: all 0.3s;
+    }
+
+    #contenedor_Busqueda .indicador {
+        position: absolute;
+        left: 1rem;
+        top: 1rem;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s;
+    }
+
+#contenedor_Botones {
+    margin: 1rem;
+    display: flex;
+}
+
+#btn_Buscar {
+    align-self: flex-end;
+}
+
+#btn_OcultarEncabezado {
+    position: absolute;
+    right: 1rem;
+    top: 0.5rem;
+    transform: rotate(-90deg);
+}
+
+
+#contenedor_Resultado {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+    #contenedor_Resultado .tabla-contenedor {
+        flex: 1;
+    }
+
+
+#contenedor_Resultado {
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+    #contenedor_Resultado.visible {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+
+    .tabla-contenedor{
+        flex:auto !important;
+    }

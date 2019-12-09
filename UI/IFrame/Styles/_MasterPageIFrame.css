@@ -1,0 +1,48 @@
+﻿
+#errorCritico {
+    pointer-events: none;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10000;
+    background-color: var(--colorCard);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+    #errorCritico .material-icons {
+        color: var(--colorError);
+        font-size: 5rem;
+    }
+
+    #errorCritico .textos {
+        max-width: 30rem;
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+        #errorCritico .textos .titulo {
+            font-size: 1.5rem;
+            text-align: center;
+            color: var(--colorError);
+        }
+
+        #errorCritico .textos .detalle {
+            margin-top: 0.5rem;
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--colorError);
+        }
+
+    #errorCritico.visible {
+        opacity: 1;
+        pointer-events: all;
+    }

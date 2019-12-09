@@ -1,0 +1,150 @@
+﻿.colorAyuda {
+    color: #757575;
+    font-size: 20px !important;
+}
+
+.colorRelevamiento {
+    color: black !important;
+}
+
+.btnNuevoArchivo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+}
+
+    .btnNuevoArchivo > i {
+        background-color: rgba(0,0,0,0.1);
+        border-radius: 200px;
+        font-size: 3rem;
+        margin-bottom: 16px;
+    }
+
+    .btnNuevoArchivo > label {
+        font-size: 1.3rem;
+        text-align: center;
+        color: black;
+    }
+
+.dragzone {
+    width: 100%;
+    height: 100%;
+    background: var(--colorCard);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+    .dragzone > label {
+        color: rgba(0,0,0,0.8);
+        font-size: 1.8rem;
+        text-align: center;
+        max-width: 300px;
+        line-height: initial;
+    }
+
+    .dragzone > i {
+        font-size: 5rem;
+        background-color: rgba(0,0,0,0.1);
+        border-radius: 200px;
+        padding: 16px;
+        margin-bottom: 16px;
+    }
+
+.cardArchivo {
+    margin-left: 16px;
+}
+
+    .cardArchivo > .contenido {
+        width: 100%;
+        height: 100%;
+    }
+
+    .cardArchivo .contenedorTitulo {
+        left: 0;
+        right: 0;
+        position: absolute;
+        bottom: 0;
+        height: 50px;
+        padding: 4px;
+        display: flex;
+        align-items: center;
+        background: rgba(0,0,0,0.05);
+    }
+
+    #contenedorCheckboxInicio{
+        margin-top: 16px!important;
+        }
+
+        .cardArchivo .contenedorTitulo > label {
+            color: black;
+            font-size: 1rem;
+            flex: 1;
+            vertical-align: middle;
+            line-height: initial;
+            overflow: hidden;
+            white-space: pre;
+            text-overflow: ellipsis;
+        }
+
+
+#tabDocumentos > .cargando, #tabImagenes > .cargando {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 48px;
+    background: var(--colorCard);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#contenedor_DomicilioNoSeleccionado {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+#contenedor_DomicilioSeleccionado {
+    display: flex;
+    flex-direction: row;
+}
+
+    #contenedor_DomicilioSeleccionado .mapa {
+        width: 10rem;
+        height: 10rem;
+        margin-right: 1rem;
+        background: white;
+        border-radius: 1rem;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    #contenedor_DomicilioSeleccionado .contenido {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+    }
+
+
+#btn_SeleccionarDomicilio, #btn_CancelarDomicilio {
+    margin-top: 1rem;
+}
+
+
+#errorFormulario_Domicilio {
+    margin-top: 1rem;
+}

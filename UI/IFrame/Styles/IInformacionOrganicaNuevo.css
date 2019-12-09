@@ -1,0 +1,17 @@
+﻿#main {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.col > div {
+    display: flex;
+    align-items: center;
+}
+
+    .col > div > .mi-input-field {
+        flex: 1;
+    }
+
+    .col > div > .btn {
+        margin-left: 1rem;
+    }

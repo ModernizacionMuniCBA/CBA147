@@ -1,0 +1,16 @@
+﻿.contenido {
+    height:100%;
+}
+
+.configuracion{
+    margin: 1rem;
+}
+
+.opciones{
+    display: flex;
+    margin-top: 1rem;
+}
+
+#contenedor_estadoCreacionOT .opciones label{
+    display:flex;
+}

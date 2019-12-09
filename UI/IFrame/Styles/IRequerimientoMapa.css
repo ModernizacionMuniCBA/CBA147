@@ -1,0 +1,144 @@
+﻿.card-filtro {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    margin: 0;
+    min-width: 15rem;
+    max-width: 15rem;
+    min-height: 10rem;
+    max-height: calc(100% - 20px);
+    opacity: 0;
+    transform: translateY(-5rem);
+    transition: all 0.3s;
+    pointer-events: none;
+}
+
+    .card-filtro.visible {
+        opacity: 1;
+        pointer-events: all;
+        transform: translateY(0);
+    }
+
+    .card-filtro .titulo {
+        flex: 1;
+    }
+
+
+    .card-filtro .contenedor-header {
+        min-height: fit-content;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        background-color: rgba(0,0,0,0.05);
+        padding: 0.5rem;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .card-filtro .contenedor-main {
+        padding: 0;
+    }
+
+.item {
+    display: flex;
+    padding: 0.5rem;
+    align-items: center;
+    cursor: pointer;
+    border-left: 0rem solid var(--colorVerde);
+    transition: all 0.3s;
+}
+
+    .item.seleccionado {
+        border-left: 0.3rem solid var(--colorVerde);
+        background-color: rgba(0,0,0,0.05);
+    }
+
+    .item:hover {
+        background: rgba(0,0,0,0.05);
+    }
+
+    .item .nombre {
+        flex: 1;
+        cursor: pointer;
+    }
+
+
+    .item .cantidad {
+        cursor: pointer;
+        min-width: 2rem;
+        min-height: 2rem;
+        /* max-width: 2rem; */
+        max-height: 2rem;
+        background: rgba(0,0,0,0.1);
+        border-radius: 10rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+.requerimiento {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+    .requerimiento:hover {
+        background-color: rgba(0,0,0,0.05);
+    }
+
+    .requerimiento:not(:last-child) {
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+
+.link {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+    .link:hover {
+        font-weight: 400;
+    }
+
+#btn_Areas {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 75px;
+}
+
+#btn_Estados {
+    position: absolute;
+    left: 10px;
+    top: 45px;
+    width: 75px;
+}
+
+#btn_Referencias {
+    position: absolute;
+    left: 10px;
+    top: 85px;
+    width: 75px;
+}
+
+.svg-icon {
+    height: 27px;
+    width: 24px;
+    padding: 2px;
+}
+
+#contenedor_Referencias .contenedor-main .nombre {
+    margin-left: 0.5rem;
+}
+
+#contenedor_Referencias .item,
+#contenedor_Referencias .item .nombre {
+    cursor: default !important;
+}
+
+.cluster > div {
+    color: white !important;
+}

@@ -1,0 +1,425 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BD160731-7EBF-40E3-BCD0-2093E8727FFE}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Intranet_Servicios2</RootNamespace>
+    <AssemblyName>Intranet_Servicios2</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>7f1c1e18</NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>Content\Documentacion.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Encriptacion">
+      <HintPath>..\packages\others\Encriptacion.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=4.5.2.1, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.4.5.2.1\lib\net40\EPPlus.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FireSharp, Version=2.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FireSharp.2.0.4\lib\portable-net45+sl5+wp8+win8\FireSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GeoJSON.Net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GeoJSON.Net.1.1.70\lib\net45\GeoJSON.Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="JWT, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\JWT.4.0.0\lib\net46\JWT.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions.Desktop, Version=1.0.168.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\UI\bin\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="Swashbuckle.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cd1bb07a5ac7c7bc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Swashbuckle.Core.5.6.0\lib\net40\Swashbuckle.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.6\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.6\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.6\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Telerik.Reporting, Version=9.0.15.324, Culture=neutral, PublicKeyToken=a9d7983dfcc261be">
+      <HintPath>C:\Users\sasia_r\Desktop\Bin\Telerik.Reporting.dll</HintPath>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="Telerik.ReportViewer.WebForms, Version=9.0.15.324, Culture=neutral, PublicKeyToken=a9d7983dfcc261be">
+      <HintPath>C:\Users\sasia_r\Desktop\Bin\Telerik.ReportViewer.WebForms.dll</HintPath>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="Telerik.ReportViewer.Wpf, Version=9.0.15.324, Culture=neutral, PublicKeyToken=a9d7983dfcc261be">
+      <HintPath>C:\Users\sasia_r\Desktop\Bin\Telerik.ReportViewer.Wpf.dll</HintPath>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Content\Swagger.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Content\Swagger.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Content\Documentacion.XML">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Resources\Imagenes\icono-logo-cba-147.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Imagenes\logo-la-muni.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Imagenes\logo_muni.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Reportes\Antiguos\detalle_OT.trdx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Reportes\Antiguos\Reporte_OrdenTrabajoDetalle.trdx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Reportes\Antiguos\Reporte_OrdenTrabajoListado.trdx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Reportes\Antiguos\Reporte_RequerimientoDetalle.trdx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Reportes\Antiguos\Reporte_RequerimientoDetalleV2.trdx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Reportes\Antiguos\Reporte_RequerimientoNuevo.trdx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Reportes\Estadisticas\EstadisticaCPC.trdx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Reportes\Estadisticas\EstadisticaOrigen.trdx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Reportes\OrdenTrabajo\DetalladaOT\Reporte_RequerimientoDetalleParaOT.trdx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Reportes\OrdenTrabajo\Reporte_OrdenTrabajoListadoV2.trdx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Reportes\OrdenTrabajo\ResumenOT\Reporte_OrdenDetalleListadoRequerimientos.trdx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Reportes\OrdenTrabajo\ResumenOT\Reporte_OrdenEncabezado.trdx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Reportes\Requerimiento\Reporte_RequerimientoDetalleV3.trdx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Reportes\Requerimiento\Reporte_RequerimientoListado.trdx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Properties\PublishProfiles\CBA147_WS_Intranet_Release.pubxml" />
+    <None Include="Properties\PublishProfiles\CBA147_WS_Intranet_Test.pubxml" />
+    <Content Include="Resources\AppData.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Test.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\SwaggerConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Sisi\Utils\MisRules\_WSRules_Base.cs" />
+    <Compile Include="Sisi\Utils\MisRules\_WSRules_BaseEstudiosAlcanzados.cs" />
+    <Compile Include="Sisi\Utils\MisRules\_WSRules_BaseExperienciaLaboral.cs" />
+    <Compile Include="Sisi\Utils\MisRules\_WSRules_BaseOcupacion.cs" />
+    <Compile Include="Sisi\Utils\MisRules\_WSRules_BasePrograma.cs" />
+    <Compile Include="Sisi\Utils\MisRules\_WSRules_BasePreinscripcion.cs" />
+    <Compile Include="Sisi\Utils\MisRules\_WSRules_BaseUsuarioSisi.cs" />
+    <Compile Include="Sisi\v1\Controllers\SiSi_EstudiosAlcanzadosController .cs" />
+    <Compile Include="Sisi\v1\Controllers\SiSi_OcupacionController.cs" />
+    <Compile Include="Sisi\v1\Controllers\SiSi_ExperienciaLaboralController.cs" />
+    <Compile Include="Sisi\v1\Controllers\SiSi_EntrevistaController.cs" />
+    <Compile Include="Sisi\v1\Controllers\SiSi_PreinscripcionController.cs" />
+    <Compile Include="Sisi\v1\Controllers\SiSi_UsuarioController.cs" />
+    <Compile Include="Sisi\v1\Controllers\SiSi_ProgramaController.cs" />
+    <Compile Include="Sisi\v1\Entities\Comandos\ComandoApp_Entrevista.cs" />
+    <Compile Include="Sisi\v1\Entities\Comandos\ComandoApp_ExperienciaLaboral.cs" />
+    <Compile Include="Sisi\v1\Entities\Comandos\ComandoApp_Preinscripcion_InfoGlobal.cs" />
+    <Compile Include="Sisi\v1\Entities\Comandos\ComandoApp_UsuarioSiSi.cs" />
+    <Compile Include="Sisi\v1\Entities\Comandos\ComandoApp_Preinscripcion.cs" />
+    <Compile Include="Sisi\v1\Entities\Resultados\ResultadoApp_Preinscripcion.cs" />
+    <Compile Include="Sisi\v1\Entities\Resultados\ResultadoApp_Curso.cs" />
+    <Compile Include="Sisi\v1\Entities\Resultados\ResultadoApp_EstudiosAlcanzados.cs" />
+    <Compile Include="Sisi\v1\Entities\Resultados\ResultadoApp_ExperienciaLaboral.cs" />
+    <Compile Include="Sisi\v1\Entities\Resultados\ResultadoApp_Ocupacion.cs" />
+    <Compile Include="Sisi\v1\Entities\Resultados\ResultadoApp_UsuarioSisi.cs" />
+    <Compile Include="Sisi\v1\Entities\Resultados\ResultadoApp_Programa.cs" />
+    <Compile Include="Sisi\v1\MisRules\WSRules_EstudiosAlcanzados.cs" />
+    <Compile Include="Sisi\v1\MisRules\WSRules_Ocupacion.cs" />
+    <Compile Include="Sisi\v1\MisRules\WSRules_ExperienciaLaboral.cs" />
+    <Compile Include="Sisi\v1\MisRules\WSRules_Preinscripcion.cs" />
+    <Compile Include="Sisi\v1\MisRules\WSRules_UsuarioSisi.cs" />
+    <Compile Include="Sisi\v1\MisRules\WSRules_Programa.cs" />
+    <Compile Include="Utils\Controllers\ActionFilters\ConToken.cs" />
+    <Compile Include="Utils\Controllers\ActionFilters\JsonContent.cs" />
+    <Compile Include="Utils\Controllers\ActionFilters\ValidarApp.cs" />
+    <Compile Include="Utils\Controllers\ActionFilters\_Autorizacion.cs" />
+    <Compile Include="Utils\Controllers\Control.cs" />
+    <Compile Include="MiLog_WS.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Entities\Comando\ComandoAppBase_Requerimiento.cs" />
+    <Compile Include="Utils\Entities\Comando\ComandoAppBase_UsuarioIniciarActivacion.cs" />
+    <Compile Include="Utils\Entities\Comando\ComandoAppBase_UsuarioEditarFotoPersonal.cs" />
+    <Compile Include="Utils\Entities\Comando\ComandoAppBase_UsuarioEditarDatosContacto.cs" />
+    <Compile Include="Utils\Entities\Comando\ComandoAppBase_UsuarioEditarDatosPersonales.cs" />
+    <Compile Include="Utils\Entities\Comando\ComandoAppBase_UsuarioEditar.cs" />
+    <Compile Include="Utils\Entities\Comando\ComandoAppBase_UsuarioNuevo.cs" />
+    <Compile Include="Utils\Entities\Comando\ComandoAppBase_UsuarioDomicilio.cs" />
+    <Compile Include="Utils\MisRules\_WSRules_BaseAjustes.cs" />
+    <Compile Include="Utils\MisRules\_WSRules_BaseRequerimiento.cs" />
+    <Compile Include="Utils\ReCaptchaClass.cs" />
+    <Compile Include="Utils\MisRules\_WSRules_BaseEstadoRequerimiento.cs" />
+    <Compile Include="Utils\MisRules\_WSRules_BaseEstadistica.cs" />
+    <Compile Include="Utils\MisRules\_WSRules_BaseDomicilio.cs" />
+    <Compile Include="Utils\MisRules\_WSRules_BaseServicio.cs" />
+    <Compile Include="Utils\MisRules\_WSRules_BaseContacto.cs" />
+    <Compile Include="Utils\ResultadoServicio.cs" />
+    <Compile Include="v1\Controllers\ActionFilters\ConClavePanel.cs" />
+    <Compile Include="v1\Controllers\EstadisticaController.cs" />
+    <Compile Include="v1\Controllers\RequerimientoController.cs" />
+    <Compile Include="v1\Controllers\DomicilioController.cs" />
+    <Compile Include="v1\Controllers\ServicioController.cs" />
+    <Compile Include="v1\Controllers\AjustesController.cs" />
+    <Compile Include="v1\Entities\Comandos\ComandoExterno_RequerimientoCambiarEstado.cs" />
+    <Compile Include="v1\Entities\Comandos\ComandoApp_UsuarioDomicilio.cs" />
+    <Compile Include="v1\Entities\Comandos\ComandoApp_UsuarioIniciarActivacion.cs" />
+    <Compile Include="v1\Entities\Comandos\ComandoApp_UsuarioEditarDatosContacto.cs" />
+    <Compile Include="v1\Entities\Comandos\ComandoApp_UsuarioEditarFotoPersonal.cs" />
+    <Compile Include="v1\Entities\Comandos\ComandoApp_UsuarioEditarDatosPersonales.cs" />
+    <Compile Include="v1\Entities\Comandos\ComandoApp_UsuarioEditar.cs" />
+    <Compile Include="v1\Entities\Comandos\ComandoApp_UsuarioNuevo.cs" />
+    <Compile Include="v1\Entities\Comandos\ComandoApp_Requerimiento.cs" />
+    <Compile Include="v1\Entities\Consultas\ConsultaApp_Requerimiento.cs" />
+    <Compile Include="v1\Entities\Resultados\ResultadoApp_Ajustes.cs" />
+    <Compile Include="v1\Entities\Resultados\ResultadoApp_Barrio.cs" />
+    <Compile Include="v1\Entities\Resultados\ResultadoApp_Domicilio.cs" />
+    <Compile Include="v1\Entities\Resultados\ResultadoApp_Cpc.cs" />
+    <Compile Include="v1\Entities\Resultados\ResultadoApp_EstadoRequerimiento.cs" />
+    <Compile Include="v1\Entities\Resultados\ResultadoApp_EstadoRequerimientoHistorial.cs" />
+    <Compile Include="v1\Entities\Resultados\ResultadoApp_RequerimientoDetalle.cs" />
+    <Compile Include="v1\Entities\Resultados\ResultadoApp_RequerimientoInsertado.cs" />
+    <Compile Include="v1\Entities\Resultados\ResultadoApp_RequerimientoListado.cs" />
+    <Compile Include="v1\Entities\Resultados\ResultadoExterno_Requerimiento.cs" />
+    <Compile Include="v1\MisRules\WSRules_Domicilio.cs" />
+    <Compile Include="v1\MisRules\WSRules_Requerimiento.cs" />
+    <Compile Include="v1\MisRules\WSRules_Servicio.cs" />
+    <Compile Include="Utils\MisRules\_WSRules_BaseMotivo.cs" />
+    <Compile Include="Utils\MisRules\_WSRules_Base.cs" />
+    <Compile Include="Utils\MisRules\_WSRules_BaseUsuario.cs" />
+    <Compile Include="v1\Controllers\MotivoController.cs" />
+    <Compile Include="v1\Controllers\UsuarioController.cs" />
+    <Compile Include="v1\Entities\Resultados\ResultadoApp_Motivo.cs" />
+    <Compile Include="v1\Entities\Resultados\ResultadoApp_Servicio.cs" />
+    <Compile Include="v1\Entities\Resultados\ResultadoApp_ServicioMotivoParaBusqueda.cs" />
+    <Compile Include="v1\Entities\Resultados\ResultadoApp_Usuario.cs" />
+    <Compile Include="v1\MisRules\WSRules_Motivo.cs" />
+    <Compile Include="v1\MisRules\WSRules_Estadisticas.cs" />
+    <Compile Include="v1\MisRules\WSRules_Ajustes.cs" />
+    <Compile Include="v1\MisRules\WSRules_Usuario.cs" />
+    <Compile Include="v2\Controllers\DomicilioController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Model\_Model.csproj">
+      <Project>{8ee908c5-d4c1-4caf-b8e5-f32b0aded1a9}</Project>
+      <Name>_Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rules\_Rules.csproj">
+      <Project>{64672338-112e-452c-a49c-88b2941f76ca}</Project>
+      <Name>_Rules</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Utils\Entities\Resultados\" />
+    <Folder Include="v2\Entities\Comandos\" />
+    <Folder Include="v2\Entities\Resultados\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Test|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1500</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1080/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Habilite la restauración del paquete NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

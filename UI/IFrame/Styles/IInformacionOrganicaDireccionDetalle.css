@@ -1,0 +1,74 @@
+﻿:root {
+    --tam-foto: 7rem;
+}
+
+.seccion {
+    display: flex;
+    flex-direction: column;
+}
+
+    .seccion.icono {
+        flex-direction: row;
+    }
+
+    .seccion:not(:first-child) {
+        margin-top: 1rem;
+    }
+
+    .seccion.icono > .material-icons {
+        opacity: 0.8;
+        font-size: 1.3rem;
+        margin-top: 0.2rem;
+    }
+
+    .seccion.icono .textos {
+        display: flex;
+        margin-left: 0.5rem;
+        flex-direction: column;
+    }
+
+#contenedor_Encabezado {
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    background: rgba(0,0,0,0.05);
+}
+
+    #contenedor_Encabezado .datos {
+        display: flex;
+        flex-direction: column;
+    }
+
+#contenedor_Detalle {
+    padding: 1rem;
+}
+
+
+.direccion {
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+    .direccion .nombre {
+        flex: 1;
+    }
+
+.link {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.encabezado {
+    display: flex;
+    align-self: baseline;
+}
+
+    .encabezado > .titulo {
+        flex: 1;
+    }
+
+#btn_EditarNombre {
+    margin-left: 0.5rem;
+}
+

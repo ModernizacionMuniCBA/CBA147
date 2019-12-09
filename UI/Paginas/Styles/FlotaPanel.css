@@ -1,0 +1,413 @@
+﻿#body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: var(--padding-content);
+}
+
+:root {
+    --tam-foto: 3rem;
+}
+
+#content {
+    flex: 1;
+    position: relative;
+    overflow: auto;
+    opacity: 0;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--padding-content);
+    transition: opacity 0.3s 0.5s;
+}
+
+#cardAcciones {
+    min-height: fit-content;
+    display: flex;
+    flex-direction: initial;
+    align-items: center;
+}
+
+#cardAcciones .contenedor_Botones{
+    display: flex;
+    flex:1;
+}
+
+#cardAcciones .contenedor_Botones .btn {
+    width: fit-content;
+    margin-right: 16px;
+}
+
+#cardAcciones .contenedor_Filtros{
+    display: flex;
+    flex: 1;
+}
+
+#cardAcciones .contenedor_Filtros > div {
+    flex: 1;
+    margin-right: 16px;
+}
+
+#contenedor_Flotas {
+    margin-top: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    opacity: 0;
+    transition: 0.3s opacity;
+}
+
+    #contenedor_Flotas.visible {
+        opacity: 1;
+    }
+
+.flota {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    box-sizing: border-box;
+    min-height: 24rem;
+    max-height: 24rem;
+    margin-bottom: 0.5rem;
+    min-width: 24rem;
+    max-width: 24rem;
+    margin-right: 12px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    margin-bottom: 1rem;
+    transition: box-shadow 0.3s;
+}
+
+.contenedor_Acciones {
+    display: flex;
+}
+
+.accion {
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+    max-width: 6rem;
+    min-width: 6rem;
+    border-radius: 0.3rem;
+    margin-bottom: 0.5rem;
+    padding: 0.2rem;
+    margin: 0.1rem;
+    margin-bottom: 0.6rem;
+    /* border: solid rgba(0,0,0,1) 1px; */
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+    cursor: pointer;
+    background-color: white;
+}
+
+
+    .accion.deshabilitado {
+        /*background-color: rgba(0,0,0,0.2);*/
+    }
+
+
+        .accion.deshabilitado label {
+            color: rgba(0,0,0,0.5);
+        }
+
+        .accion.deshabilitado i {
+            color: rgba(0,0,0,0.5);
+        }
+
+        .accion.deshabilitado:hover {
+            background-color: transparent;
+        }
+
+            .accion.deshabilitado:hover label {
+                color: rgba(0,0,0,0.5);
+            }
+
+            .accion.deshabilitado:hover i {
+                color: rgba(0,0,0,0.5);
+            }
+
+    .accion i {
+        margin-right: 0.4rem;
+        font-size: 1.1rem;
+        cursor: pointer;
+        color: var(--colorVerde);
+        transition: all 0.3s;
+    }
+
+    .accion label {
+        cursor: pointer;
+        font-size: 0.9rem;
+        line-height: 0.8rem;
+        color: black;
+        transition: all 0.3s;
+    }
+
+
+    .accion:hover {
+        background-color: var(--colorVerde);
+    }
+
+        .accion:hover i {
+            color: white;
+        }
+
+        .accion:hover label {
+            color: white;
+        }
+
+.contenedor_flota > div {
+}
+
+.contenedor_Encabezado {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: row;
+}
+
+    .contenedor_Encabezado .contenedor_Nombre {
+        flex: 1;
+            align-self: center;
+    }
+        
+     .contenedor_Encabezado .contenedor_Estado {
+    display: flex;
+    align-self: center;
+}
+
+    .contenedor_Encabezado .contenedor_Estado .indicador {
+        margin-right: 0.5rem;
+        opacity: 1 !important;
+        filter: none !important;
+        max-width: 1.1rem !important;
+        max-height: 1.1rem !important;
+        transform: scale(0.8) !important;
+    }
+
+    .contenedor_Encabezado .contenedor_Estado .nombre {
+        font-size: 1rem;
+    }
+
+.contenedor_Informacion {
+    padding: 0.5rem;
+    flex: 1;
+}
+
+    .contenedor_Informacion > div {
+    }
+
+    .contenedor_Informacion .contenedor_Nombre .nombre {
+        font-size: 1.4rem !important;
+    }
+
+    .contenedor_Informacion .contenedor_Movil {
+        display: flex;
+        flex-direction: column;
+    }
+
+        .contenedor_Informacion .contenedor_Movil .btnVerDetalle {
+            font-size: 0.8rem;
+            line-height: 0.8rem;
+            margin-top: 0.2rem;
+        }
+
+        .contenedor_Personal {
+            padding-top: 1rem;
+        }
+
+.contenedor_Personal .contenido {
+    display: flex;
+    align-items: baseline;
+}
+
+.contenedor_flota_cargando {
+    position: absolute;
+    transform: translate(10rem, -7rem);
+}
+
+.flota .contenedor-cargando {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    overflow: hidden;
+    transform: translateY(0.2rem);
+    pointer-events: none;
+    opacity: 0;
+}
+
+.flota .btnVerMasTrabajo {
+    position: relative;
+}
+
+    .flota .btnVerMasTrabajo .contenedor-cargando > div {
+        width: 2rem;
+        height: 2rem;
+    }
+
+.flota.cargandoMas .btnVerMasTrabajo .contenedor-cargando {
+    opacity: 1;
+}
+
+
+.flota.cargandoMas .btnVerMasTrabajo > i {
+    opacity: 0;
+}
+
+
+.linea {
+    border-left: 1px solid;
+    opacity: 0.5;
+    height: unset;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-top: 4px;
+    margin-bottom: 2px;
+}
+
+.flota > .contenedor_Encabezado .contenedor_Estado {
+    display: flex;
+    align-self: center;
+}
+
+    .flota > .contenedor_Encabezado .contenedor_Estado .indicador {
+        margin-right: 0.5rem;
+        opacity: 1 !important;
+        filter: none !important;
+        max-width: 1.1rem !important;
+        max-height: 1.1rem !important;
+        transform: scale(0.8) !important;
+    }
+
+    .flota > .contenedor_Encabezado .contenedor_Estado .nombre {
+        font-size: 1rem;
+    }
+
+.flota > .contenedor_Encabezado .contenedor_Foto {
+    align-self: center;
+}
+
+    .flota > .contenedor_Encabezado .contenedor_Foto > img {
+        cursor: pointer;
+        min-width: 2.5rem;
+        min-height: 2.5rem;
+        max-width: 2.5rem;
+        max-height: 2.5rem;
+        margin-right: 0.6rem;
+        border-radius: 100rem;
+        background-color: white;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+
+.flota > .separador {
+    border-bottom: 0.2rem solid;
+    /*opacity: 0.4;*/
+}
+
+.flota:hover {
+    box-shadow: 0 8px 17px 2px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);
+}
+
+/*Persona*/
+.empleado {
+    display: flex;
+    margin-right: 1rem;
+}
+
+    .empleado .persona {
+        display: flex;
+        flex-direction: column;
+        max-width: 4rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+        .empleado .persona > .foto {
+            margin-top: 0.5rem;
+            width: var(--tam-foto);
+            height: var(--tam-foto);
+            min-height: var(--tam-foto);
+            min-width: var(--tam-foto);
+            background: white;
+            border-radius: 100%;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+            .empleado .persona > .foto:hover {
+                cursor: pointer;
+            }
+
+        .empleado .persona label {
+            font-size: 0.8rem;
+            line-height: 0.8rem;
+            text-align: center;
+        }
+
+.contenedor_Trabajo > .contenedor_Trabajo_Resumen {
+    background: rgba(0,0,0,0.1);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0.6rem;
+}
+
+    .contenedor_Trabajo > .contenedor_Trabajo_Resumen > .texto {
+        flex: 1;
+    }
+
+.contenedor_Trabajo > .contenedor_Trabajo_MasInfo > .contenido.visible {
+    opacity: 1;
+    max-height: 8.5rem;
+    padding: 0.5rem;
+    transition: max-height 0.3s, opacity 0.3s 0.3s, padding 0.3s;
+}
+
+.contenedor_Trabajo > .contenedor_Trabajo_MasInfo .contenido {
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s 0.3s, opacity 0.3s, padding 0.3s 0.3s;
+}
+
+#btn_VerDetalle {
+    align-self: flex-end;
+}
+
+.link {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#content_SinFlotas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+    #content_SinFlotas img {
+        height: 100%;
+        width: 100%;
+    }
+
+    #content_SinFlotas > label {
+        margin-top: 2rem;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    #content_SinFlotas a {
+        margin-top: 2rem;
+    }

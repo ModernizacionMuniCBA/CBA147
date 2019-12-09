@@ -1,0 +1,15 @@
+﻿#cardFiltros {
+    margin: 1rem;
+    padding: 1rem;
+    margin-bottom: 0rem;
+    display: flex;
+    flex-direction: row;
+}
+
+    #cardFiltros .selects-filtros {
+        flex: 1;
+    }
+
+#cardResultado {
+    flex: 1;
+}

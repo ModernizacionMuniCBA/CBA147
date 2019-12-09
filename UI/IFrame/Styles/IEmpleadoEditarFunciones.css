@@ -1,0 +1,14 @@
+﻿
+#contenedor_Empleado{
+    display: flex;
+    flex-direction: column;
+}
+
+#contenedor_Area {
+    display: flex;
+    flex-direction: column;
+}
+
+#contenedor_Informacion{
+    padding:1rem;
+}

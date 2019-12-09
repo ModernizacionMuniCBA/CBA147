@@ -1,0 +1,126 @@
+﻿#main {
+    overflow: hidden !important;
+}
+
+#contenedor_Tabla {
+    flex: 1;
+    opacity: 0;
+    pointer-events: none;
+}
+
+    #contenedor_Tabla .contenedor-main {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+        #contenedor_Tabla .contenedor-main .tabla-contenedor {
+            flex: 1;
+        }
+
+        #contenedor_Tabla .contenedor-main .tabla-footer {
+            flex: 1;
+        }
+
+        #contenedor_Tabla .contenedor-main .contenedor-footer {
+            display: flex;
+        }
+
+
+#contenedor_Cargando {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+    #contenedor_Cargando.visible {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+
+    #contenedor_Cargando .texto1 {
+        font-size: 2rem;
+        margin-top: 3rem;
+        font-weight: 500;
+    }
+
+    #contenedor_Cargando .texto2 {
+    }
+
+
+#contenedor_Resultado {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+    #contenedor_Resultado.visible {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+
+    #contenedor_Resultado .contenedor_Botones {
+        display: flex;
+    }
+
+    #contenedor_Resultado > i {
+        font-size: 7rem;
+        color: var(--colorVerde);
+        margin-bottom: 1rem;
+    }
+
+    #contenedor_Resultado > label {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    #contenedor_Resultado > .contenedor_Botones a {
+        margin: 0.5rem;
+    }
+
+
+#contenedor_Error {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+    #contenedor_Error.visible {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+
+    #contenedor_Error > i {
+        font-size: 7rem;
+        color: var(--colorError);
+        margin-bottom: 1rem;
+    }
+
+    #contenedor_Error > label {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }

@@ -1,0 +1,284 @@
+﻿#body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: var(--padding-content);
+}
+
+#content {
+    flex: 1;
+    position: relative;
+    overflow: auto;
+    opacity: 0;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--padding-content);
+    transition: opacity 0.3s 0.5s;
+}
+
+#cardFormularioFiltros {
+    min-height: fit-content;
+}
+
+#contenedor_Empleados {
+    flex-direction: row;
+    flex-wrap: wrap;
+    opacity: 0;
+    transition: 0.3s opacity;
+}
+
+    #contenedor_Empleados.visible {
+        opacity: 1;
+    }
+
+.contenedor_empleado {
+    float: left;
+    box-sizing: border-box;
+    min-height: 1px;
+    margin-bottom: 0.5rem;
+    min-width: 24rem;
+    max-width: 24rem;
+    margin-right: 12px;
+    position: relative;
+}
+
+
+.contenedor_empleado_cargando {
+    position: absolute;
+    transform: translate(10rem, -7rem);
+}
+
+.empleado {
+    width: 100%;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    margin-bottom: 1rem;
+    transition: box-shadow 0.3s;
+    cursor: pointer;
+}
+
+    .empleado * {
+        cursor: pointer;
+    }
+
+    .empleado > .contenedor_Encabezado {
+        padding: 0.6rem;
+        display: flex;
+    }
+
+        .empleado > .contenedor_Encabezado > .contenedor_Informacion {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+
+            .empleado > .contenedor_Encabezado > .contenedor_Informacion > div {
+                display: flex;
+            }
+
+            .empleado > .contenedor_Encabezado > .contenedor_Informacion > .infoAdicional {
+                flex-direction: column;
+            }
+
+            .empleado > .contenedor_Encabezado > .contenedor_Informacion > .fila2, .empleado > .contenedor_Encabezado > .contenedor_Informacion > .fila3 {
+                display: flex;
+                flex-direction: column;
+            }
+
+        .empleado > .contenedor_Encabezado .contenedor_Nombre {
+            display: flex;
+            flex: 1;
+        }
+
+        .empleado > .contenedor_Encabezado .contenedor_Nombre {
+            max-width: 13rem;
+        }
+
+            .empleado > .contenedor_Encabezado .contenedor_Nombre > .nombre {
+                flex: 1;
+                font-size: 1.1rem;
+                font-weight: 600;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+
+            .empleado > .contenedor_Encabezado .contenedor_Nombre > .dni {
+                font-size: 1rem;
+            }
+
+        .empleado > .contenedor_Encabezado > .contenedor_Informacion > .infoAdicional > .filaInfoAdicional {
+            display: flex;
+        }
+
+            .empleado > .contenedor_Encabezado > .contenedor_Informacion > .infoAdicional > .filaInfoAdicional.primera {
+                margin-right: 12px;
+            }
+
+            .empleado > .contenedor_Encabezado > .contenedor_Informacion > .infoAdicional > .filaInfoAdicional > .contenedor_Dni, .empleado > .contenedor_Encabezado > .contenedor_Informacion > .infoAdicional > .filaInfoAdicional > .contenedor_Seccion {
+                min-width: 8.5rem;
+                max-width: 8.5rem;
+            }
+
+            .empleado > .contenedor_Encabezado > .contenedor_Informacion > .infoAdicional > .filaInfoAdicional label {
+                font-size: 0.85rem;
+                margin: 0;
+                color: black;
+            }
+
+                .empleado > .contenedor_Encabezado > .contenedor_Informacion > .infoAdicional > .filaInfoAdicional label.titulo {
+                    font-weight: 700;
+                }
+
+
+    .empleado .contenedor-cargando {
+        position: absolute;
+        width: 2rem;
+        height: 2rem;
+        overflow: hidden;
+        transform: translateY(0.2rem);
+        pointer-events: none;
+        opacity: 0;
+    }
+
+    .empleado .btnVerMasTrabajo {
+        position: relative;
+    }
+
+        .empleado .btnVerMasTrabajo .contenedor-cargando > div {
+            width: 2rem;
+            height: 2rem;
+        }
+
+    .empleado.cargandoMas .btnVerMasTrabajo .contenedor-cargando {
+        opacity: 1;
+    }
+
+
+    .empleado.cargandoMas .btnVerMasTrabajo > i {
+        opacity: 0;
+    }
+
+
+.linea {
+    border-left: 1px solid;
+    opacity: 0.5;
+    height: unset;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-top: 4px;
+    margin-bottom: 2px;
+}
+
+.empleado > .contenedor_Encabezado .contenedor_Estado {
+    display: flex;
+    align-self: center;
+}
+
+    .empleado > .contenedor_Encabezado .contenedor_Estado .indicador {
+        margin-right: 0.5rem;
+        opacity: 1 !important;
+        filter: none !important;
+        max-width: 1.1rem !important;
+        max-height: 1.1rem !important;
+        transform: scale(0.8) !important;
+    }
+
+    .empleado > .contenedor_Encabezado .contenedor_Estado .nombre {
+        font-size: 1rem;
+    }
+
+.empleado > .contenedor_Encabezado .contenedor_Foto {
+    align-self: center;
+}
+
+    .empleado > .contenedor_Encabezado .contenedor_Foto > img {
+        cursor: pointer;
+        min-width: 2.5rem;
+        min-height: 2.5rem;
+        max-width: 2.5rem;
+        max-height: 2.5rem;
+        margin-right: 0.6rem;
+        border-radius: 100rem;
+        background-color: white;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+
+.empleado > .separador {
+    border-bottom: 0.2rem solid;
+    /*opacity: 0.4;*/
+}
+
+.empleado:hover {
+    box-shadow: 0 8px 17px 2px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);
+}
+
+.contenedor_Trabajo > .contenedor_Trabajo_Resumen {
+    background: rgba(0,0,0,0.1);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0.6rem;
+}
+
+    .contenedor_Trabajo > .contenedor_Trabajo_Resumen > .texto {
+        flex: 1;
+    }
+
+.contenedor_Trabajo > .contenedor_Trabajo_MasInfo > .contenido.visible {
+    opacity: 1;
+    max-height: 8.5rem;
+    padding: 0.5rem;
+    transition: max-height 0.3s, opacity 0.3s 0.3s, padding 0.3s;
+}
+
+.contenedor_Trabajo > .contenedor_Trabajo_MasInfo .contenido {
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s 0.3s, opacity 0.3s, padding 0.3s 0.3s;
+}
+
+#btn_VerDetalle {
+    align-self: flex-end;
+}
+
+.link {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#content_SinEmpleados {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+    #content_SinEmpleados img {
+        height: 100%;
+        width: 100%;
+    }
+
+    #content_SinEmpleados > label {
+        margin-top: 2rem;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    #content_SinEmpleados a {
+        margin-top: 2rem;
+    }

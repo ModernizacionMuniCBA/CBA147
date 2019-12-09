@@ -1,0 +1,838 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9375352C-A1DE-4AE5-8553-E20A06C4510E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Internet_UI</RootNamespace>
+    <AssemblyName>Internet_UI</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Encriptacion">
+      <HintPath>..\packages\others\Encriptacion.dll</HintPath>
+    </Reference>
+    <Reference Include="FireSharp, Version=2.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FireSharp.2.0.4\lib\portable-net45+sl5+wp8+win8\FireSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FubarCoder.RestSharp.Portable.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=be81bb0f53eab22f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FubarCoder.RestSharp.Portable.Core.4.0.8\lib\net45\FubarCoder.RestSharp.Portable.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FubarCoder.RestSharp.Portable.HttpClient, Version=4.0.0.0, Culture=neutral, PublicKeyToken=be81bb0f53eab22f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FubarCoder.RestSharp.Portable.HttpClient.4.0.8\lib\net45\FubarCoder.RestSharp.Portable.HttpClient.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions.Desktop, Version=1.0.168.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.28.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.28\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.28.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.28\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.6\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="browserconfig.xml" />
+    <Content Include="Controles\ControlMapa.ascx" />
+    <Content Include="Controles\Scripts\ControlMapa.js" />
+    <Content Include="Controles\Styles\ControlMapa.css" />
+    <Content Include="EntitiesSiSi\Libs\Scripts\lottie_api.minified.js" />
+    <Content Include="EntitiesSiSi\Libs\Scripts\lottie_light.min.js" />
+    <Content Include="EntitiesSiSi\Libs\Scripts\recaptcha.js" />
+    <Content Include="EntitiesSiSi\Libs\Scripts\buscador.js" />
+    <Content Include="EntitiesSiSi\Libs\Styles\buscador.css" />
+    <Content Include="manifest.json" />
+    <Content Include="PaginasSiSi\CambiarPassword.aspx" />
+    <Content Include="PaginasSiSi\CambiarUsername.aspx" />
+    <Content Include="PaginasSiSi\CerrarSesion.aspx" />
+    <Content Include="PaginasSiSi\ExperienciaLaboral.aspx" />
+    <Content Include="PaginasSiSi\CompletarPerfil.aspx" />
+    <Content Include="PaginasSiSi\Entrevista.aspx" />
+    <Content Include="PaginasSiSi\PreinscripcionesInfoGlobal.aspx" />
+    <Content Include="PaginasSiSi\Programas.aspx" />
+    <Content Include="PaginasSiSi\Login.aspx" />
+    <Content Include="PaginasSiSi\Inicio.aspx" />
+    <Content Include="PaginasSiSi\MiPerfil.aspx" />
+    <Content Include="PaginasSiSi\Scripts\PreinscripcionesInfoGlobal.js" />
+    <Content Include="PaginasSiSi\Scripts\ExperienciaLaboral.js" />
+    <Content Include="PaginasSiSi\Scripts\Entrevista.js" />
+    <Content Include="PaginasSiSi\Scripts\Programas.js" />
+    <Content Include="PaginasSiSi\Scripts\ValidarDatos.js" />
+    <Content Include="PaginasSiSi\Scripts\CompletarPerfil.js" />
+    <Content Include="PaginasSiSi\Scripts\CambiarPassword.js" />
+    <Content Include="PaginasSiSi\Scripts\CambiarUsername.js" />
+    <Content Include="PaginasSiSi\Scripts\Login.js" />
+    <Content Include="PaginasSiSi\Scripts\MiPerfil.js" />
+    <Content Include="PaginasSiSi\Scripts\Inicio.js" />
+    <Content Include="PaginasSiSi\Scripts\_Master.js" />
+    <Content Include="PaginasSiSi\Styles\PreinscripcionesInfoGlobal.css" />
+    <Content Include="PaginasSiSi\Styles\ExperienciaLaboral.css" />
+    <Content Include="PaginasSiSi\Styles\Entrevista.css" />
+    <Content Include="PaginasSiSi\Styles\Programas.css" />
+    <Content Include="PaginasSiSi\Styles\ValidarDatos.css" />
+    <Content Include="PaginasSiSi\Styles\CompletarPerfil.css" />
+    <Content Include="PaginasSiSi\Styles\CambiarPassword.css" />
+    <Content Include="PaginasSiSi\Styles\CambiarUsername.css" />
+    <Content Include="PaginasSiSi\Styles\Inicio.css" />
+    <Content Include="PaginasSiSi\Styles\Login.css" />
+    <Content Include="PaginasSiSi\Styles\MiPerfil.css" />
+    <Content Include="PaginasSiSi\Styles\_Master.css" />
+    <Content Include="PaginasSiSi\ValidarDatos.aspx" />
+    <Content Include="Paginas\ValidarDatos.aspx" />
+    <Content Include="Paginas\Ajustes.aspx" />
+    <Content Include="Paginas\CambiarUsername.aspx" />
+    <Content Include="Paginas\CambiarPassword.aspx" />
+    <Content Include="Paginas\MiPerfil.aspx" />
+    <Content Include="Paginas\RequerimientoDetalle.aspx" />
+    <Content Include="Paginas\MisRequerimientos.aspx" />
+    <Content Include="Paginas\Scripts\ValidarDatos.js" />
+    <Content Include="Paginas\Scripts\Ajustes.js" />
+    <Content Include="Paginas\Scripts\CambiarUsername.js" />
+    <Content Include="Paginas\Scripts\CambiarPassword.js" />
+    <Content Include="Paginas\Scripts\MiPerfil.js" />
+    <Content Include="Paginas\Scripts\RequerimientoDetalle.js" />
+    <Content Include="Paginas\Scripts\_Master.js" />
+    <Content Include="Paginas\Styles\ValidarDatos.css" />
+    <Content Include="Paginas\Styles\Ajustes.css" />
+    <Content Include="Paginas\Styles\CambiarUsername.css" />
+    <Content Include="Paginas\Styles\CambiarPassword.css" />
+    <Content Include="Paginas\Styles\MiPerfil.css" />
+    <Content Include="Paginas\Styles\RequerimientoDetalle.css" />
+    <Content Include="Paginas\Styles\_Master.css" />
+    <Content Include="Paginas\WebForm1.aspx" />
+    <Content Include="ResourcesSiSi\Imagenes\favicon.png" />
+    <Content Include="ResourcesSiSi\Imagenes\logo-completo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ResourcesSiSi\Imagenes\logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Imagenes\sin-requerimientos.png" />
+    <Content Include="Resources\Imagenes\vecino-virtual.png" />
+    <Content Include="Paginas\_Pagina.Master" />
+    <Content Include="PaginasSiSi\_Pagina.Master" />
+    <None Include="Properties\PublishProfiles\Publish_Internet_UI_Release.pubxml" />
+    <Content Include="Paginas\EstadisticasTV.aspx" />
+    <Content Include="Paginas\CerrarSesion.aspx" />
+    <Content Include="Paginas\Login.aspx" />
+    <Content Include="Paginas\Scripts\EstadisticasTV.js" />
+    <Content Include="Paginas\Styles\EstadisticasTV.css" />
+    <Content Include="Paginas\Styles\Login.css" />
+    <Content Include="packages.config" />
+    <Content Include="Paginas\RequerimientoNuevo.aspx" />
+    <Content Include="Paginas\Scripts\Login.js" />
+    <Content Include="Paginas\Scripts\RequerimientoNuevo.js" />
+    <Content Include="Resources\Imagenes\fondo_login_oscura.jpg" />
+    <Content Include="Resources\Imagenes\escudo-lamuni-blanco-chico.png" />
+    <Content Include="Resources\Imagenes\escudo-lamuni-blanco-grande.png" />
+    <Content Include="Resources\Imagenes\escudo-lamuni-blanco-mediano.png" />
+    <Content Include="Resources\Imagenes\fondo_login_grande.jpg" />
+    <Content Include="Resources\Imagenes\icono_cba147.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Imagenes\logo_cba147_negativo.png" />
+    <Content Include="Resources\Imagenes\logo_solo.png" />
+    <Content Include="Resources\Imagenes\user-male-icon-blanco.png" />
+    <Content Include="Scripts\Libs\fusioncharts.charts.js" />
+    <Content Include="Scripts\Libs\fusioncharts.js" />
+    <Content Include="Scripts\Libs\fusioncharts.powercharts.js" />
+    <Content Include="Scripts\Libs\fusioncharts.theme.fint.js" />
+    <Content Include="Scripts\Libs\fusioncharts.widgets.js" />
+    <Content Include="Scripts\Libs\underscore-min.js" />
+    <Content Include="Scripts\MasterPageBase.js" />
+    <Content Include="Scripts\MasterPage.js" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Resources\Fonts\GothamRounded-Bold.otf" />
+    <Content Include="Resources\Fonts\GothamRounded-Light.otf" />
+    <Content Include="Resources\Fonts\GothamRounded-Medium.otf" />
+    <Content Include="Resources\Fonts\Lato\Lato-Bold.ttf" />
+    <Content Include="Resources\Fonts\Lato\Lato-Light.ttf" />
+    <Content Include="Resources\Fonts\Lato\Lato-Regular.ttf" />
+    <Content Include="Resources\Pdfs\instructivo_uso.pdf" />
+    <Content Include="ServiciosSiSi\ServicioEstudiosAlcanzados.asmx" />
+    <Content Include="ServiciosSiSi\ServicioExperienciaLaboral.asmx" />
+    <Content Include="ServiciosSiSi\ServicioOcupacion.asmx" />
+    <Content Include="ServiciosSiSi\ServicioEntrevista.asmx" />
+    <Content Include="ServiciosSiSi\ServicioPreinscripcion.asmx" />
+    <Content Include="ServiciosSiSi\ServicioPrograma.asmx" />
+    <Content Include="ServiciosSiSi\ServicioUsuarioSisi.asmx" />
+    <Content Include="ServiciosSiSi\_BaseService.asmx" />
+    <Content Include="Servicios\ServicioDomicilio.asmx" />
+    <Content Include="Servicios\ServicioServicio.asmx" />
+    <Content Include="Servicios\ServicioMotivo.asmx" />
+    <Content Include="Servicios\ServicioAjustes.asmx" />
+    <Content Include="Servicios\ServicioEstadoCivil.asmx" />
+    <Content Include="Servicios\ServicioMuniOnline.asmx" />
+    <Content Include="Styles\MasterPageBase.css" />
+    <Content Include="Styles\MasterPage.css" />
+    <Content Include="Paginas\Styles\RequerimientoNuevo.css" />
+    <Content Include="Resources\Anims\anim_success.json" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.Test.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="EntitiesSiSi\Libs\images\sort_asc.png" />
+    <Content Include="EntitiesSiSi\Libs\images\sort_asc_disabled.png" />
+    <Content Include="EntitiesSiSi\Libs\images\sort_both.png" />
+    <Content Include="EntitiesSiSi\Libs\images\sort_desc.png" />
+    <Content Include="EntitiesSiSi\Libs\images\sort_desc_disabled.png" />
+    <Content Include="EntitiesSiSi\Libs\Scripts\fusioncharts.charts.js" />
+    <Content Include="EntitiesSiSi\Libs\Scripts\fusioncharts.js" />
+    <Content Include="EntitiesSiSi\Libs\Scripts\jAlert-functions.min.js" />
+    <Content Include="EntitiesSiSi\Libs\Scripts\jAlert.min.js" />
+    <Content Include="EntitiesSiSi\Libs\Scripts\jquery-3.0.0.min.js" />
+    <Content Include="EntitiesSiSi\Libs\Scripts\jquery-ui.min.js" />
+    <Content Include="EntitiesSiSi\Libs\Scripts\jquery.backstretch.min.js" />
+    <Content Include="EntitiesSiSi\Libs\Scripts\jquery.dataTables.min.js" />
+    <Content Include="EntitiesSiSi\Libs\Scripts\jquery.mask.js" />
+    <Content Include="EntitiesSiSi\Libs\Scripts\jquery.mjs.nestedSortable.js" />
+    <Content Include="EntitiesSiSi\Libs\Scripts\jquery.qtip.min.js" />
+    <Content Include="EntitiesSiSi\Libs\Scripts\jquery.validate.aditional.min.js" />
+    <Content Include="EntitiesSiSi\Libs\Scripts\jquery.validate.min.js" />
+    <Content Include="EntitiesSiSi\Libs\Scripts\list-to-tree.js" />
+    <Content Include="EntitiesSiSi\Libs\Scripts\materialize.min.js" />
+    <Content Include="EntitiesSiSi\Libs\Scripts\moment.js" />
+    <Content Include="EntitiesSiSi\Libs\Scripts\orgchart.js" />
+    <Content Include="EntitiesSiSi\Libs\Scripts\purl.js" />
+    <Content Include="EntitiesSiSi\Libs\Scripts\select2.min.js" />
+    <Content Include="EntitiesSiSi\Libs\Styles\default-skin\default-skin.css" />
+    <Content Include="EntitiesSiSi\Libs\Styles\default-skin\default-skin.png" />
+    <Content Include="EntitiesSiSi\Libs\Styles\default-skin\default-skin.svg" />
+    <Content Include="EntitiesSiSi\Libs\Styles\jAlert.css" />
+    <Content Include="EntitiesSiSi\Libs\Styles\jquery.dataTables.min.css" />
+    <Content Include="EntitiesSiSi\Libs\Styles\jquery.qtip.min.css" />
+    <Content Include="EntitiesSiSi\Libs\Styles\materialize.min.css" />
+    <Content Include="EntitiesSiSi\Libs\Styles\orgchart.css" />
+    <Content Include="EntitiesSiSi\Libs\Styles\select2.materialize.css" />
+    <Content Include="EntitiesSiSi\Libs\Styles\select2.min.css" />
+    <Content Include="Paginas\Scripts\MisRequerimientos.js" />
+    <Content Include="Paginas\Styles\MisRequerimientos.css" />
+    <Content Include="Resources\Fonts\material-design-icons\LICENSE.txt" />
+    <Content Include="Resources\Fonts\material-design-icons\Material-Design-Icons.svg" />
+    <Content Include="Resources\Imagenes\account-circle.png" />
+    <Content Include="Resources\Imagenes\chevron-down.png" />
+    <Content Include="Resources\Imagenes\drag_icon.png" />
+    <Content Include="Resources\Imagenes\Icons\android-icon-144x144.png" />
+    <Content Include="Resources\Imagenes\Icons\android-icon-192x192.png" />
+    <Content Include="Resources\Imagenes\Icons\android-icon-36x36.png" />
+    <Content Include="Resources\Imagenes\Icons\android-icon-48x48.png" />
+    <Content Include="Resources\Imagenes\Icons\android-icon-72x72.png" />
+    <Content Include="Resources\Imagenes\Icons\android-icon-96x96.png" />
+    <Content Include="Resources\Imagenes\Icons\apple-icon-114x114.png" />
+    <Content Include="Resources\Imagenes\Icons\apple-icon-120x120.png" />
+    <Content Include="Resources\Imagenes\Icons\apple-icon-144x144.png" />
+    <Content Include="Resources\Imagenes\Icons\apple-icon-152x152.png" />
+    <Content Include="Resources\Imagenes\Icons\apple-icon-180x180.png" />
+    <Content Include="Resources\Imagenes\Icons\apple-icon-57x57.png" />
+    <Content Include="Resources\Imagenes\Icons\apple-icon-60x60.png" />
+    <Content Include="Resources\Imagenes\Icons\apple-icon-72x72.png" />
+    <Content Include="Resources\Imagenes\Icons\apple-icon-76x76.png" />
+    <Content Include="Resources\Imagenes\Icons\apple-icon-precomposed.png" />
+    <Content Include="Resources\Imagenes\Icons\apple-icon.png" />
+    <Content Include="Resources\Imagenes\Icons\favicon-16x16.png" />
+    <Content Include="Resources\Imagenes\Icons\favicon-32x32.png" />
+    <Content Include="Resources\Imagenes\Icons\favicon-96x96.png" />
+    <Content Include="Resources\Imagenes\Icons\ms-icon-144x144.png" />
+    <Content Include="Resources\Imagenes\Icons\ms-icon-150x150.png" />
+    <Content Include="Resources\Imagenes\Icons\ms-icon-310x310.png" />
+    <Content Include="Resources\Imagenes\Icons\ms-icon-70x70.png" />
+    <Content Include="Resources\Imagenes\logo_muni.png" />
+    <Content Include="Resources\Imagenes\Slider\slide-1.jpg" />
+    <Content Include="Resources\Imagenes\Slider\slide-2.jpg" />
+    <Content Include="Resources\Imagenes\Slider\slide-3.jpg" />
+    <Content Include="Resources\Imagenes\Slider\slide-4.jpg" />
+    <Content Include="Resources\Imagenes\Slider\slide-5.jpg" />
+    <Content Include="Resources\Imagenes\Slider\slide-9.jpg" />
+    <Content Include="Resources\Imagenes\user-male-icon.png" />
+    <Content Include="Resources\Fonts\material-design-icons\fontIconos.woff2" />
+    <Content Include="Resources\Fonts\material-design-icons\Material-Design-Icons.eot" />
+    <Content Include="Resources\Fonts\material-design-icons\Material-Design-Icons.ttf" />
+    <Content Include="Resources\Fonts\material-design-icons\Material-Design-Icons.woff" />
+    <Content Include="Resources\Fonts\material-design-icons\Material-Design-Icons.woff2" />
+    <Content Include="Resources\Fonts\roboto\Roboto-Bold.eot" />
+    <Content Include="Resources\Fonts\roboto\Roboto-Bold.ttf" />
+    <Content Include="Resources\Fonts\roboto\Roboto-Bold.woff" />
+    <Content Include="Resources\Fonts\roboto\Roboto-Bold.woff2" />
+    <Content Include="Resources\Fonts\roboto\Roboto-Light.eot" />
+    <Content Include="Resources\Fonts\roboto\Roboto-Light.ttf" />
+    <Content Include="Resources\Fonts\roboto\Roboto-Light.woff" />
+    <Content Include="Resources\Fonts\roboto\Roboto-Light.woff2" />
+    <Content Include="Resources\Fonts\roboto\Roboto-Medium.eot" />
+    <Content Include="Resources\Fonts\roboto\Roboto-Medium.ttf" />
+    <Content Include="Resources\Fonts\roboto\Roboto-Medium.woff" />
+    <Content Include="Resources\Fonts\roboto\Roboto-Medium.woff2" />
+    <Content Include="Resources\Fonts\roboto\Roboto-Regular.eot" />
+    <Content Include="Resources\Fonts\roboto\Roboto-Regular.ttf" />
+    <Content Include="Resources\Fonts\roboto\Roboto-Regular.woff" />
+    <Content Include="Resources\Fonts\roboto\Roboto-Regular.woff2" />
+    <Content Include="Resources\Fonts\roboto\Roboto-Thin.eot" />
+    <Content Include="Resources\Fonts\roboto\Roboto-Thin.ttf" />
+    <Content Include="Resources\Fonts\roboto\Roboto-Thin.woff" />
+    <Content Include="Resources\Fonts\roboto\Roboto-Thin.woff2" />
+    <Content Include="Servicios\ServicioRequerimiento.asmx" />
+    <Content Include="Servicios\ServicioUsuario.asmx" />
+    <Content Include="Servicios\_BaseService.asmx" />
+    <Content Include="Utils\Scripts\utils.js" />
+    <Content Include="Utils\Scripts\utils_datatable.js" />
+    <Content Include="Utils\Scripts\utils_dialogo.js" />
+    <Content Include="Utils\Styles\utils.css" />
+    <Content Include="Utils\Styles\utils_datatable.css" />
+    <Content Include="Utils\Styles\utils_dialogo.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controles\ControlMapa.ascx.cs">
+      <DependentUpon>ControlMapa.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\ControlMapa.ascx.designer.cs">
+      <DependentUpon>ControlMapa.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EntitiesSiSi\Comandos\ComandoApp_Entrevista.cs" />
+    <Compile Include="EntitiesSiSi\Comandos\ComandoApp_Preinscripcion_InfoGlobal.cs" />
+    <Compile Include="EntitiesSiSi\Comandos\ComandoApp_ExperienciaLaboral.cs" />
+    <Compile Include="EntitiesSiSi\Comandos\ComandoApp_Preinscripcion.cs" />
+    <Compile Include="EntitiesSiSi\Comandos\ComandoApp_UsuarioSiSi.cs" />
+    <Compile Include="EntitiesSiSi\Resultados\ResultadoApp_Curso.cs" />
+    <Compile Include="EntitiesSiSi\Resultados\ResultadoApp_EstudiosAlcanzados.cs" />
+    <Compile Include="EntitiesSiSi\Resultados\ResultadoApp_ExperienciaLaboral.cs" />
+    <Compile Include="EntitiesSiSi\Resultados\ResultadoApp_Ocupacion.cs" />
+    <Compile Include="EntitiesSiSi\Resultados\ResultadoApp_Preinscripcion.cs" />
+    <Compile Include="EntitiesSiSi\Resultados\ResultadoApp_Programa.cs" />
+    <Compile Include="EntitiesSiSi\Resultados\ResultadoApp_UsuarioSisi.cs" />
+    <Compile Include="Entities\Comandos\ComandoApp_AppDataKey.cs" />
+    <Compile Include="Entities\Comandos\ComandoApp_Requerimiento.cs">
+      <SubType>
+      </SubType>
+    </Compile>
+    <Compile Include="Entities\Comandos\ComandoApp_UsuarioCambiarUsername.cs" />
+    <Compile Include="Entities\Comandos\ComandoApp_UsuarioDomicilio.cs" />
+    <Compile Include="Entities\Comandos\ComandoApp_UsuarioEditarDatosPersonales.cs">
+      <SubType>
+      </SubType>
+    </Compile>
+    <Compile Include="Entities\Comandos\ComandoApp_UsuarioEditarDatosContacto.cs">
+      <SubType>
+      </SubType>
+    </Compile>
+    <Compile Include="Entities\Comandos\ComandoApp_UsuarioEditar.cs">
+      <SubType>
+      </SubType>
+    </Compile>
+    <Compile Include="Entities\Comandos\ComandoApp_UsuarioCambiarPassword.cs" />
+    <Compile Include="Entities\Comandos\ComandoApp_UsuarioEditarFotoPersonal.cs">
+      <SubType>
+      </SubType>
+    </Compile>
+    <Compile Include="Entities\Comandos\ComandoApp_UsuarioIniciarActivacion.cs" />
+    <Compile Include="Entities\Comandos\ComandoApp_UsuarioNuevo.cs">
+      <SubType>
+      </SubType>
+    </Compile>
+    <Compile Include="Entities\Resultados\ResultadoApp_AppMuniOnline.cs" />
+    <Compile Include="Entities\Resultados\ResultadoApp_Ajustes.cs" />
+    <Compile Include="Entities\Resultados\ResultadoApp_Barrio.cs">
+      <SubType>
+      </SubType>
+    </Compile>
+    <Compile Include="Entities\Resultados\ResultadoApp_Cpc.cs">
+      <SubType>
+      </SubType>
+    </Compile>
+    <Compile Include="Entities\Resultados\ResultadoApp_Domicilio.cs">
+      <SubType>
+      </SubType>
+    </Compile>
+    <Compile Include="Entities\Resultados\ResultadoApp_EstadoRequerimiento.cs">
+      <SubType>
+      </SubType>
+    </Compile>
+    <Compile Include="Entities\Resultados\ResultadoApp_EstadoRequerimientoHistorial.cs">
+      <SubType>
+      </SubType>
+    </Compile>
+    <Compile Include="Entities\Resultados\ResultadoApp_Motivo.cs">
+      <SubType>
+      </SubType>
+    </Compile>
+    <Compile Include="Entities\Resultados\ResultadoApp_RequerimientoDetalle.cs">
+      <SubType>
+      </SubType>
+    </Compile>
+    <Compile Include="Entities\Resultados\ResultadoApp_RequerimientoListado.cs">
+      <SubType>
+      </SubType>
+    </Compile>
+    <Compile Include="Entities\Resultados\ResultadoApp_RequerimientoInsertado.cs">
+      <SubType>
+      </SubType>
+    </Compile>
+    <Compile Include="Entities\Resultados\ResultadoApp_Servicio.cs">
+      <SubType>
+      </SubType>
+    </Compile>
+    <Compile Include="Entities\Resultados\ResultadoApp_ServicioMotivoParaBusqueda.cs">
+      <SubType>
+      </SubType>
+    </Compile>
+    <Compile Include="Entities\Resultados\ResultadoApp_EstadoCivil.cs" />
+    <Compile Include="Entities\Resultados\ResultadoApp_Usuario.cs">
+      <SubType>
+      </SubType>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="PaginasSiSi\CambiarPassword.aspx.cs">
+      <DependentUpon>CambiarPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginasSiSi\CambiarPassword.aspx.designer.cs">
+      <DependentUpon>CambiarPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaginasSiSi\CambiarUsername.aspx.cs">
+      <DependentUpon>CambiarUsername.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginasSiSi\CambiarUsername.aspx.designer.cs">
+      <DependentUpon>CambiarUsername.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaginasSiSi\CerrarSesion.aspx.cs">
+      <DependentUpon>CerrarSesion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginasSiSi\CerrarSesion.aspx.designer.cs">
+      <DependentUpon>CerrarSesion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaginasSiSi\ExperienciaLaboral.aspx.cs">
+      <DependentUpon>ExperienciaLaboral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginasSiSi\ExperienciaLaboral.aspx.designer.cs">
+      <DependentUpon>ExperienciaLaboral.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaginasSiSi\CompletarPerfil.aspx.cs">
+      <DependentUpon>CompletarPerfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginasSiSi\CompletarPerfil.aspx.designer.cs">
+      <DependentUpon>CompletarPerfil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaginasSiSi\Entrevista.aspx.cs">
+      <DependentUpon>Entrevista.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginasSiSi\Entrevista.aspx.designer.cs">
+      <DependentUpon>Entrevista.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaginasSiSi\PreinscripcionesInfoGlobal.aspx.cs">
+      <DependentUpon>PreinscripcionesInfoGlobal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginasSiSi\PreinscripcionesInfoGlobal.aspx.designer.cs">
+      <DependentUpon>PreinscripcionesInfoGlobal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaginasSiSi\Programas.aspx.cs">
+      <DependentUpon>Programas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginasSiSi\Programas.aspx.designer.cs">
+      <DependentUpon>Programas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaginasSiSi\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginasSiSi\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaginasSiSi\Inicio.aspx.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginasSiSi\Inicio.aspx.designer.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaginasSiSi\MiPerfil.aspx.cs">
+      <DependentUpon>MiPerfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginasSiSi\MiPerfil.aspx.designer.cs">
+      <DependentUpon>MiPerfil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaginasSiSi\ValidarDatos.aspx.cs">
+      <DependentUpon>ValidarDatos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginasSiSi\ValidarDatos.aspx.designer.cs">
+      <DependentUpon>ValidarDatos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaginasSiSi\_Pagina.Master.cs">
+      <DependentUpon>_Pagina.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginasSiSi\_Pagina.Master.designer.cs">
+      <DependentUpon>_Pagina.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Ajustes.aspx.cs">
+      <DependentUpon>Ajustes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Ajustes.aspx.designer.cs">
+      <DependentUpon>Ajustes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\CambiarUsername.aspx.cs">
+      <DependentUpon>CambiarUsername.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\CambiarUsername.aspx.designer.cs">
+      <DependentUpon>CambiarUsername.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\EstadisticasTV.aspx.cs">
+      <DependentUpon>EstadisticasTV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\EstadisticasTV.aspx.designer.cs">
+      <DependentUpon>EstadisticasTV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\CerrarSesion.aspx.cs">
+      <DependentUpon>CerrarSesion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\CerrarSesion.aspx.designer.cs">
+      <DependentUpon>CerrarSesion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\ValidarDatos.aspx.cs">
+      <DependentUpon>ValidarDatos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\ValidarDatos.aspx.designer.cs">
+      <DependentUpon>ValidarDatos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\CambiarPassword.aspx.cs">
+      <DependentUpon>CambiarPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\CambiarPassword.aspx.designer.cs">
+      <DependentUpon>CambiarPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\MiPerfil.aspx.cs">
+      <DependentUpon>MiPerfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\MiPerfil.aspx.designer.cs">
+      <DependentUpon>MiPerfil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\RequerimientoDetalle.aspx.cs">
+      <DependentUpon>RequerimientoDetalle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\RequerimientoDetalle.aspx.designer.cs">
+      <DependentUpon>RequerimientoDetalle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\MisRequerimientos.aspx.cs">
+      <DependentUpon>MisRequerimientos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\MisRequerimientos.aspx.designer.cs">
+      <DependentUpon>MisRequerimientos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\_Pagina.Master.cs">
+      <DependentUpon>_Pagina.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\_Pagina.Master.designer.cs">
+      <DependentUpon>_Pagina.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\RequerimientoNuevo.aspx.cs">
+      <DependentUpon>RequerimientoNuevo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\RequerimientoNuevo.aspx.designer.cs">
+      <DependentUpon>RequerimientoNuevo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ServiciosSiSi\ServicioEntrevista.asmx.cs">
+      <DependentUpon>ServicioEntrevista.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ServiciosSiSi\ServicioUsuarioSisi.asmx.cs">
+      <DependentUpon>ServicioUsuarioSisi.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ServiciosSiSi\ServicioPreinscripcion.asmx.cs">
+      <DependentUpon>ServicioPreinscripcion.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ServiciosSiSi\ServicioOcupacion.asmx.cs">
+      <DependentUpon>ServicioOcupacion.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ServiciosSiSi\ServicioExperienciaLaboral.asmx.cs">
+      <DependentUpon>ServicioExperienciaLaboral.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ServiciosSiSi\ServicioEstudiosAlcanzados.asmx.cs">
+      <DependentUpon>ServicioEstudiosAlcanzados.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ServiciosSiSi\ServicioPrograma.asmx.cs">
+      <DependentUpon>ServicioPrograma.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ServiciosSiSi\_BaseService.asmx.cs">
+      <DependentUpon>_BaseService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Servicios\ServicioServicio.asmx.cs">
+      <DependentUpon>ServicioServicio.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Servicios\ServicioMotivo.asmx.cs">
+      <DependentUpon>ServicioMotivo.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Servicios\ServicioAjustes.asmx.cs">
+      <DependentUpon>ServicioAjustes.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Servicios\ServicioEstadoCivil.asmx.cs">
+      <DependentUpon>ServicioEstadoCivil.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EntitiesSiSi\Comandos\ComandoApp_CompletarPerfil.cs" />
+    <Compile Include="Servicios\ServicioMuniOnline.asmx.cs">
+      <DependentUpon>ServicioMuniOnline.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utils\JsUtils.cs" />
+    <Compile Include="Utils\ReCaptchaClass.cs" />
+    <Compile Include="Resources\Recursos_RequerimientoNuevo.Designer.cs">
+      <DependentUpon>Recursos_RequerimientoNuevo.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Recursos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Recursos.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Servicios\ServicioDomicilio.asmx.cs">
+      <DependentUpon>ServicioDomicilio.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Servicios\ServicioRequerimiento.asmx.cs">
+      <DependentUpon>ServicioRequerimiento.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Servicios\ServicioUsuario.asmx.cs">
+      <DependentUpon>ServicioUsuario.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Servicios\_BaseService.asmx.cs">
+      <DependentUpon>_BaseService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utils\RestCall.cs" />
+    <Compile Include="Utils\Resultado.cs" />
+    <Compile Include="Utils\Consts.cs" />
+    <Compile Include="Utils\Strings\Strings_RequerimientoNuevo.cs" />
+    <Compile Include="Utils\Strings\_Strings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Recursos_RequerimientoNuevo.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Recursos_RequerimientoNuevo.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Recursos.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Recursos.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Start\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Test|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>30615</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:30615/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

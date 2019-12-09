@@ -1,0 +1,284 @@
+﻿
+.jAlert label, .jAlert a {
+    font-family: GothamRounded;
+    font-weight: 400;
+}
+
+.jAlert label {
+    color: var(--colorTexto);
+    font-size: 1.3rem;
+}
+
+.input-field label {
+    font-size: 1rem;
+}
+
+.ja_wrap {
+    background-color: transparent !important;
+    transition: background-color 1s;
+    overflow: hidden;
+}
+
+    .ja_wrap.open {
+        background-color: rgba(0,0,0,0.4) !important;
+    }
+
+.jAlert {
+    background: white !important;
+}
+
+    .jAlert.width {
+        width: 100% !important;
+    }
+
+
+.ja_default {
+    background: white !important;
+}
+
+.ja_title {
+    position: relative !important;
+    background-color: var(--colorCard);
+    padding: 24px 24px 0 24px;
+    line-height: 32px;
+}
+
+    .ja_title div {
+        font-family: "GothamRounded" !important;
+        font-size: 1rem !important;
+        padding: 0 !important;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        font-size: 1rem;
+        line-height: 1;
+        font-weight: 400;
+    }
+
+        .ja_title div > label {
+            flex: 1;
+            color: #424242;
+            font-size: 1.5rem;
+            font-weight: 400;
+            line-height: 1;
+        }
+
+        .ja_title div .titulo {
+            font-size: 1rem;
+            line-height: 1;
+            font-weight: 400;
+        }
+
+        .ja_title div i.material-icons {
+            margin-left: 16px;
+            vertical-align: middle !important;
+            margin-right: 16px;
+        }
+
+        .ja_title div .detalle {
+            font-size: 1rem;
+            line-height: 1;
+        }
+
+
+
+.jAlert div > div.closejAlert.ja_close.ja_close_round {
+    background: transparent !important;
+    font-size: 2rem !important;
+    color: rgba(0,0,0,0.7) !important;
+    top: 0px !important;
+    right: 0px !important;
+    line-height: 32px;
+    padding: 0;
+    width: 32px;
+    text-align: center;
+}
+
+.ja_body {
+    padding: 12px 24px 12px 24px;
+    background-color: var(--colorCard) !important;
+}
+
+.ja_media_wrap {
+    padding: 16px !important;
+}
+
+.jAlert.no-padding .ja_media_wrap {
+    padding: 0 !important;
+}
+
+.ja_btn_wrap.optBack {
+    margin: 0 !important;
+    display: flex !important;
+    align-items: flex-end !important;
+    flex-direction: row !important;
+    justify-content: flex-end; /* padding: 16px; */
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    padding-bottom: 8px !important;
+    background-color: transparent !important;
+}
+
+    .ja_btn_wrap.optBack .btn:not(:last-child), .ja_btn_wrap.optBack .btn-flat:not(:last-child) {
+        margin-right: 8px;
+    }
+
+
+.ja_body form.padding {
+    padding: 0 !important;
+}
+
+.ja_body .ja_btn_wrap.optBack {
+    padding: 12px 0 0 0 !important;
+}
+
+    .ja_body .ja_btn_wrap.optBack a {
+        background-color: transparent !important;
+        color: #212121 !important;
+        padding-left: 8px;
+        padding-right: 8px;
+        box-shadow: none !important;
+        font-family: Roboto;
+        font-weight: 500;
+        letter-spacing: 0.05rem;
+    }
+
+        .ja_body .ja_btn_wrap.optBack a:hover {
+            background-color: #EEEEEE !important;
+        }
+
+        .ja_body .ja_btn_wrap.optBack a.colorExito {
+            color: var(--colorExito) !important;
+        }
+
+            .ja_body .ja_btn_wrap.optBack a.colorExito:hover {
+                background: var(--colorExitoHover) !important;
+            }
+
+
+.menu-flotante {
+    z-index: 99999999;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    overflow: auto;
+    background-color: var(--colorCard);
+    border-radius: 0.5rem;
+    box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.3);
+    transform: scale(0.7,0.7);
+    opacity: 0 !important;
+    transition: transform 0.2s, opacity 0.2s;
+    transform-origin: 100% 0%;
+}
+
+    .menu-flotante.todo-el-ancho {
+        transform: scale(1,0.7);
+    }
+
+    .menu-flotante.arriba-izquierda {
+        transform-origin: 100% 100%;
+    }
+
+        .menu-flotante.arriba-izquierda.todo-el-ancho {
+            transform-origin: 50% 100%;
+        }
+
+    .menu-flotante.arriba-derecha {
+        transform-origin: 0% 100%;
+    }
+
+        .menu-flotante.arriba-derecha.todo-el-ancho {
+            transform-origin: 50% 100%;
+        }
+
+    .menu-flotante.abajo-izquierda {
+        transform-origin: 100% 0%;
+    }
+
+        .menu-flotante.abajo-izquierda.todo-el-ancho {
+            transform-origin: 50% 0%;
+        }
+
+    .menu-flotante.abajo-derecha {
+        transform-origin: 0% 0%;
+    }
+
+        .menu-flotante.abajo-derecha.todo-el-ancho {
+            transform-origin: 50% 0%;
+        }
+
+    .menu-flotante.abierto {
+        opacity: 1 !important;
+        transform: scale(1,1);
+    }
+
+    .menu-flotante > ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu-flotante .menu-item {
+        min-height: 48px;
+        max-height: 48px;
+        height: 48px;
+        white-space: nowrap;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        text-overflow: ellipsis;
+        cursor: pointer;
+        transition: background-color 0.5s;
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+    }
+
+        .menu-flotante .menu-item:hover {
+            background-color: var(--colorDrawerItemHover);
+        }
+
+        .menu-flotante .menu-item.menu-separador {
+            background-color: transparent !important;
+            min-height: 0;
+            max-height: 0;
+            height: 0;
+            cursor: default;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .menu-flotante .menu-item > .texto {
+            color: var(--colorTexto);
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+
+.menu-flotante-fondo {
+    z-index: 99999999;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+    background-color: transparent;
+}
+
+    .menu-flotante-fondo > div {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.1);
+    }
+
+    .menu-flotante-fondo.abierto {
+        opacity: 1;
+    }

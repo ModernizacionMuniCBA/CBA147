@@ -1,0 +1,35 @@
+﻿#checkboxEstados {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+    #checkboxEstados label:not(:last-child) {
+        margin-right: 16px;
+    }
+
+    #checkboxEstados > label {
+        color: rgba(0,0,0,0.87);
+        display: flex;
+    }
+
+    #contenedor_EncabezadoResultado {
+    padding: 0.5rem;
+    padding-left: 1rem;
+}
+
+#btnCambiarFiltros {
+    color: rgba(0,0,0,0.6);
+    margin-left: 1rem;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+    #btnCambiarFiltros:hover {
+        font-weight:600;
+        text-decoration: underline;
+    }
+
+    #contenedor_Area .mostrar{
+        transition:all 1s;
+        height:100%!important;
+    }

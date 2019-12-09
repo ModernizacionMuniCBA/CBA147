@@ -1,0 +1,139 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="_MasterPageIFrame.Master.cs" Inherits="UI.IFrame._MasterPageIFrame" ClientIDMode="Static" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+    <!-- Materialize -->
+    <link type="text/css" rel="stylesheet" href="<%=ResolveUrl("~/Styles/Libs/materialize.min.css")%>" media="screen,projection" />
+
+    <!-- Master Base -->
+    <link type="text/css" rel="stylesheet" href="<%=ResolveUrl("~/Styles/_MasterPageSinLogin.css?v=" + ConfigurationManager.AppSettings["VERSION"])%>" media="screen,projection" />
+
+    <!-- DataTables -->
+    <link type="text/css" rel="stylesheet" href="<%=ResolveUrl("~/Styles/Libs/jquery.dataTables.min.css")%>" media="screen,projection" />
+
+    <!--Select2 -->
+    <link type="text/css" rel="stylesheet" href="<%=ResolveUrl("~/Styles/Libs/select2.min.css")%>" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="<%=ResolveUrl("~/Styles/Libs/select2.materialize.css")%>" media="screen,projection" />
+
+    <!-- JAlert -->
+    <link type="text/css" rel="stylesheet" href="<%=ResolveUrl("~/Styles/Libs/jAlert.css")%>" media="screen,projection" />
+
+    <!-- Tooltip -->
+    <link type="text/css" rel="stylesheet" href="<%=ResolveUrl("~/Styles/Libs/jquery.qtip.min.css")%>" media="screen,projection" />
+
+    <!-- Dialogo -->
+    <link type="text/css" rel="stylesheet" href="<%=ResolveUrl("~/Styles/Utils/utils_dialogo.css?v=" + ConfigurationManager.AppSettings["VERSION"])%>" media="screen,projection" />
+
+    <!-- Let browser know website is optimized for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Material icons-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/2.4.85/css/materialdesignicons.min.css" rel="stylesheet" />
+
+    <!-- Titulo -->
+    <title></title>
+
+    <style>
+        html,
+        body {
+            background-color: transparent !important;
+            overflow: hidden;
+        }
+
+        #contenedor-principal {
+            width: 100%;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <script type="text/javascript">
+        var urlCordobaGeoApi = "<%= ConfigurationManager.AppSettings["URL_CORDOBA_GEO_API"] %>"
+        var baseUrl = "<%= ResolveUrl("~/") %>";
+        const KEY_GOOGLE_MAPS = "<%= ConfigurationManager.AppSettings["KEY_GOOGLE_MAPS"] %>";
+    </script>
+
+
+    <!--JQuery-->
+    <script type="text/javascript" src="<%=ResolveUrl("~/Scripts/Libs/jquery-3.0.0.min.js") %>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/Scripts/Libs/purl.js") %>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/Scripts/Libs/jquery.validate.min.js") %>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/Scripts/Libs/jquery.validate.aditional.min.js") %>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/Scripts/Libs/underscore-min.js") %>"></script>
+
+    <!-- Materialize -->
+    <script type="text/javascript" src="<%=ResolveUrl("~/Scripts/Libs/materialize.min.js") %>"></script>
+
+    <!-- DataTables -->
+    <script type="text/javascript" src="<%=ResolveUrl("~/Scripts/Libs/jquery.dataTables.min.js") %>"></script>
+    <script type="text/javascript">
+        //Datatables
+        $.fn.dataTableExt.oStdClasses.sPageButton = "btn-flat btn-paginacion waves-effect";
+        $.fn.dataTableExt.oStdClasses.sPageButtonActive = "grey white-text waves-light";
+    </script>
+
+    <!-- Mask -->
+    <script type="text/javascript" src="<%=ResolveUrl("~/Scripts/Libs/jquery.mask.js") %>"></script>
+
+    <!-- Select2 -->
+    <script type="text/javascript" src="<%=ResolveUrl("~/Scripts/Libs/select2.min.js") %>"></script>
+
+    <!-- JAlert -->
+    <script type="text/javascript" src="<%=ResolveUrl("~/Scripts/Libs/jAlert.min.js") %>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/Scripts/Libs/jAlert-functions.min.js") %>"></script>
+
+    <!-- Moments -->
+    <script type="text/javascript" src="<%=ResolveUrl("~/Scripts/Libs/moment.js") %>"></script>
+
+    <!-- Tooltip -->
+    <script type="text/javascript" src="<%=ResolveUrl("~/Scripts/Libs/jquery.qtip.min.js") %>"></script>
+
+    <!-- Dialogo -->
+    <script type="text/javascript" src="<%=ResolveUrl("~/Scripts/Utils/utils_dialogo.js?v=" + ConfigurationManager.AppSettings["VERSION"]) %>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/Scripts/Utils/utils_camposdinamicos.js?v=" + ConfigurationManager.AppSettings["VERSION"]) %>"></script>
+
+    <div id="contenedor-principal" class="flex direction-vertical full-height no-scroll">
+
+        <!-- Body -->
+        <div id="main" class="flex direction-vertical full-height">
+
+            <!-- Contenido -->
+            <asp:ContentPlaceHolder ID="body" runat="server">
+            </asp:ContentPlaceHolder>
+
+        </div>
+
+    </div>
+
+    <form id="form2" runat="server">
+        <!-- ScriptManager -->
+        <asp:ScriptManager runat="server" EnablePartialRendering="True" EnablePageMethods="true" ID="scriptManager1" />
+    </form>
+
+    <div id="errorCritico">
+        <i class="material-icons"></i>
+        <div class="textos">
+            <label class="titulo"></label>
+            <label class="detalle"></label>
+        </div>
+
+    </div>
+
+    <!-- Mi JS -->
+    <script type="text/javascript" src="<%=ResolveUrl("~/IFrame/Scripts/_MasterPageIframe.js?v=" + ConfigurationManager.AppSettings["VERSION"]) %>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/Scripts/Utils/js.js?v=" + ConfigurationManager.AppSettings["VERSION"]) %>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/Scripts/Utils/validaciones.js?v=" + ConfigurationManager.AppSettings["VERSION"]) %>"></script>
+    <script type="text/javascript">
+        initJs();
+    </script>
+
+</body>
+</html>

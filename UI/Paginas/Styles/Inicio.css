@@ -1,0 +1,90 @@
+﻿
+.contenedor {
+}
+
+    .contenedor > .contenedor-header {
+        margin: 8px;
+        margin-bottom: 0;
+        min-height: 0;
+        flex-direction: initial;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+        .contenedor > .contenedor-header > .titulo {
+            font-size: 1.5rem;
+        }
+
+        .contenedor > .contenedor-header > .detalle {
+            font-size: 1rem;
+        }
+
+        .contenedor > .contenedor-header > .numero {
+            position: absolute;
+            right: 8px;
+            font-size: 2rem;
+            color: rgba(0,0,0,0.6);
+        }
+
+.grafico {
+    height: 300px;
+}
+
+.fila .cuadrado {
+    width: 100%;
+    height: 300px;
+}
+
+.fila > .card:not(:last-child) {
+    margin-right: 1.5rem;
+}
+
+
+.contenedor-numero {
+    display: flex;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+    .contenedor-numero > label {
+        font-size: 3rem;
+        color: black;
+    }
+
+.separador-vertical {
+    height: 100%;
+    width: 1px;
+    background-color: rgba(0,0,0,0.1);
+}
+
+
+.contenedor > .numero {
+    position: absolute;
+    bottom: 0px;
+    background-color: rgb(250,250,250);
+    left: 0px;
+    padding: 8px;
+    right: 0px;
+    color: black;
+    font-size: 1rem;
+}
+
+.contenedor > .btn {
+    position: absolute;
+    bottom: 8px;
+    background-color: rgb(250,250,250);
+    right: 8px;
+}
+
+#cardBusqueda {
+    align-items: center;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+    #cardBusqueda > input {
+        border: none !important;
+        box-shadow: none;
+        margin-left: 8px;
+    }

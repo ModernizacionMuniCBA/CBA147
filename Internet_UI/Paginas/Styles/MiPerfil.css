@@ -1,0 +1,65 @@
+﻿#contenedor_FotoPersonal {
+    text-align: center;
+    margin-top: 0;
+}
+
+#fotoPersonal {
+    display: inline-block;
+    min-width: 15rem;
+    min-height: 15rem;
+    max-height: 15rem;
+    max-width: 15rem;
+    border-radius: 15rem;
+    background-color: #ccc;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+    #fotoPersonal:after {
+        content: 'Cambiar imagen';
+        color: #fff;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        background-color: rgba(0,0,0,0.2);
+        width: 15rem;
+        height: 15rem;
+        border-radius: 15rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        opacity: 0;
+        transition: opacity 0.5s;
+    }
+
+    #fotoPersonal:hover:after {
+        opacity: 1;
+    }
+
+
+#contenedor_DatosAcceso .textos {
+    width: auto;
+}
+
+#contenedor_DatosAcceso .link {
+    padding-left: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+    #contenedor_DatosAcceso .link,
+    #contenedor_DatosAcceso .link * {
+        color: var(--colorMuniVerde);
+    }
+
+.text-input {
+    padding: 0 !important;
+    display: block;
+    line-height: 2rem;
+}
+
+    .text-input.s2 {
+        padding-right: 0.5rem !important;
+        text-align: right;
+    }

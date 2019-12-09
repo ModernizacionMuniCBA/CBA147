@@ -1,0 +1,15 @@
+﻿.texto {
+    padding: 16px;
+    max-width: 80rem;
+    font-size: 2.4rem;
+    color: black;
+}
+
+
+#sin-items {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

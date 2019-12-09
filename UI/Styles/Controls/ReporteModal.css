@@ -1,0 +1,11 @@
+﻿.modal {
+    width: 80%;
+    height: 500px;
+    left: 0px;
+    margin-left: 10%;
+}
+
+   .modal-body {
+        height:100%;
+    }
+

@@ -1,0 +1,252 @@
+﻿#cardFormulario {
+    height: 100%;
+}
+
+#btn_SeleccionarDomicilio {
+    background-color: var(--colorButton) !important;
+    color: var(--colorButton_Texto) !important;
+}
+
+    #btn_SeleccionarDomicilio > .btn-icono {
+        color: var(--colorbutton_texto) !important;
+    }
+
+/*Referente */
+#contenedor_Genero {
+    margin-top: 24px;
+}
+
+/*Usuarios */
+#btn_BuscarUsuario {
+    width: fit-content;
+    margin-top: 10px;
+}
+
+.usuarioSeleccionado {
+    padding: 12px;
+}
+
+/* #contenedor_UsuarioSeleccionado {
+  transition: opacity 0.3s 0s;
+}
+
+#contenedor_UsuarioSeleccionado.visible {
+  transition: opacity 0.3s 0.3s;
+} */
+
+#contenedor_ReferenteProvisorio, #contenedor_DatosAdicionales,#contenedor_Observaciones {
+    transition:  all 0.2s;
+    opacity: 0;
+    min-height: 0;
+    max-height: 0;
+    overflow: hidden;
+}
+
+    #contenedor_ReferenteProvisorio.visible , #contenedor_DatosAdicionales.visible, #contenedor_Observaciones.visible {
+        transition: all 0.2s;
+        opacity: 1;
+        max-height: fit-content;
+        /* height: 100%; */
+    }
+
+.usuarioSeleccionado > div > div {
+    display: flex;
+    flex-direction: column;
+}
+
+#btnCancelarUsuarioSeleccionado {
+    margin-left: 24px;
+}
+
+.seccionNombre {
+    margin-left: 1rem;
+    display: flex;
+    margin-bottom: 8px;
+    align-items: center;
+}
+
+    .seccionNombre label {
+        min-width: 6rem;
+    }
+
+.divisor {
+    background-color: rgba(0,0,0,0.1);
+    width: 1px;
+    height: 100%;
+}
+
+.contenedor-main {
+    padding: 0 !important;
+}
+
+#contenedor-camposDinamicos {
+    flex: 2;
+    width: 100%;
+    padding-left: 16px;
+    overflow: auto;
+    padding: 1rem;
+}
+
+#contenedor-formulario {
+    padding-right: 16px;
+    overflow: auto;
+    padding: 1rem;
+}
+
+/* Categorias de motivos */
+.seccion-motivos {
+    padding: 1rem;
+}
+
+#contenedor-categorias {
+    display: flex;
+}
+
+.categoria {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    background-color: white !important;
+}
+
+    .categoria:hover {
+        background-color: var(--colorButton) !important;
+    }
+
+    .categoria.oculto {
+        display: block;
+        max-height: 0 !important;
+        min-height: 0 !important;
+        opacity: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        border-bottom: 0px solid rgba(0, 0, 0, 0.1);
+        pointer-events: none;
+    }
+
+    .categoria.activo {
+        background-color: var(--colorButton) !important;
+    }
+
+/*Motivos*/
+#contenedor-motivos {
+    transition: all 0.3s;
+}
+
+.motivo {
+    display: flex;
+    padding: 0.5rem;
+    max-width: 40rem;
+    border-radius: 1rem;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s;
+}
+
+    .motivo.oculto {
+        display: block;
+        max-height: 0 !important;
+        min-height: 0 !important;
+        opacity: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        border-bottom: 0px solid rgba(0, 0, 0, 0.1);
+        pointer-events: none;
+    }
+
+    .motivo:first-child {
+        border-top: none;
+    }
+
+    .motivo:hover {
+        box-shadow: 0 3px 3px 0 rgba(0.14, 0.14, 0.14, 0.14);
+    }
+
+    .motivo i {
+        display: flex;
+        align-items: center;
+    }
+
+    .motivo label {
+        color: var(--text-color);
+        cursor: pointer;
+        flex: 1;
+    }
+
+    .motivo .textos {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0.5rem;
+        flex: 1;
+    }
+
+        .motivo .textos .texto1 {
+            font-weight: 600;
+        }
+
+/* Motivo seleccionado */
+.motivoSeleccionado .texto {
+    flex: 1;
+    font-weight: 700;
+}
+
+/* Domicilio */
+#errorFormulario_Domicilio {
+    margin-top: 1rem;
+}
+
+#contenedor_DomicilioSeleccionado {
+    display: flex;
+    flex-direction: row;
+}
+
+    #contenedor_DomicilioSeleccionado .contenido {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+    }
+
+#btn_SeleccionarDomicilio,
+#btn_CancelarDomicilio {
+    margin-top: 1rem;
+}
+
+#contenedor_DomicilioNoSeleccionado_Manual.visible,
+#contenedor_DomicilioNoSeleccionado_Edificio.visible {
+    transition: opacity 0.3s 0.3s, max-height 0.3s 0s;
+    opacity: 1;
+    max-height: 5rem;
+    /* height: 100%; */
+}
+
+#contenedor_DomicilioNoSeleccionado_Manual,
+#contenedor_DomicilioNoSeleccionado_Edificio {
+    transition: opacity 0.3s 0s, max-height 0.3s 0.3s;
+    opacity: 0;
+    min-height: 0;
+    max-height: 0;
+    overflow: hidden;
+}
+
+#contenedor_DomicilioNoSeleccionado_Manual {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+#contenedor_DomicilioNoSeleccionado_Manual,
+#contenedor_DomicilioNoSeleccionado_Edificio {
+    transition: opacity 0.3s 0s, max-height 0.3s 0.3s;
+    opacity: 0;
+    min-height: 0;
+    max-height: 0;
+    overflow: hidden;
+}
+
+#btn_SeleccionarDomicilio,
+#btn_CancelarDomicilio {
+    margin-top: 1rem;
+}

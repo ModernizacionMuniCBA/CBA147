@@ -1,0 +1,11 @@
+﻿.card.contenedor {
+    flex: 1;
+}
+
+.tabla-contenedor {
+    height: 100%;
+}
+
+.contenedor-main {
+    padding: 0 !important;
+}

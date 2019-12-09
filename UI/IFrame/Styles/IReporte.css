@@ -1,0 +1,9 @@
+﻿#contenedorDocumento{
+    width: 100%;
+    height:100%;
+    flex:1;
+}
+
+#contenedor_Error i{
+    color:var(--colorError);
+}

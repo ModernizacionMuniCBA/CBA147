@@ -1,0 +1,338 @@
+﻿:root {
+    --border-color: #E0E0E0;
+    --hover-color:#EEEEEE;
+    --icon-color:#BDBDBD;
+    --icon-deep-color: #9E9E9E;
+    --text-color: #424242;
+    --muni-color: #00a665;
+}
+
+#ControlMapa_Contenedor {
+    height: 100%;
+    width: 100%;
+    user-select: none;
+    opacity: 0;
+    transition: all 0.3s;
+    position: relative;
+}
+
+
+
+    #ControlMapa_Contenedor.visible {
+        opacity: 1;
+    }
+
+    #ControlMapa_Contenedor.fullscreen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+#ControlMapa_Loader {
+    z-index: 1;
+    margin: 0;
+}
+
+#ControlMapa_LoaderBuscar {
+    position: absolute;
+    height: 0.3rem;
+    top: 3rem;
+    margin: 0;
+    border-radius: 0;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+    #ControlMapa_Loader .indeterminate,
+    #ControlMapa_LoaderBuscar .indeterminate {
+        background-color: var(--muni-color);
+    }
+
+#ControlMapa_Mapa {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#ControlMapa_ContenedorBusqueda {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: calc(100% - 20px);
+    max-width: 30rem;
+    margin: 10px;
+    opacity: 0;
+    transform: translateY(-10rem);
+    transition: transform 0.3s 0.3s, opacity 0.3s 0.3s;
+}
+
+    #ControlMapa_ContenedorBusqueda > div {
+        border-radius: 4px;
+        margin: 0;
+        background-color: #fff;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+    }
+
+        #ControlMapa_ContenedorBusqueda > div:not(:first-child) {
+            margin-top: 10px;
+        }
+
+
+#ControlMapa_Contenedor.visible #ControlMapa_ContenedorBusqueda {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#ControlMapa_InputBuscar {
+    width: calc(100% - 5rem);
+    border-radius: 4px;
+    height: auto;
+    padding: 1rem 4rem 1rem 1rem;
+    border: none;
+    box-shadow: none;
+}
+
+
+#ControlMapa_BotonBuscar {
+    cursor: pointer;
+    padding: 0.8rem 1rem 0.4rem 1rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+    #ControlMapa_BotonBuscar i {
+        color: var(--icon-deep-color);
+        transition: color 0.1s;
+    }
+
+    #ControlMapa_BotonBuscar:hover i {
+        color: var(--text-color);
+    }
+
+    #ControlMapa_BotonBuscar:before {
+        content: '';
+        border-left: 1px solid var(--border-color);
+        height: 2.2rem;
+        position: absolute;
+        left: 0;
+        top: 0.5rem;
+    }
+
+#ControlMapa_ContenedorSugerencias {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    overflow: auto;
+    opacity: 0;
+    max-height: 0;
+    transition: all 0.3s;
+}
+
+    #ControlMapa_ContenedorSugerencias.visible {
+        border-top: 1px solid var(--border-color);
+        max-height: 25rem;
+        opacity: 1;
+    }
+
+.sugerencia {
+    display: flex;
+    padding: 0.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+    .sugerencia.clickable {
+        cursor: pointer;
+    }
+
+    .sugerencia:first-child {
+        border-top: none;
+    }
+
+    .sugerencia.clickable:hover {
+        background-color: var(--hover-color);
+    }
+
+    .sugerencia i {
+        color: var(--icon-color);
+        display: flex;
+        align-items: center;
+    }
+
+    .sugerencia label {
+        color: var(--text-color);
+    }
+
+    .sugerencia.clickable label {
+        cursor: pointer;
+    }
+
+    .sugerencia .textos {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0.5rem;
+    }
+
+        .sugerencia .textos .texto1 {
+            font-weight: 600;
+        }
+
+
+.popup label {
+    display: block;
+}
+
+.popup .textos {
+    display: flex;
+    flex-direction: column;
+}
+
+    .popup .textos .cpc {
+        margin-top: 0.2rem;
+        border-left: 0.2rem solid black;
+        padding-left: 0.5rem;
+    }
+
+    .popup .textos .barrio {
+        margin-top: 0.2rem;
+        border-left: 0.2rem solid black;
+        padding-left: 0.5rem;
+    }
+
+.btn-mapa {
+    cursor: pointer;
+    direction: ltr;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    color: rgb(86, 86, 86);
+    font-family: Roboto, Arial, sans-serif;
+    user-select: none;
+    font-size: 11px;
+    background-color: rgb(255, 255, 255);
+    padding: 8px;
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+    background-clip: padding-box;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px;
+    min-width: 37px;
+    border-left: 0px;
+    max-height: 29px;
+}
+
+    .btn-mapa.seleccionado {
+        color: rgb(0, 0, 0);
+        border-bottom: 4px solid black;
+        padding-bottom: 5px;
+        font-weight: 500;
+    }
+
+#ControlMapa_Botones {
+    position: absolute;
+    margin: 10px;
+    right: 100px;
+    top: 0px;
+    opacity: 0;
+    transition: opacity 0.3s 0.6s;
+    display: flex;
+}
+
+    #ControlMapa_Botones.visible {
+        opacity: 1;
+    }
+
+#ControlMapa_BotonesOpciones {
+    position: absolute;
+    margin: 10px;
+    right: 0px;
+    bottom: 118px;
+}
+
+    #ControlMapa_BotonesOpciones > div {
+        margin-top: 10px;
+    }
+
+    #ControlMapa_BotonesOpciones .btn-mapa {
+        padding: 5px 0 0 0;
+        min-width: 0;
+        width: 28px;
+        height: 28px;
+    }
+
+    #ControlMapa_BotonesOpciones a {
+        border-bottom: none;
+    }
+
+        #ControlMapa_BotonesOpciones a i {
+            color: --var(--icon-color);
+            font-size: 18px;
+        }
+
+    #ControlMapa_BotonesOpciones:hover a i {
+        color: --var(--icon-deep-color);
+    }
+
+    #ControlMapa_BotonesOpciones a .cargando {
+        position: absolute;
+        right: 7px;
+        top: 7px;
+        pointer-events: none;
+        opacity: 0;
+        transition: all 0.3s;
+    }
+
+        #ControlMapa_BotonesOpciones a .cargando .preloader-wrapper {
+            width: 14px;
+            height: 14px;
+        }
+
+    #ControlMapa_BotonesOpciones a.buscando {
+        cursor: wait;
+        pointer-events: none;
+    }
+
+        #ControlMapa_BotonesOpciones a.buscando .cargando {
+            opacity: 1;
+        }
+
+        #ControlMapa_BotonesOpciones a.buscando i {
+            opacity: 0;
+        }
+
+#ControlMapa_BtnFullscreen .btn-mapa {
+    padding-top: 3px;
+}
+
+#ControlMapa_BtnFullscreen a i {
+    font-size: 24px;
+}
+
+#ControlMapa_BtnLocalizacion a i {
+    color: #2196F3;
+}
+
+#ControlMapa_BtnLocalizacion:hover a i {
+    color: #1976D2;
+}
+
+@media (max-width: 42rem) {
+    #ControlMapa_ContenedorBusqueda {
+        max-width: 100%;
+    }
+
+    #ControlMapa_Botones {
+        right: 144px;
+        top: auto;
+        bottom: 14px;
+    }
+
+    .gm-style > .gmnoprint:last-child {
+        right: 38px !important;
+        top: auto !important;
+        bottom: 14px;
+    }
+}

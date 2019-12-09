@@ -1,0 +1,1136 @@
+﻿body,
+#main {
+  overflow: hidden !important;
+}
+
+#main {
+  display: flex;
+  flex-direction: row;
+}
+
+:root {
+  --tam-foto: 3rem;
+}
+
+.form-separador {
+  min-height: 1px;
+  margin-bottom: 24px !important;
+  margin-top: 24px !important;
+}
+
+#contenedor_Detalle {
+  display: flex;
+  flex: 2;
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+    0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  max-width: 100%;
+  overflow: hidden;
+  background: white;
+  transition: max-width 0.5s, opacity 0.2s 0.5s;
+}
+
+#contenedor_Detalle #contenedor_Encabezado {
+  overflow: auto;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.05);
+  display: flex;
+  max-width: 26rem;
+  width: fit-content;
+  min-width: min-content;
+  flex-direction: column;
+}
+
+#contenedor_Detalle #contenedor_Encabezado > div {
+  padding: 1rem;
+  width: fit-content;
+}
+
+#contenedor_Detalle #contenedor_Encabezado > div:not(:last-child) {
+  padding-bottom: 0 !important;
+}
+/* #contenedor_Detalle #contenedor_Encabezado #contenedor_Numero {
+  flex: 1;
+} */
+
+#contenedor_Detalle #contenedor_Encabezado #texto_Numero {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+#contenedor_Detalle #contenedor_Encabezado #contenedor_ServicioMotivoArea {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.2rem;
+}
+
+#contenedor_Detalle
+  #contenedor_Encabezado
+  #contenedor_ServicioMotivoArea
+  label {
+  font-size: 1rem;
+}
+
+#contenedor_Detalle
+  #contenedor_Encabezado
+  #contenedor_ServicioMotivoArea
+  label:not(:last-child) {
+  margin-right: 1rem;
+}
+
+#contenedor_Detalle #contenedor_Encabezado #contenedor_Indicadores {
+}
+
+#contenedor_Detalle #contenedor_Encabezado #contenedor_Indicadores .fila {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#contenedor_Detalle #contenedor_Encabezado #contenedor_Indicadores .fila > div {
+  display: flex;
+  margin: 0.2rem;
+  min-width: 11rem;
+  max-width: 11rem;
+  padding: 0.2rem;
+}
+
+#contenedor_Detalle
+  #contenedor_Encabezado
+  #contenedor_Indicadores
+  .fila
+  > div
+  .textos {
+  display: flex;
+  margin-left: 0.5rem;
+  flex-direction: column;
+}
+
+#contenedor_Detalle
+  #contenedor_Encabezado
+  #contenedor_Indicadores
+  .fila
+  > div
+  .textos
+  label {
+  font-size:1rem;
+}
+
+#contenedor_Detalle
+  #contenedor_Encabezado
+  #contenedor_Indicadores
+  .fila
+  > div
+  .textos
+  label.detalle {
+  font-size: 0.8rem;
+}
+
+#contenedor_Detalle #contenedor_Alertas {
+}
+
+#contenedor_Alertas {
+        margin-bottom: 24px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+.alerta {
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: white;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.alerta .textos {
+  flex: 1;
+}
+
+.alerta > .link {
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+
+.alerta.naranja {
+  background: var(--colorAlerta);
+}
+
+.alerta.negro {
+  background: rgba(0, 0, 0, 1);
+}
+
+.alerta.negro label {
+  color: white;
+}
+
+.alerta.amarillo {
+  background-color: lightyellow;
+}
+
+.alerta.ordenAtencionCritica > .textos {
+  display: flex;
+  flex-direction: column;
+}
+
+.alerta.ordenAtencionCritica > .textos > .titulo {
+  color: var(--colorTexto);
+  font-size: var(--tamañoTexto);
+  font-weight: var(--anchoTexto);
+  color: white;
+}
+
+.alerta.ordenAtencionCritica > .textos > .descripcion {
+  color: var(--colorTexto);
+  font-size: var(--tamañoTexto);
+  font-weight: var(--anchoTexto);
+  font-size: 0.9rem;
+  color: white;
+  opacity: 0.8;
+}
+
+#alertaRequerimientoCancelado {
+  flex-direction: column;
+  align-items: baseline;
+}
+
+#alertaRequerimientoCancelado .encabezado {
+  display: flex;
+}
+
+#alertaRequerimientoCancelado .encabezado label {
+}
+
+#alertaRequerimientoCancelado .encabezado .contenedor_Persona {
+  cursor: pointer;
+}
+
+#alertaRequerimientoCancelado .encabezado .contenedor_Persona img {
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  max-width: 1.5rem;
+  max-height: 1.5rem;
+  background-color: white;
+  border-radius: 100%;
+  margin-right: 0.2rem;
+}
+
+#alertaRequerimientoCancelado .encabezado .contenedor_Persona label {
+  cursor: pointer;
+}
+
+#alertaRequerimientoCancelado .encabezado .contenedor_Persona label:hover {
+  text-decoration: underline;
+}
+
+#contenedor_Contenido {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  overflow: auto;
+  flex-direction: column;
+}
+
+#contenedor_Contenido .titulo {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+#contenedor_Contenido {
+}
+
+#contenedor_Descripcion {
+  display: flex;
+  flex-direction: column;
+}
+
+#contenedor_Requerimientos .contenido {
+  margin-top: 0.5rem;
+}
+
+.tarea {
+  display: flex;
+  padding: 0.5rem;
+  max-width: 45rem;
+  transition: all 0.3s;
+}
+
+.tarea .textos {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.tarea .textos .link {
+  align-self: baseline;
+}
+
+.tarea .textos label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.tarea .botones {
+  display: flex;
+}
+
+.tarea:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+#contenedor_Comentarios {
+}
+
+#contenedor_Comentarios > .contenido {
+  max-height: 12rem;
+  overflow: hidden;
+  position: relative;
+  margin-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+#contenedor_Comentarios > .contenido > .verMas {
+  max-width: 46rem;
+  background: red;
+  padding: 0.5rem;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  z-index: 2;
+  height: 4rem;
+  align-items: flex-end;
+  background: -moz-linear-gradient(
+    top,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 1) 63%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 1) 63%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+#contenedor_Comentarios > .contenido > .verMas > label {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  padding: 0;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 0.2rem;
+  text-decoration: underline;
+}
+
+#contenedor_Comentarios > .contenido > .verMas > label:hover {
+  font-weight: 600;
+  /*box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.3);*/
+}
+
+#contenedor_ComentariosDetalle {
+  padding: 1rem;
+}
+
+#contenedor_ComentariosDetalle .contenedor_Input {
+  display: flex;
+  margin: 0.5rem;
+  max-width: 45rem;
+  margin-bottom: 2rem;
+}
+
+#contenedor_ComentariosDetalle .contenedor_Input input {
+  flex: 1;
+}
+
+#contenedor_ComentariosDetalle .contenedor_Input a {
+  margin-left: 1rem;
+}
+
+#contenedor_Mapa {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#contenedor_Mapa #mapa {
+  flex: 1;
+}
+
+#contenedor_IndicadoresArchivos {
+  display: flex;
+  flex-direction: column;
+}
+
+#contenedor_IndicadoresArchivos > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+#contenedor_IndicadoresArchivos > div > div:not(:last-child) {
+  margin-right: 1rem;
+}
+
+#contenedor_IndicadoresArchivos > div > div {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+#contenedor_IndicadoresArchivos > div > .link {
+}
+
+#contenedor_IndicadoresArchivos .badge {
+  position: absolute;
+  right: -0.7rem;
+  top: -0.7rem;
+  background: red;
+  min-width: 1.1rem;
+  min-height: 1.1rem;
+  max-height: 1.1rem;
+  max-width: 1.1rem;
+  border-radius: 100%;
+  color: white;
+  text-align: center;
+  font-size: 0.8rem;
+  pointer-events: none;
+  cursor: pointer;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12),
+    0 2px 4px -1px rgba(0, 0, 0, 0.3);
+}
+
+#contenedor_IndicadoresArchivos .material-icons {
+  font-size: 1.5rem;
+}
+
+#btn_Fotos,
+#btn_Documentos {
+  cursor: pointer;
+}
+
+/*Usuario refernte*/
+#contenedor_UsuarioReferente .contenedor_Persona .textos {
+  display: flex;
+  flex-direction: column;
+}
+
+#contenedor_UsuarioReferente .contenedor_Persona img {
+  min-height: var(--tam-foto);
+  min-width: var(--tam-foto);
+  max-width: var(--tam-foto);
+  margin-top: 0.5rem;
+  max-height: var(--tam-foto);
+  border-radius: 100%;
+  background: white;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  margin-right: 1rem;
+}
+
+/*Comentarios*/
+#contenedor_Comentarios {
+}
+
+/*Estados*/
+#contenedor_HistorialEstados {
+  padding: 1rem;
+}
+
+.estado {
+  display: flex;
+}
+
+.estado .indicador {
+  position: relative;
+  filter: initial;
+  opacity: 1;
+  margin-right: 1rem;
+  width: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.estado .indicador .circulo {
+  min-height: 2rem;
+  min-width: 2rem;
+  max-height: 2rem;
+  max-width: 2rem;
+  background-color: red;
+  position: absolute;
+  top: 0.5rem;
+  border-radius: 100%;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.estado .indicador .circulo i {
+  color: white;
+  max-width: 1.7rem;
+  text-align: center;
+  line-height: 2rem;
+  font-size: 1.4rem;
+  margin-left: 0.2rem;
+}
+
+.estado .indicador .linea1 {
+  width: 0.3rem;
+  background: rgba(0, 0, 0, 0.3);
+  flex: 1;
+}
+
+.estado .indicador .linea2 {
+  width: 0.3rem;
+  background: rgba(0, 0, 0, 0.3);
+  flex: 3;
+}
+
+.estado .textos {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  margin-top: 0.5rem;
+}
+
+.estado .textos > .nombre {
+  font-size: 1.2rem;
+}
+
+.estado .contenedor_Fecha {
+  margin-top: 0.5rem;
+}
+
+.estado .contenedor_Fecha label {
+  font-size: 0.9rem;
+}
+
+.estado .contenedor_Fecha .nombrePersona {
+  cursor: pointer;
+}
+
+.estado .contenedor_Fecha .nombrePersona:hover {
+  text-decoration: underline;
+}
+
+.estado .contenedor_Persona {
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+/*Panel Deslizable*/
+#contenedor_PanelDeslizable {
+  z-index: 5;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+#contenedor_PanelDeslizable.visible {
+  pointer-events: all;
+}
+
+#contenedor_PanelDeslizable > .fondo {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  pointer-events: none;
+}
+
+#contenedor_PanelDeslizable.visible > .fondo {
+  opacity: 1;
+}
+
+#contenedor_PanelDeslizable > .contenido {
+  background: white;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s;
+  transform: translateY(100%);
+}
+
+#contenedor_PanelDeslizable.visible > .contenido {
+  transform: translateY(0);
+}
+
+#contenedor_PanelDeslizable > .contenido > .encabezado {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  z-index: 10;
+  min-height: fit-content;
+  transition: all 0.5s;
+}
+
+#contenedor_PanelDeslizable.visible > .contenido > .encabezado {
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12),
+    0 2px 4px -1px rgba(0, 0, 0, 0.3);
+}
+
+#contenedor_PanelDeslizable .encabezado > .titulo {
+  flex: 1;
+}
+
+#contenedor_PanelDeslizable .contenedor_Contenido {
+  overflow: hidden;
+  width: 100%;
+  flex: 1;
+}
+
+#contenedor_PanelDeslizable .contenedor_Contenido > div {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  position: relative;
+}
+
+/*Utiles*/
+@media screen and (max-width: 700px) {
+  #main {
+    flex-direction: column-reverse;
+  }
+
+  #contenedor_Detalle #contenedor_Encabezado #contenedor_Indicadores .fila {
+    flex-direction: column;
+  }
+
+  #contenedor_Detalle
+    #contenedor_Encabezado
+    #contenedor_Indicadores
+    .fila
+    > div {
+    flex: 1;
+    max-width: none;
+  }
+}
+
+#contenedor_HistoricoOrdenesTrabajo {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  padding: 1rem;
+}
+
+#tablaHistoricoOrdenesTrabajo {
+  width: 100%;
+}
+
+.contenedor_Listado .contenido {
+  display: flex;
+  flex-direction: column;
+}
+
+.contenedor_Listado > div {
+  height: 100%;
+}
+
+.contenedor_Listado .busqueda {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  margin: 1rem;
+  margin-top: 0.2rem !important;
+}
+
+.contenedor_Listado .contenedor_Tabla {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.contenedor_Listado .contenedor_Tabla .tabla-contenedor {
+  flex: 1;
+}
+
+.indicadorCPC {
+  border-radius: 25px;
+  background: #9f25f6;
+  color: white;
+  padding: 0.2rem;
+  font-weight: bolder;
+  font-size: 0.5rem;
+  line-height: 1rem;
+  max-width: 1.5rem;
+  min-width: 1.5rem;
+  max-height: 1.5rem;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1.2rem;
+}
+
+.link {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.link:hover {
+  font-weight: 600;
+}
+
+.contenedor_Persona {
+  display: flex;
+}
+
+.contenedor_Persona .imagen {
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  background: white;
+  border-radius: 100%;
+  margin-right: 0.2rem;
+}
+
+.contenedor_Persona .nombre {
+}
+
+.comentario {
+  display: flex;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.comentario .persona {
+  display: flex;
+  flex-direction: column;
+  max-width: 4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.comentario .persona > .foto {
+  margin-top: 0.5rem;
+  width: var(--tam-foto);
+  height: var(--tam-foto);
+  min-height: var(--tam-foto);
+  min-width: var(--tam-foto);
+  background: white;
+  border-radius: 100%;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.comentario .persona > .foto:hover {
+  cursor: pointer;
+}
+
+.comentario .persona label {
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+  text-align: center;
+}
+
+.comentario .card {
+  align-self: baseline;
+  margin-left: 1rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  max-width: 40rem;
+}
+
+.comentario .card .fecha {
+  font-size: 0.8rem;
+  align-self: flex-end;
+}
+
+.usuarioReferente {
+  display: flex;
+  margin-right: 1rem;
+}
+
+.usuarioReferente .persona {
+  display: flex;
+  flex-direction: column;
+  max-width: 4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.usuarioReferente .persona > .foto {
+  margin-top: 0.5rem;
+  width: var(--tam-foto);
+  height: var(--tam-foto);
+  min-height: var(--tam-foto);
+  min-width: var(--tam-foto);
+  background: white;
+  border-radius: 100%;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.usuarioReferente .persona > .foto:hover {
+  cursor: pointer;
+}
+
+.usuarioReferente .persona label {
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+  text-align: center;
+}
+
+.contenedor_Listado .busqueda > div {
+  flex: 1;
+}
+
+.contenedor_Listado .busqueda > div input {
+  max-width: 20rem;
+}
+
+.contenedor_Listado .busqueda {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  margin: 1rem;
+  margin-top: 0.2rem !important;
+}
+
+.btnMapa {
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  color: white;
+  background: var(--colorExito);
+  cursor: pointer;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+.contenedorBtnExpandirMapa,
+.contenedorBtnCpc {
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+#btnCPC.activo {
+  background-color: green;
+  color: white;
+}
+
+#main.mapaExpandido #contenedor_Detalle {
+  max-width: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: max-width 0.5s 0.2s, opacity 0.2s;
+}
+
+#contenedor_Error i {
+  color: white;
+}
+
+#contenedor_Error label {
+  color: white;
+}
+
+.popup > .textos {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup > .textos > .titulo {
+  font-size: 1.3rem;
+  margin: 0;
+  color: black;
+  margin-bottom: 0.5rem;
+  font-weight: initial;
+}
+
+.contenedor_Documentos {
+}
+
+.contenedor_Documentos .error {
+  background: var(--colorError);
+}
+
+.contenedor_Documentos .error i {
+  color: white;
+}
+
+.contenedor_Documentos .error label {
+  color: white;
+}
+
+.contenedor_Documentos .error a.btn {
+  margin-top: 1rem;
+}
+
+.contenedor_Documentos .contenido {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  justify-content: baseline;
+  align-items: baseline;
+  justify-items: flex-start;
+  align-content: flex-start;
+}
+
+.contenedor_Documentos .fotoPreview {
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+.contenedor_Documentos .fotoPreview:hover {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12),
+    0 3px 5px -1px rgba(0, 0, 0, 0.3);
+}
+
+.contenedor_Documentos .fotoPreview > .cargando {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor_Documentos .fotoPreview > .cargando.visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.contenedor_Documentos .fotoPreview .foto {
+  width: 10rem;
+  height: 10rem;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  background-repeat: no-repeat;
+}
+
+.contenedor_Documentos .fotoPreview.boton .foto {
+  opacity: 0.5;
+  background-size: auto;
+}
+
+.contenedor_Documentos .fotoPreview .datos {
+  overflow: hidden;
+  display: flex;
+  padding: 0.2rem;
+  background: rgba(230, 230, 230, 1);
+  width: 10rem;
+  align-items: center;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  min-height: 3.3rem;
+  max-height: 3.3rem;
+}
+
+.contenedor_Documentos .fotoPreview .datosTexto {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding-left: 0.3rem;
+}
+
+.contenedor_Documentos .fotoPreview .datos .nombre {
+  font-size: 0.8rem;
+  /* max-width: 7.6rem; */
+  word-wrap: break-word;
+  /* max-height: 2rem; */
+  line-height: 0.8rem;
+  text-overflow: ellipsis;
+  flex: 1;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  max-height: 1.5rem;
+  min-height: 1.5rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+
+.contenedor_Documentos .fotoPreview .datos .subidaPor {
+  font-size: 0.7rem;
+  /* max-width: 7.6rem; */
+  word-wrap: break-word;
+  /* max-height: 2rem; */
+  line-height: 0.8rem;
+  /* text-overflow: ellipsis; */
+  flex: 1;
+  /* display: -webkit-box; */
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  max-height: 1.5rem;
+  min-height: 1.5rem;
+  /* font-weight: 600; */
+  /* line-height: 1.5rem; */
+}
+
+.contenedor_Documentos .fotoPreview .datos .subidaPor b {
+  cursor: pointer;
+}
+
+.contenedor_Documentos .fotoPreview.boton .datos .nombre {
+  text-align: center;
+}
+
+.contenedor_Documentos .fotoPreview .btn-flat {
+  margin-right: -0.5rem;
+}
+
+.contenedor_Documentos .fotoPreview.boton .btn-flat {
+  display: none;
+}
+
+#btn_Acciones {
+  margin-bottom: 0.5rem;
+  align-self: baseline;
+}
+
+#contenedor_Acciones {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: fit-content;
+}
+
+#contenedor_Acciones .contenido {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  opacity: 1;
+  transition: all 0.3s;
+  overflow: hidden;
+}
+
+.accion {
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12),
+    0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  max-width: 11rem;
+  min-width: 11rem;
+
+  border-radius: 0.3rem;
+  margin-bottom: 0.5rem;
+  padding: 0.3rem;
+  margin: 0.3rem;
+  margin-bottom: 0.6rem;
+  /* border: solid rgba(0,0,0,1) 1px; */
+  display: flex;
+  align-items: center;
+  transition: all 0.3s;
+  cursor: pointer;
+  background-color: white;
+}
+
+.accion.deshabilitado {
+  /*background-color: rgba(0,0,0,0.2);*/
+}
+
+.accion.deshabilitado label {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.accion.deshabilitado i {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.accion.deshabilitado:hover {
+  background-color: transparent;
+}
+
+.accion.deshabilitado:hover label {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.accion.deshabilitado:hover i {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.accion i {
+  margin-right: 0.4rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: var(--colorVerde);
+  transition: all 0.3s;
+}
+
+.accion label {
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 0.8rem;
+  color: black;
+  transition: all 0.3s;
+}
+
+.accion:hover {
+  background-color: var(--colorVerde);
+}
+
+.accion:hover i {
+  color: white;
+}
+
+.accion:hover label {
+  color: white;
+}
+
+#contenedor_SeccionDescripcion {
+  flex: 1;
+}
+
+#contenedor_UltimoEstado .textos {
+  margin-bottom: 0;
+}
+
+#contenedor_InformacionOrganica {
+  display: flex;
+  flex-direction: column;
+}
+
+#contenedor_ReferenteProvisorio {
+  display: flex;
+  flex-direction: column;
+}
+
+#contenedor_InfoAltaModificacion {
+  margin-bottom: 24px;
+  margin-top: 24px;
+}
+
+#contenedor_InfoAltaModificacion .titulo {
+  font-size: 1.1rem;
+  font-weight: 400 !important;
+}

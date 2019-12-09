@@ -1,0 +1,16 @@
+﻿#contenedor_Tabla {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+}
+
+    #contenedor_Tabla .tabla-contenedor {
+        flex: 1;
+    }
+
+
+#contenedor_Descripcion {
+    padding: 1rem;
+    padding-top: 0;
+}

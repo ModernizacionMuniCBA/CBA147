@@ -1,0 +1,16 @@
+﻿.motivo-titulo{
+    font-size: medium;
+    font-weight: 400;
+    color: black;
+}
+
+.motivo-detalle {
+    font-size: medium;
+    color: black;
+    font-weight: 300;
+}
+
+.deshabilitado{
+    pointer-events:none;
+    opacity: 0.6;
+}

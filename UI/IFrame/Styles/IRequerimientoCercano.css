@@ -1,0 +1,75 @@
+﻿#main {
+    display: flex;
+    flex-direction: row;
+}
+
+.contenedorTabla {
+    display: flex;
+    flex: 2;
+    overflow: hidden;
+    flex-direction: column;
+    box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.3);
+    z-index: 2;
+}
+
+.contenedorMapa {
+    flex: 1;
+}
+
+#map {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+
+.popup {
+    display: flex;
+    padding: 0.5rem;
+    transition: all 0.3s;
+}
+
+    .popup:hover {
+        background: rgba(0,0,0,0.05);
+    }
+
+    .popup .textos {
+        display: flex;
+        flex-direction: column;
+    }
+
+        .popup .textos .titulo {
+            font-size: 1.2rem;
+            margin: 0;
+            color: black;
+            font-weight: 500;
+        }
+
+        .popup .textos .descripcion {
+        }
+
+    .popup a.btn {
+        margin-left: 1rem;
+    }
+
+
+.popupLista {
+    display: flex;
+    flex-direction: column;
+}
+
+    .popupLista .popup:not(:first-child) {
+        border-top: 0.1rem solid rgba(0,0,0,0.1);
+    }
+
+
+.contenedorAyuda {
+    padding: 1rem;
+    display: flex;
+    min-height: fit-content;
+}
+
+    .contenedorAyuda i {
+        margin-right: 1rem;
+    }

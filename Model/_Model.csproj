@@ -1,0 +1,480 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8EE908C5-D4C1-4CAF-B8E5-F32B0ADED1A9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Model</RootNamespace>
+    <AssemblyName>Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Test|AnyCPU'">
+    <OutputPath>bin\Test\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Internet_Servicios\bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseEntity.cs" />
+    <Compile Include="Comandos\Comando_ConfiguracionBandeja.cs" />
+    <Compile Include="Comandos\Comando_EdificioMunicipal.cs" />
+    <Compile Include="Comandos\Comando_Flota_CambioEstado.cs" />
+    <Compile Include="Comandos\Comando_OrdenTrabajo_Flotas.cs" />
+    <Compile Include="Comandos\Comando_OrdenTrabajo_QuitarFlota.cs" />
+    <Compile Include="Comandos\Comando_RubroMotivo.cs" />
+    <Compile Include="Comandos\Comando_Motivo.cs" />
+    <Compile Include="Comandos\Comando_Empleado_EditarFunciones.cs" />
+    <Compile Include="Comandos\Comando_Empleado_CambioEstado.cs" />
+    <Compile Include="Comandos\Comando_Movil_Reparacion.cs" />
+    <Compile Include="Comandos\Comando_Movil_VisarNota.cs" />
+    <Compile Include="Comandos\Comando_Movil_Estado.cs" />
+    <Compile Include="Comandos\Comando_Movil_Condicion.cs" />
+    <Compile Include="Comandos\Comando_Movil_Caracteristicas.cs" />
+    <Compile Include="Comandos\Comando_Movil_TUV.cs" />
+    <Compile Include="Comandos\Comando_Movil_ITV.cs" />
+    <Compile Include="Comandos\Comando_Movil_Kilometraje.cs" />
+    <Compile Include="Comandos\Comando_Movil_Valuacion.cs" />
+    <Compile Include="Comandos\Comando_Movil_Nota.cs" />
+    <Compile Include="Comandos\Comando_FCMToken.cs" />
+    <Compile Include="Comandos\Comando_Empleado.cs" />
+    <Compile Include="Comandos\Comando_RequerimientoEditarCamposDinamicos.cs" />
+    <Compile Include="Comandos\Comando_RequerimientoTareas.cs" />
+    <Compile Include="Comandos\Comando_Flota.cs" />
+    <Compile Include="Comandos\Comando_TareaPorArea_Editar.cs" />
+    <Compile Include="Comandos\Comando_TareaPorArea.cs" />
+    <Compile Include="Comandos\Comando_NotificacionPush.cs" />
+    <Compile Include="Comandos\Comando_OrdenInspeccion.cs" />
+    <Compile Include="Comandos\Comando_OrdenInspeccion_Descripcion.cs" />
+    <Compile Include="Comandos\Comando_OrdenInspeccion_Nota.cs" />
+    <Compile Include="Comandos\Comando_OrdenInspeccion_Cerrar.cs" />
+    <Compile Include="Comandos\Comando_OrdenTrabajo_QuitarMovil.cs" />
+    <Compile Include="Comandos\Comando_OrdenTrabajo_QuitarEmpleado.cs" />
+    <Compile Include="Comandos\Comando_OrdenTrabajo_Empleados.cs" />
+    <Compile Include="Comandos\Comando_OrdenTrabajo_QuitarRequerimiento.cs" />
+    <Compile Include="Comandos\Comando_OrdenInspeccion_Requerimientos .cs" />
+    <Compile Include="Comandos\Comando_OrdenTrabajo_Seccion.cs" />
+    <Compile Include="Comandos\Comando_OrdenTrabajo_Cancelar.cs" />
+    <Compile Include="Comandos\Comando_OrdenTrabajo_Requerimientos.cs" />
+    <Compile Include="Comandos\Comando_OrdenTrabajoMail.cs" />
+    <Compile Include="Comandos\Comando_CambioEstado.cs" />
+    <Compile Include="Comandos\Comando_Funcion.cs" />
+    <Compile Include="Comandos\Comando_GrupoRubroMotivo.cs" />
+    <Compile Include="Comandos\Comando_CategoriaMotivoArea.cs" />
+    <Compile Include="Comandos\Comando_UsuarioVecinoVirtualActualizarDomicilio.cs" />
+    <Compile Include="Comandos\Comando_UsuarioVecinoVirtualEditarFotoPersonal.cs" />
+    <Compile Include="Comandos\Comando_UsuarioVecinoVirtualEditarDatosContacto.cs" />
+    <Compile Include="Comandos\Comando_UsuarioVecinoVirtualEditarDatosPersonales.cs" />
+    <Compile Include="Comandos\Comando_UsuarioVecinoVirtualEditar.cs" />
+    <Compile Include="Comandos\Comando_UsuarioVecinoVirtualNuevo.cs" />
+    <Compile Include="Comandos\Comando_Servicio.cs" />
+    <Compile Include="Comandos\Comando_VersionSistema.cs" />
+    <Compile Include="Comandos\Comando_OrdenTrabajo_Cerrar.cs" />
+    <Compile Include="Comandos\Comando_OrdenTrabajo_Moviles.cs" />
+    <Compile Include="Comandos\Comando_OrdenTrabajo_Nota.cs" />
+    <Compile Include="Comandos\Comando_OrdenTrabajo_Recursos.cs" />
+    <Compile Include="Comandos\Comando_OrdenTrabajo_Requerimiento.cs" />
+    <Compile Include="Comandos\Comando_OrdenTrabajo_Descripcion.cs" />
+    <Compile Include="Comandos\Comando_InformacionOrganica.cs" />
+    <Compile Include="Comandos\Comando_InformacionOrganicaSecretaria.cs" />
+    <Compile Include="Comandos\Comando_Movil.cs" />
+    <Compile Include="Comandos\Comando_Secretaria.cs" />
+    <Compile Include="Comandos\Comando_InformacionOrganicaDireccion.cs" />
+    <Compile Include="Comandos\Comando_RequerimientoComentario.cs" />
+    <Compile Include="Comandos\Comando_RequerimientoCancelar.cs" />
+    <Compile Include="Comandos\Comando_RequerimientoCambioEstado.cs" />
+    <Compile Include="Comandos\Comando_RequerimientoFavoritoPorUsuario.cs" />
+    <Compile Include="Comandos\Comando_BarrioPorZona.cs" />
+    <Compile Include="Comandos\Comando_NotificacionParaUsuario.cs" />
+    <Compile Include="Comandos\Comando_RequerimientoPorOrdenTrabajo.cs" />
+    <Compile Include="Comandos\Comando_NotaOrdenTrabajo.cs" />
+    <Compile Include="Comandos\Comando_OrigenPorAmbito.cs" />
+    <Compile Include="Comandos\Comando_OrigenPorArea.cs" />
+    <Compile Include="Comandos\Comando_OrigenPorUsuario.cs" />
+    <Compile Include="Comandos\Comando_Recursos.cs" />
+    <Compile Include="Comandos\Comando_OrdenTrabajo.cs" />
+    <Compile Include="Comandos\Comando_Seccion.cs" />
+    <Compile Include="Comandos\Comando_Origen.cs" />
+    <Compile Include="Comandos\Comando_OrdenAtencionCritica.cs" />
+    <Compile Include="Comandos\Comando_Nota.cs" />
+    <Compile Include="Comandos\Comando_Archivo.cs" />
+    <Compile Include="Comandos\Comando_Domicilio.cs" />
+    <Compile Include="Comandos\Comando_RequerimientoIntranet.cs" />
+    <Compile Include="Comandos\Comando_Requerimiento.cs" />
+    <Compile Include="Comandos\Comando_SubZona.cs" />
+    <Compile Include="Comandos\Comando_TipoMovil.cs" />
+    <Compile Include="Comandos\Comando_Zona.cs" />
+    <Compile Include="Comandos\Comando_ConfiguracionPorArea.cs" />
+    <Compile Include="Consultas\Consulta_AreaConSubarea.cs" />
+    <Compile Include="Consultas\Consulta_Area.cs" />
+    <Compile Include="Consultas\Consulta_Flota.cs" />
+    <Compile Include="Consultas\Consulta_Empleado.cs" />
+    <Compile Include="Consultas\Consulta_EstadisticaSubArea.cs" />
+    <Compile Include="Consultas\Consulta_EstadisticaUsuarios.cs" />
+    <Compile Include="Consultas\Consulta_EstadisticaMotivos.cs" />
+    <Compile Include="Consultas\Consulta_EstadisticaRubros.cs" />
+    <Compile Include="Consultas\Consulta_EstadisticaZona.cs" />
+    <Compile Include="Consultas\Consulta_EstadisticaArea.cs" />
+    <Compile Include="Consultas\Consulta_EstadisticaResueltos.cs" />
+    <Compile Include="Consultas\Consulta_EstadisticaServicios.cs" />
+    <Compile Include="Consultas\Consulta_Motivo.cs" />
+    <Compile Include="Consultas\Consulta_VecinoVirtualUsuario.cs" />
+    <Compile Include="Consultas\Consulta_EstadisticaEficacia.cs" />
+    <Compile Include="Consultas\Consulta_EstadisticaOrigen.cs" />
+    <Compile Include="Consultas\Consulta_InformacionOrganica.cs" />
+    <Compile Include="Consultas\Consulta_ArchivoPorRequerimiento.cs" />
+    <Compile Include="Consultas\Consulta_BarrioPorZona.cs" />
+    <Compile Include="Consultas\Consulta_EstadisticaCPC.cs" />
+    <Compile Include="Consultas\Consulta_Domicilio.cs" />
+    <Compile Include="Consultas\Consulta_OrdenInspeccion.cs" />
+    <Compile Include="Consultas\Consulta_OrdenTrabajo.cs" />
+    <Compile Include="Consultas\Consulta_RequerimientoCercano.cs" />
+    <Compile Include="Consultas\Consulta_RequerimientoFavoritoPorUsuario.cs" />
+    <Compile Include="Consultas\Consulta_OrdenAtencionCritica.cs" />
+    <Compile Include="Consultas\Consulta_NotificacionParaUsuario.cs" />
+    <Compile Include="Consultas\Consulta_OrigenPorAmbito.cs" />
+    <Compile Include="Consultas\Consulta_OrigenPorArea.cs" />
+    <Compile Include="Consultas\Consulta_OrigenPorUsuario.cs" />
+    <Compile Include="Consultas\Consulta_Requerimiento_Bandeja.cs" />
+    <Compile Include="Consultas\Consulta_Requerimiento.cs" />
+    <Compile Include="Consultas\Consulta_Origen.cs" />
+    <Compile Include="Consultas\Consulta_Subzona.cs" />
+    <Compile Include="Consultas\Consulta_RequerimientoTopBarrios.cs" />
+    <Compile Include="Consultas\Consulta_Usuario.cs" />
+    <Compile Include="Consultas\Consulta_Personal.cs" />
+    <Compile Include="Consultas\Consulta_Movil.cs" />
+    <Compile Include="Consultas\Consulta_Seccion.cs" />
+    <Compile Include="Consultas\Consulta_Zona.cs" />
+    <Compile Include="Entities\ConfiguracionEstadoCreacionOT.cs" />
+    <Compile Include="Entities\ConfiguracionBandejaPorArea.cs" />
+    <Compile Include="Entities\CategoriaMotivoArea.cs" />
+    <Compile Include="Entities\EmpleadoPorFlota.cs" />
+    <Compile Include="Entities\FlotaPorOrdenTrabajo.cs" />
+    <Compile Include="Entities\EstadoFlota.cs" />
+    <Compile Include="Entities\EstadoFlotaHistorial.cs" />
+    <Compile Include="Entities\Flota.cs" />
+    <Compile Include="Entities\DescripcionPorRequerimiento.cs" />
+    <Compile Include="Entities\ReferenteProvisorio.cs" />
+    <Compile Include="Entities\UsuarioReferentePorRequerimiento.cs" />
+    <Compile Include="Entities\TerritorioIncumbencia.cs" />
+    <Compile Include="Entities\GrupoRubroMotivo.cs" />
+    <Compile Include="Entities\MotivoPorRubroMotivo.cs" />
+    <Compile Include="Entities\RubroMotivo.cs" />
+    <Compile Include="Entities\CampoPorMotivoPorRequerimiento.cs" />
+    <Compile Include="Entities\TipoCampo.cs" />
+    <Compile Include="Entities\CerrojoArea.cs" />
+    <Compile Include="Entities\CerrojoAmbito.cs" />
+    <Compile Include="Entities\CampoPorMotivo.cs" />
+    <Compile Include="Entities\Color.cs" />
+    <Compile Include="Entities\CategoriaEdificioMunicipal.cs" />
+    <Compile Include="Entities\EdificioMunicipal.cs" />
+    <Compile Include="Entities\TareaPorAreaPorRequerimiento.cs" />
+    <Compile Include="Entities\TareaPorArea.cs" />
+    <Compile Include="Entities\EmpleadoPorOrdenTrabajo.cs" />
+    <Compile Include="Entities\EstadoEmpleado.cs" />
+    <Compile Include="Entities\EstadoEmpleadoHistorial.cs" />
+    <Compile Include="Entities\FCMToken.cs" />
+    <Compile Include="Entities\EstadoOrdenInspeccion.cs" />
+    <Compile Include="Entities\EstadoOrdenInspeccionHistorial.cs" />
+    <Compile Include="Entities\EmpleadoPorArea.cs" />
+    <Compile Include="Entities\FuncionPorEmpleado.cs" />
+    <Compile Include="Entities\KilometrajePorMovil.cs" />
+    <Compile Include="Entities\NotaPorMovil.cs" />
+    <Compile Include="Entities\NotaPorOrdenInspeccion.cs" />
+    <Compile Include="Entities\OrdenInspeccion.cs" />
+    <Compile Include="Entities\FuncionPorArea.cs" />
+    <Compile Include="Entities\PermisoEstadoOrdenInspeccion.cs" />
+    <Compile Include="Entities\PermisoEstadoOrdenInspeccionPorEstado.cs" />
+    <Compile Include="Entities\ReparacionPorMovil.cs" />
+    <Compile Include="Entities\RequerimientoPorOrdenInspeccion.cs" />
+    <Compile Include="Entities\ValuacionPorMovil.cs" />
+    <Compile Include="Entities\ITVPorMovil.cs" />
+    <Compile Include="Entities\TUVPorMovil.cs" />
+    <Compile Include="Entities\EstadoMovilHistorial.cs" />
+    <Compile Include="Entities\InformacionOrganica.cs" />
+    <Compile Include="Entities\InformacionOrganicaDireccion.cs" />
+    <Compile Include="Entities\InformacionOrganicaSecretaria.cs" />
+    <Compile Include="Entities\PermisoEstadoOrdenTrabajo.cs" />
+    <Compile Include="Entities\PermisoEstadoOrdenTrabajoPorEstado.cs" />
+    <Compile Include="Entities\PermisoEstadoRequerimientoPorEstado.cs" />
+    <Compile Include="Entities\PermisoEstadoRequerimiento.cs" />
+    <Compile Include="Entities\ArchivoPorRequerimiento.cs" />
+    <Compile Include="Entities\Ajustes.cs" />
+    <Compile Include="Entities\EstadoMovil.cs" />
+    <Compile Include="Entities\Movil.cs" />
+    <Compile Include="Entities\MovilPorOrdenTrabajo.cs" />
+    <Compile Include="Entities\TipoMovil.cs" />
+    <Compile Include="Entities\NotificacionSistema.cs" />
+    <Compile Include="Entities\EstadoOrdenEspecial.cs" />
+    <Compile Include="Entities\EstadoOrdenEspecialHistorial.cs" />
+    <Compile Include="Entities\LimiteRequerimientosPorUsuario.cs" />
+    <Compile Include="Entities\BarrioPorZona.cs" />
+    <Compile Include="Entities\MensajePorRequerimiento.cs" />
+    <Compile Include="Entities\NotaPorRequerimiento.cs" />
+    <Compile Include="Entities\NotaPorOrdenTrabajo.cs" />
+    <Compile Include="Entities\OrdenAtencionCritica.cs" />
+    <Compile Include="Entities\OrigenPorAmbito.cs" />
+    <Compile Include="Entities\OrigenPorArea.cs" />
+    <Compile Include="Entities\OrigenPorUsuario.cs" />
+    <Compile Include="Entities\Personal.cs" />
+    <Compile Include="Entities\RangoCriticidadServicio.cs" />
+    <Compile Include="Entities\RecursoPorOrdenTrabajo.cs" />
+    <Compile Include="Entities\RequerimientoPorOrdenEspecial.cs" />
+    <Compile Include="Entities\RequerimientoPorOrdenTrabajo.cs" />
+    <Compile Include="Entities\EstadoOrdenTrabajoHistorial.cs" />
+    <Compile Include="Entities\EstadoOrdenTrabajo.cs" />
+    <Compile Include="Entities\OrdenTrabajo.cs" />
+    <Compile Include="Entities\Barrio.cs" />
+    <Compile Include="Entities\Cpc.cs" />
+    <Compile Include="Entities\Domicilio.cs" />
+    <Compile Include="Entities\EstadoRequerimiento.cs" />
+    <Compile Include="Entities\EstadoRequerimientoHistorial.cs" />
+    <Compile Include="Entities\Motivo.cs" />
+    <Compile Include="Entities\PersonaFisica.cs" />
+    <Compile Include="Entities\Requerimiento.cs" />
+    <Compile Include="Entities\Seccion.cs" />
+    <Compile Include="Entities\Servicio.cs" />
+    <Compile Include="Entities\Subzona.cs" />
+    <Compile Include="Entities\Tema.cs" />
+    <Compile Include="Entities\TipoRequerimiento.cs" />
+    <Compile Include="Entities\TipoDocumento.cs" />
+    <Compile Include="Entities\Origen.cs" />
+    <Compile Include="Entities\RequerimientoFavoritoPorUsuario.cs" />
+    <Compile Include="Entities\VersionSistema.cs" />
+    <Compile Include="Entities\Zona.cs" />
+    <Compile Include="Entities\_VecinoVirtualUsuario.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Result.cs" />
+    <Compile Include="Resultados\Estadisticas\Resultado_DatosEstadisticaRubros.cs" />
+    <Compile Include="Resultados\Estadisticas\Resultado_DatosEstadisticaUsuario.cs" />
+    <Compile Include="Resultados\Estadisticas\Resultado_DatosEstadisticaMotivos.cs" />
+    <Compile Include="Resultados\Estadisticas\Resultado_DatosEstadisticaZona.cs" />
+    <Compile Include="Resultados\Estadisticas\Resultado_DatosEstadisticaArea.cs" />
+    <Compile Include="Resultados\ResultadoReporte_Requerimiento.cs" />
+    <Compile Include="Resultados\ResultadoTabla_RequerimientoExportar.cs" />
+    <Compile Include="Resultados\ResultadoWSExterno_Requerimiento.cs" />
+    <Compile Include="Resultados\Resultado_ReferenteProvisorio.cs" />
+    <Compile Include="Resultados\Resultado_ConfiguracionPorAreaDataInicial.cs" />
+    <Compile Include="Resultados\Resultado_ConfiguracionPorArea.cs" />
+    <Compile Include="Resultados\Resultado_CantidadRequerimientosParaOrdenDeTrabajoPorAreaYTipo.cs" />
+    <Compile Include="Resultados\Resultado_DataInicialControlMotivos.cs" />
+    <Compile Include="Resultados\Resultado_AreaTerriorialIncumbencia.cs" />
+    <Compile Include="Resultados\Resultado_CampoPorMotivo.cs" />
+    <Compile Include="Resultados\Resultado_CatalogoTareas.cs" />
+    <Compile Include="Resultados\Resultado_CatalogoMotivos.cs" />
+    <Compile Include="Resultados\Resultado_CatalogoUsuarios.cs" />
+    <Compile Include="Resultados\Estadisticas\Resultado_DatosEstadisticaResueltos.cs" />
+    <Compile Include="Resultados\Estadisticas\Resultado_DatosEstadisticaResueltos_Intermedio.cs" />
+    <Compile Include="Resultados\Estadisticas\Resultado_DatosEstadisticaServicios.cs" />
+    <Compile Include="Resultados\Resultado_CategoriaEdificioMunicipal.cs" />
+    <Compile Include="Resultados\ResultadoTabla_RubroMotivo.cs" />
+    <Compile Include="Resultados\Resultado_CategoriaMotivo.cs" />
+    <Compile Include="Resultados\Resultado_EdificioMunicipal.cs" />
+    <Compile Include="Resultados\ResultadoTabla_EmpleadoPanelOT.cs" />
+    <Compile Include="Resultados\ResultadoTabla_EmpleadoPanel.cs" />
+    <Compile Include="Resultados\Resultado_EmpleadoPorArea.cs" />
+    <Compile Include="Resultados\ResultadoTabla_OrdenInspeccion.cs" />
+    <Compile Include="Resultados\ResultadoTabla_Empleado.cs" />
+    <Compile Include="Resultados\Resultado_EstadoFlota.cs" />
+    <Compile Include="Resultados\Resultado_EstadoEmpleado.cs" />
+    <Compile Include="Resultados\Resultado_EstadoEmpleadoHistorial.cs" />
+    <Compile Include="Resultados\ResultadoTabla_Flota.cs" />
+    <Compile Include="Resultados\Resultado_FuncionPorEmpleado.cs" />
+    <Compile Include="Resultados\ResultadoTabla_EdificioMunicipal.cs" />
+    <Compile Include="Resultados\ResultadoTabla_Motivo.cs" />
+    <Compile Include="Resultados\Resultado_OrdenTrabajoPanelMasInfo.cs" />
+    <Compile Include="Resultados\Resultado_OrdenTrabajoInit.cs" />
+    <Compile Include="Resultados\Estadisticas\Resultado_DatosEstadisticaEficacia.cs" />
+    <Compile Include="Resultados\Resultado_OrdenInspeccionInit.cs" />
+    <Compile Include="Resultados\Resultado_OrdenInspeccion.cs" />
+    <Compile Include="Resultados\Resultado_OrdenInspeccionDetalle.cs" />
+    <Compile Include="Resultados\ResultadoTabla.cs" />
+    <Compile Include="Resultados\ResultadoTabla_OrdenAtencionCritica.cs" />
+    <Compile Include="Resultados\ResultadoTabla_OrdenTrabajo.cs" />
+    <Compile Include="Resultados\ResultadoTabla_Movil.cs" />
+    <Compile Include="Resultados\ResultadoTabla_Zona.cs" />
+    <Compile Include="Resultados\Resultado_EstadoOrdenInspeccion.cs" />
+    <Compile Include="Resultados\Resultado_PermisoOrdenInspeccionAcceso.cs" />
+    <Compile Include="Resultados\Resultado_PermisoOrdenInspeccionItem .cs" />
+    <Compile Include="Resultados\Resultado_Funcion.cs" />
+    <Compile Include="Resultados\ResultadoTabla_TareaPorArea.cs" />
+    <Compile Include="Resultados\Resultado_Flota.cs" />
+    <Compile Include="Resultados\Resultado_TareaPorArea.cs" />
+    <Compile Include="Resultados\Resultado_ServicioAreaMotivo.cs" />
+    <Compile Include="Resultados\Resultado_RequerimientoInfo.cs" />
+    <Compile Include="Resultados\Resultado_RequerimientoTopBarrios.cs" />
+    <Compile Include="Resultados\Estadisticas\Resultado_DatosEstadisticaOrigen.cs" />
+    <Compile Include="Resultados\Resultado_NotaPorOrdenTrabajo.cs" />
+    <Compile Include="Resultados\Resultado_NotaPorRequerimiento.cs" />
+    <Compile Include="Resultados\Resultado_NumeroIdentificatorio.cs" />
+    <Compile Include="Resultados\Resultado_EstadoOrdenTrabajoHistorialDetalle.cs" />
+    <Compile Include="Resultados\Resultado_InformacionOrganicaDireccion.cs" />
+    <Compile Include="Resultados\Resultado_InformacionOrganicaSecretaria.cs" />
+    <Compile Include="Resultados\Resultado_InformacionOrganica.cs" />
+    <Compile Include="Resultados\Resultado_OrdenTrabajoDetalle.cs" />
+    <Compile Include="Resultados\Resultado_PermisoOrdenTrabajoAcceso.cs" />
+    <Compile Include="Resultados\Resultado_PermisoRequerimientoAcceso.cs" />
+    <Compile Include="Resultados\Resultado_PermisoOrdenTrabajoItem.cs" />
+    <Compile Include="Resultados\Resultado_PermisoRequerimientoItem.cs" />
+    <Compile Include="Resultados\Resultado_ArchivoPorRequerimiento_Documento.cs" />
+    <Compile Include="Resultados\Resultado_ArchivoPorRequerimiento_Imagen.cs" />
+    <Compile Include="Resultados\Resultado_Enums.cs" />
+    <Compile Include="Resultados\Resultado_EstadoMovil.cs" />
+    <Compile Include="Resultados\Resultado_MovilPorOrdenTrabajo.cs" />
+    <Compile Include="Resultados\Resultado_Movil.cs" />
+    <Compile Include="Resultados\Resultado_TipoCampoPorMotivo.cs" />
+    <Compile Include="Resultados\Resultado_GrupoCategoriaMotivo.cs" />
+    <Compile Include="Resultados\Resultado_CategoriaMotivoArea.cs" />
+    <Compile Include="Resultados\Resultado_TipoMovil.cs" />
+    <Compile Include="Resultados\Resultado_CantidadRequerimientosParaOrdenDeTrabajoPorArea.cs" />
+    <Compile Include="Resultados\Resultado_InitData.cs" />
+    <Compile Include="Resultados\Resultado_MarcadorGoogleMaps.cs" />
+    <Compile Include="Resultados\Resultado_RequerimientoDetalle2.cs" />
+    <Compile Include="Resultados\Resultado_RequerimientoFavoritoPorUsuario.cs" />
+    <Compile Include="Resultados\Resultado_NotificacionSistema.cs" />
+    <Compile Include="Resultados\Resultado_BarrioPorZona.cs" />
+    <Compile Include="Resultados\Resultado_EstadoOrdenTrabajoHistorial.cs" />
+    <Compile Include="Resultados\Resultado_EstadoOrdenTrabajo.cs" />
+    <Compile Include="Resultados\Resultado_Origen.cs" />
+    <Compile Include="Resultados\Resultado_Ambito.cs" />
+    <Compile Include="Resultados\Resultado_Ajustes.cs" />
+    <Compile Include="Resultados\Resultado_Cpc.cs" />
+    <Compile Include="Resultados\Resultado_Barrio.cs" />
+    <Compile Include="Resultados\Estadisticas\Resultado_DatosEstadisticaPanel.cs" />
+    <Compile Include="Resultados\Estadisticas\Resultado_DatosEstadisticaPanel_CriticidadServicio.cs" />
+    <Compile Include="Resultados\Estadisticas\Resultado_DatosEstadisticaPanel_Motivos.cs" />
+    <Compile Include="Resultados\Estadisticas\Resultado_DatosEstadisticaPanel_Radial.cs" />
+    <Compile Include="Resultados\Estadisticas\Resultado_DatosEstadisticaPanel_Cpc.cs" />
+    <Compile Include="Resultados\Estadisticas\Resultado_DatosEstadisticaPanel_Totales.cs" />
+    <Compile Include="Resultados\Resultado_EstadoOrdenAtencionCritica.cs" />
+    <Compile Include="Resultados\Resultado_EstadoRequerimientoHistorial.cs" />
+    <Compile Include="Resultados\Resultado_OrdenAtencionCritica.cs" />
+    <Compile Include="Resultados\Resultado_Motivo.cs" />
+    <Compile Include="Resultados\Resultado_Domicilio.cs" />
+    <Compile Include="Resultados\ResultadoTabla_Requerimiento.cs" />
+    <Compile Include="Resultados\Resultado_OrdenTrabajo.cs" />
+    <Compile Include="Resultados\Resultado_OrigenPorAmbito.cs" />
+    <Compile Include="Resultados\Resultado_OrigenPorArea.cs" />
+    <Compile Include="Resultados\Resultado_OrigenPorUsuario.cs" />
+    <Compile Include="Resultados\Resultado_Seccion.cs" />
+    <Compile Include="Resultados\Resultado_Subzona.cs" />
+    <Compile Include="Resultados\Resultado_Servicio.cs" />
+    <Compile Include="Resultados\Resultado_Personal.cs" />
+    <Compile Include="Resultados\Resultado_EstadoRequerimiento.cs" />
+    <Compile Include="Resultados\Resultado_Requerimiento.cs" />
+    <Compile Include="Resultados\Resultado_TipoDocumento.cs" />
+    <Compile Include="Resultados\Resultado_Zona.cs" />
+    <Compile Include="Resultados\_Resultado_Base.cs" />
+    <Compile Include="Resultados\Resultado_Area.cs" />
+    <Compile Include="Resultados\_Resultado_VecinoVirtualUsuario.cs" />
+    <Compile Include="SiSi_Model\Comandos\Comando_Entrevista.cs" />
+    <Compile Include="SiSi_Model\Comandos\Comando_Preinscripcion.cs" />
+    <Compile Include="SiSi_Model\Comandos\Comando_ExperienciaLaboral.cs" />
+    <Compile Include="SiSi_Model\Comandos\Comando_UsuarioSisi.cs" />
+    <Compile Include="SiSi_Model\Consultas\Consulta_UsuarioSisi.cs" />
+    <Compile Include="SiSi_Model\Consultas\Consulta_Programa.cs" />
+    <Compile Include="SiSi_Model\Entities\Mail.cs" />
+    <Compile Include="SiSi_Model\Entities\MailAjustes.cs" />
+    <Compile Include="SiSi_Model\Entities\Curso.cs" />
+    <Compile Include="SiSi_Model\Entities\Ocupacion.cs" />
+    <Compile Include="SiSi_Model\Entities\ExperienciaLaboral.cs" />
+    <Compile Include="SiSi_Model\Entities\EstudiosAlcanzados.cs" />
+    <Compile Include="SiSi_Model\Entities\Preinscripcion.cs" />
+    <Compile Include="SiSi_Model\Entities\Programa.cs" />
+    <Compile Include="SiSi_Model\Entities\UsuarioSisi.cs" />
+    <Compile Include="SiSi_Model\Resultados\Resultado_Preinscripcion.cs" />
+    <Compile Include="SiSi_Model\Resultados\Resultado_ExperienciaLaboral.cs" />
+    <Compile Include="SiSi_Model\Resultados\Resultado_EstudiosAlcanzados.cs" />
+    <Compile Include="SiSi_Model\Resultados\Resultado_Ocupacion.cs" />
+    <Compile Include="SiSi_Model\Resultados\Resultado_UsuarioSisi.cs" />
+    <Compile Include="SiSi_Model\Resultados\Resultado_Curso.cs" />
+    <Compile Include="SiSi_Model\Resultados\Resultado_Programa.cs" />
+    <Compile Include="SiSi_Model\Resultados\_Resultado_Base.cs" />
+    <Compile Include="Utiles\LatLng.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="Utiles\GoogleMapsUtils.cs" />
+    <Compile Include="WSVecinoVirtual\Comandos\VVComando_ActualizarUsuario.cs" />
+    <Compile Include="WSVecinoVirtual\Comandos\VVComando_CambiarPassword.cs" />
+    <Compile Include="WSVecinoVirtual\Comandos\VVComando_CrearUsuario.cs" />
+    <Compile Include="WSVecinoVirtual\Comandos\VVComando_GetAccesoPorObjeto.cs" />
+    <Compile Include="WSVecinoVirtual\Comandos\VVComando_GetRoles.cs" />
+    <Compile Include="WSVecinoVirtual\Comandos\VVComando_IniciarActivacionCuenta.cs" />
+    <Compile Include="WSVecinoVirtual\Comandos\VVComando_IniciarRecuperacionCuenta.cs" />
+    <Compile Include="WSVecinoVirtual\Comandos\VVComando_IniciarSesion.cs" />
+    <Compile Include="WSVecinoVirtual\Comandos\VVComando_ProcesarRecuperacionCuenta.cs" />
+    <Compile Include="WSVecinoVirtual\Comandos\VVComando_UsuarioActualizar.cs" />
+    <Compile Include="WSVecinoVirtual\Comandos\VVComando_UsuarioActualizarDomicilio.cs" />
+    <Compile Include="WSVecinoVirtual\Comandos\VVComando_UsuarioActualizarDatosContacto.cs" />
+    <Compile Include="WSVecinoVirtual\Comandos\VVComando_UsuarioActualizarDatosPersonales.cs" />
+    <Compile Include="WSVecinoVirtual\Comandos\VVComando_UsuarioCambiarFoto.cs" />
+    <Compile Include="WSVecinoVirtual\Comandos\VVComando_UsuarioInfoPublica.cs" />
+    <Compile Include="WSVecinoVirtual\Comandos\VVComando_UsuarioNuevo.cs" />
+    <Compile Include="WSVecinoVirtual\Comandos\VVComando_UsuarioValidarRenaper.cs" />
+    <Compile Include="WSVecinoVirtual\Comandos\VVComando_ValidarUsuarioActivadorByUserPass.cs" />
+    <Compile Include="WSVecinoVirtual\Resultados\VVResultado_Acceso.cs" />
+    <Compile Include="WSVecinoVirtual\Resultados\VVResultado_AmbitoTrabajo.cs" />
+    <Compile Include="WSVecinoVirtual\Resultados\VVResultado_Area.cs" />
+    <Compile Include="WSVecinoVirtual\Resultados\VVResultado_CambioClave.cs" />
+    <Compile Include="WSVecinoVirtual\Resultados\VVResultado_KeyValue.cs" />
+    <Compile Include="WSVecinoVirtual\Resultados\VVResultado_Menu.cs" />
+    <Compile Include="WSVecinoVirtual\Resultados\VVResultado_Objeto.cs" />
+    <Compile Include="WSVecinoVirtual\Resultados\VVResultado_Permisos.cs" />
+    <Compile Include="WSVecinoVirtual\Resultados\VVResultado_Rol.cs" />
+    <Compile Include="WSVecinoVirtual\Resultados\VVResultado_Token.cs" />
+    <Compile Include="WSVecinoVirtual\Resultados\VVResultado_UrlMail.cs" />
+    <Compile Include="WSVecinoVirtual\Resultados\VVResultado_Usuario.cs" />
+    <Compile Include="WSVecinoVirtual\Resultados\VVResultado_UsuarioActivacion.cs" />
+    <Compile Include="WSVecinoVirtual\Resultados\VVResultado_UsuarioDatosRenaper.cs" />
+    <Compile Include="WSVecinoVirtual\Resultados\VVResultado_UsuarioPublico.cs" />
+    <Compile Include="WSVecinoVirtual\VVResult.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

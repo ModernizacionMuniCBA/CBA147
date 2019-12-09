@@ -1,0 +1,164 @@
+﻿body {
+    overflow: hidden;
+}
+
+#panel {
+    height: 100%;
+    overflow: hidden;
+    padding: 1rem;
+    display: flex;
+}
+
+    #panel > div {
+        overflow: initial;
+        display: flex;
+        flex: 1;
+    }
+
+    #panel .panel {
+        flex: 1;
+        flex-direction: column;
+        display: flex;
+    }
+
+        #panel .panel:not(:last-child) {
+            border-right: 1px solid rgba(0,0,0,0.2);
+        }
+
+    #panel .contenedor_Nombre {
+        padding: 1rem;
+    }
+
+    #panel .contenedor_Busqueda {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+        position: relative;
+    }
+
+        #panel .contenedor_Busqueda input {
+            border-radius: 10rem;
+            border: 1px solid rgba(0,0,0,0.2) !important;
+            box-shadow: none !important;
+            padding-left: 2.5rem;
+            width: calc(100% - 3rem);
+        }
+
+        #panel .contenedor_Busqueda i {
+            position: absolute;
+            left: 0.5rem;
+            top: 0.3rem;
+        }
+
+    #panel .contenedor_Items {
+        flex: 1;
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid rgba(0,0,0,0.1);
+    }
+
+    #panel .contenedor_Botones {
+        padding: 0.5rem;
+        border-top: 1px solid rgba(0,0,0,0.1);
+        display: flex;
+        justify-content: flex-end;
+    }
+
+
+.entity {
+    display: flex;
+    align-items: center;
+    min-height: fit-content;
+    padding: 1rem;
+    overflow: hidden;
+    transition: all 0.3s;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+    .entity * {
+        cursor: pointer;
+    }
+
+
+    .entity:hover {
+        background-color: rgba(0,0,0,0.05);
+    }
+
+
+    .entity.oculto {
+        display: block;
+        max-height: 0 !important;
+        min-height: 0 !important;
+        opacity: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        border-bottom: 0px solid rgba(0,0,0,0.1);
+        pointer-events: none;
+    }
+
+
+    .entity.seleccionado {
+        background-color: rgba(0,0,0,0.05);
+    }
+
+
+    .entity .nombre {
+        flex: 1;
+    }
+
+    .entity .principal {
+        margin-right: 0.5rem;
+        border-radius: 10rem;
+        min-width: 2rem;
+        min-height: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+        .entity .principal i {
+            color: white !important;
+        }
+
+
+.contenedor_Nombre {
+    display: flex;
+    align-items: center;
+}
+
+    .contenedor_Nombre > label {
+        flex: 1;
+    }
+
+.boton-filtro {
+    padding: 0.5rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 2rem;
+    font-size: 0.8rem;
+    transition: all 0.3s;
+}
+
+    .boton-filtro:not(:last-child) {
+        margin-right: 0.2rem;
+    }
+
+
+    .boton-filtro:hover {
+        background-color: rgba(0,0,0,0.1);
+    }
+
+
+    .boton-filtro.seleccionado {
+        background-color: rgba(0,0,0,0.2);
+    }
+
+    .boton-filtro:last-child {
+        margin-right: 0.5rem;
+    }

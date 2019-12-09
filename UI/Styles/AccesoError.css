@@ -1,0 +1,148 @@
+﻿html, body {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    align-self: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0,0,0,0.02);
+    background-color: #e5e5e5;
+}
+
+
+#fondo {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #e5e5e5;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+    #fondo.visible {
+        opacity: 1;
+    }
+
+#contenedor_Error {
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    position: relative;
+    overflow: hidden;
+    align-self: center;
+    justify-self: center;
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+    background: #fff;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    margin: 0 auto;
+    width: 100%;
+    overflow: auto;
+    transition: all 0.5s;
+    max-width: 35rem;
+    transform: translateY(5rem);
+    opacity: 0;
+    pointer-events: none;
+}
+
+    #contenedor_Error.visible {
+        opacity: 1;
+        pointer-events: all;
+        transform: translateY(0);
+    }
+
+
+    #contenedor_Error.cargando {
+        pointer-events: none;
+    }
+
+        #contenedor_Error.cargando * {
+            pointer-events: none;
+        }
+
+        #contenedor_Error.cargando #indicador_Cargando {
+            opacity: 1;
+        }
+
+        #contenedor_Error.cargando .titulo {
+            opacity: 0.5;
+        }
+
+        #contenedor_Error.cargando #contenedor_Origenes {
+            opacity: 0.5;
+        }
+
+
+#contenedor_Origenes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    width: 100%;
+}
+
+.titulo {
+    font-size: 1.4rem;
+    color: black;
+    font-weight: 300;
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+
+.detalle {
+    font-size: 1.2rem;
+    color: black;
+    font-weight: 300;
+    padding-left: 1rem;
+        padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.origen {
+    margin: 0;
+    padding: 0.5rem;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+    .origen:hover {
+        background-color: rgba(0,0,0,0.05);
+    }
+
+    .origen * {
+        cursor: pointer;
+    }
+
+    .origen .nombre {
+        color: rgba(0,0,0,0.87);
+        font-size: 1rem;
+    }
+
+
+/*Indicador cargando*/
+#indicador_Cargando {
+    margin-top: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background-color: rgba(0,166,101,0.4);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s;
+}
+
+    #indicador_Cargando > div {
+        background-color: rgba(0,166,101,1);
+    }

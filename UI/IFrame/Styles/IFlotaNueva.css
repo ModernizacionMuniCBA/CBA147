@@ -1,0 +1,198 @@
+﻿/*:root {
+    --h_row: 28px;
+}*/
+
+:root {
+  --tam-foto: 2.5rem;
+}
+
+#contenedor {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+#contenedor_Form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 17px 2px rgba(0, 0, 0, 0.14),
+    0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+#contenedor_Flota {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+#contenedor_Flota > div {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#contenedor_Seleccionados {
+  flex: 1 !important;
+  min-width: 25rem;
+  max-width: 25rem;
+}
+
+#contenedor_Flota > div:not(:last-child) {
+  border-right: solid 1px #e0e0e0;
+}
+
+.tabla-contenedor {
+  flex: 1;
+}
+
+.encabezado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.encabezado > .titulo {
+  flex: 1;
+  color: black;
+  font-size: 1.2rem;
+}
+
+.encabezado > .contenedor_Busqueda {
+  margin-left: 1rem;
+  min-width: 15rem;
+  max-width: 15rem;
+}
+
+#contenedor_Encabezado {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+#contenedor_Acciones {
+  padding: 0.5rem;
+}
+
+.link {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.link:hover {
+  font-weight: 600;
+}
+
+#inputFormulario_Observaciones {
+  padding-top: 3px;
+}
+
+#contenedor_Encabezado > .row {
+  padding-top: 8px;
+}
+
+#contenedor_Seleccionados {
+  display: flex;
+  flex-direction: column;
+}
+
+#contenedor_MovilSeleccionado {
+  max-height: 10rem;
+  min-height: 10rem;
+  padding: 1rem;
+  border-bottom: solid 1px #e0e0e0;
+}
+
+#contenedor_PersonalSeleccionadoTitulo {
+  padding: 1rem;
+  padding-bottom: 0 !important;
+}
+
+#contenedor_PersonalSeleccionado {
+  padding: 1rem;
+  flex: 1;
+  overflow: auto;
+}
+
+#contenedor_PersonalSeleccionado .contenido {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.empleado {
+  display: flex;
+  width: 100%;
+}
+
+.empleado .persona {
+  border-radius: 2rem;
+  margin: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  max-height: var(--tam-foto);
+  min-height: var(--tam-foto);
+  flex-direction: row;
+  justify-self: flex-start;
+  width: 100%;
+}
+
+.empleado * {
+  cursor: pointer;
+}
+
+.empleado .persona:hover {
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12),
+    0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s;
+}
+
+.empleado .persona img {
+  min-width: var(--tam-foto);
+  max-width: var(--tam-foto);
+  min-height: var(--tam-foto);
+  max-height: var(--tam-foto);
+  margin-bottom: 0.3rem;
+  border-radius: 100%;
+  background: white;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+.empleado .persona label {
+  align-self: center;
+  padding: 12px;
+  flex: 1;
+}
+
+.empleado .persona a {
+  align-self: center;
+  margin-right: 8px;
+}
+
+.empleado .persona i {
+  font-size: 20px;
+
+}
+
+.movil {
+  display: flex;
+}
+
+#contenedor_MovilSeleccionado .datos {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+  flex: 1;
+}
+
+#contenedor_MovilSeleccionado a {
+  align-self: center;
+  margin-right: 14px;
+}
+
+#contenedor_MovilSeleccionado i {
+  font-size: 20px;
+}

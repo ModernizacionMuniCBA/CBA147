@@ -1,0 +1,175 @@
+﻿#contenedor_Requerimientos {
+    max-width: 90rem;
+    width: 100%;
+}
+
+.requerimiento {
+    width: 100%;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    margin-bottom: 1rem;
+    transition: box-shadow 0.3s;
+    cursor: pointer;
+}
+
+    .requerimiento * {
+        cursor: pointer;
+    }
+
+    .requerimiento > .contenedor_Encabezado {
+        padding: 1rem;
+    }
+
+        .requerimiento > .contenedor_Encabezado > .contenedor_Numero {
+            display: flex;
+        }
+
+            .requerimiento > .contenedor_Encabezado > .contenedor_Numero > .numero {
+                flex: 1;
+                font-size: 1.5rem;
+                font-weight: 600;
+            }
+
+            .requerimiento > .contenedor_Encabezado > .contenedor_Numero > .fecha {
+                font-size: 1rem;
+            }
+
+        .requerimiento > .contenedor_Encabezado > .contenedor_Estado {
+            display: flex;
+            margin-top: 0.5rem;
+            align-items: center;
+            font-size: 1.2rem;
+        }
+
+            .requerimiento > .contenedor_Encabezado > .contenedor_Estado .indicador {
+                margin-right: 0.5rem;
+            }
+
+            .requerimiento > .contenedor_Encabezado > .contenedor_Estado .nombre {
+                font-size: 1.2rem;
+            }
+
+
+    .requerimiento > .separador {
+        border-bottom: 0.2rem solid;
+        opacity: 0.4;
+    }
+
+    .requerimiento > .contenedor_Contenido {
+        padding: 1rem;
+    }
+
+        .requerimiento > .contenedor_Contenido .nombre {
+            display: block;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .requerimiento > .contenedor_Contenido .contenedor_Detalle:not(:first-child) {
+            margin-top: 0.5rem;
+        }
+
+        .requerimiento > .contenedor_Contenido .contenedor_Detalle .titulo {
+            font-weight: 600;
+            font-size: 1rem;
+            color: #000;
+        }
+
+    .requerimiento:hover {
+        box-shadow: 0 8px 17px 2px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);
+    }
+
+#contenedor_Filtros {
+    width: 100%;
+    max-width:90rem;
+}
+
+.filtros_Estados {
+    display: flex;
+}
+
+.filtros_Numero .input-field{
+    width: 100%;
+}
+
+.contenedor_estado {
+    cursor: pointer !important;
+}
+
+.estado {
+    background-color: var(--colorBoton) !important;
+}
+
+    .estado:hover {
+        background-color: #d8d8dc !important;
+    }
+
+    .estado.activo {
+        background-color: var(--colorMuniVerde) !important;
+    }
+
+        .estado.activo:hover {
+            background-color: #04b767 !important;
+        }
+
+.estado {
+    padding: 0.8rem;
+    border-radius: 4rem;
+    margin: 12px;
+}
+
+    .estado .texto {
+        cursor: pointer;
+    }
+
+    .estado.activo .texto {
+        color: white;
+    }
+
+#fab {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    background-color: var(--colorMuniVerde) !important;
+}
+
+#content_SinRequerimientos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+    #content_SinRequerimientos img {
+        height: 100%;
+    }
+
+    #content_SinRequerimientos > label {
+        margin-top: 2rem;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    #content_SinRequerimientos a {
+        margin-top: 2rem;
+    }
+
+    
+#content_SinRequerimientosFiltrados {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+    #content_SinRequerimientosFiltrados > label {
+        margin-top: 2rem;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+

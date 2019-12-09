@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report DataSourceName="General" Width="18.9999982210994cm" Name="ListadoRQ" Zoom="1.5" SnapGridSize="0.1cm" xmlns="http://schemas.telerik.com/reporting/2012/3.8">
+  <Style BackgroundColor="" />
+  <DataSources>
+    <SqlDataSource ConnectionString="CBA147" SelectCommand="select &#xD;&#xA;'HNM4UT/2018' as motivo,&#xD;&#xA;'20/03/2018 10:13:17' as numerorequerimiento,&#xD;&#xA;'En Proceso' as descripcion,&#xD;&#xA;'Transporte Urbano Con Frecuencia Irregular' as direccion,&#xD;&#xA;'1' as idMotivo&#xD;&#xA;" Name="General" />
+  </DataSources>
+  <Items>
+    <PageHeaderSection Height="0.132291671397789cm" Name="pageHeaderSection1" />
+    <DetailSection Height="0.731662427374177cm" Name="detailSection1">
+      <Items>
+        <TextBox Width="2.59990012357632cm" Height="0.599799811840057cm" Left="0.00010012308484875cm" Top="0cm" Value="= Fields.NumeroRequerimiento" Multiline="True" Name="txtNumero">
+          <Style VerticalAlign="Top">
+            <BorderStyle Default="None" />
+            <Font Name="Calibri" Underline="False" />
+          </Style>
+        </TextBox>
+        <TextBox Width="7.79940000311928cm" Height="0.599599446461208cm" Left="2.60020081390379cm" Top="0cm" KeepTogether="True" Value="= Fields.direccion" CanGrow="True" CanShrink="False" Multiline="True" TextWrap="True" Name="txtBarrio">
+          <Style VerticalAlign="Top">
+            <BorderStyle Default="None" />
+            <Font Name="Calibri" />
+          </Style>
+        </TextBox>
+        <Shape Width="18.9998989105225cm" Height="0.132291659712791cm" Left="0cm" Top="0.599370698151609cm" Name="shape2">
+          <Style BackgroundColor="Silver" Color="191, 191, 191" />
+          <ShapeType>
+            <LineShape Direction="EW" />
+          </ShapeType>
+        </Shape>
+        <TextBox Width="8.59989957020033cm" Height="0.599599421024323cm" Left="10.4000997193627cm" Top="0cm" KeepTogether="True" Value="= Fields.descripcion" CanGrow="True" CanShrink="False" Multiline="True" TextWrap="True" Name="textBox5">
+          <Style VerticalAlign="Top">
+            <BorderStyle Default="None" />
+            <Font Name="Calibri" />
+          </Style>
+        </TextBox>
+      </Items>
+    </DetailSection>
+    <PageFooterSection Height="0.132291662986908cm" Name="pageFooterSection1" />
+  </Items>
+  <StyleSheet>
+    <StyleRule>
+      <Style>
+        <Padding Left="2pt" Right="2pt" />
+      </Style>
+      <Selectors>
+        <TypeSelector Type="TextItemBase" />
+        <TypeSelector Type="HtmlTextBox" />
+      </Selectors>
+    </StyleRule>
+    <StyleRule>
+      <Style Color="Black">
+        <BorderStyle Default="Solid" />
+        <BorderColor Default="Black" />
+        <BorderWidth Default="1px" />
+        <Font Name="Tahoma" Size="9pt" />
+      </Style>
+      <Selectors>
+        <StyleSelector Type="Table" StyleName="Normal.TableNormal" />
+      </Selectors>
+    </StyleRule>
+    <StyleRule>
+      <Style VerticalAlign="Middle">
+        <BorderStyle Default="Solid" />
+        <BorderColor Default="Black" />
+        <BorderWidth Default="1px" />
+        <Font Name="Tahoma" Size="10pt" />
+      </Style>
+      <Selectors>
+        <DescendantSelector>
+          <Selectors>
+            <TypeSelector Type="Table" />
+            <StyleSelector Type="ReportItem" StyleName="Normal.TableHeader" />
+          </Selectors>
+        </DescendantSelector>
+      </Selectors>
+    </StyleRule>
+    <StyleRule>
+      <Style>
+        <BorderStyle Default="Solid" />
+        <BorderColor Default="Black" />
+        <BorderWidth Default="1px" />
+        <Font Name="Tahoma" Size="9pt" />
+      </Style>
+      <Selectors>
+        <DescendantSelector>
+          <Selectors>
+            <TypeSelector Type="Table" />
+            <StyleSelector Type="ReportItem" StyleName="Normal.TableBody" />
+          </Selectors>
+        </DescendantSelector>
+      </Selectors>
+    </StyleRule>
+  </StyleSheet>
+  <PageSettings>
+    <PageSettings PaperKind="A4" Landscape="False" ColumnCount="1" ColumnSpacing="0cm">
+      <Margins>
+        <MarginsU Left="1cm" Right="1cm" Top="1cm" Bottom="1cm" />
+      </Margins>
+    </PageSettings>
+  </PageSettings>
+  <Groups>
+    <Group Name="group">
+      <GroupHeader>
+        <GroupHeaderSection Height="1.20020070035694cm" Name="groupHeaderSection">
+          <Items>
+            <TextBox Width="1.29999997056193cm" Height="0.500100823288271cm" Left="-0.00000002523263225cm" Top="0cm" Value="Motivo" Multiline="False" Name="textBox1">
+              <Style VerticalAlign="Middle">
+                <BorderStyle Default="None" />
+                <Font Name="Calibri" Bold="True" />
+              </Style>
+            </TextBox>
+            <TextBox Width="7.69990137405137cm" Height="0.500000168217548cm" Left="1.30019999384324cm" Top="0cm" Value="= Fields.MotivoNombre" Multiline="False" Name="textBox2">
+              <Style VerticalAlign="Middle">
+                <BorderStyle Default="None" />
+                <Font Name="Calibri" />
+              </Style>
+            </TextBox>
+            <Shape Width="18.9998984837505cm" Height="0.132291659712791cm" Left="0.00010012308484875cm" Top="0.567708387478357cm" Name="shape1">
+              <Style Color="64, 64, 64" />
+              <ShapeType>
+                <LineShape Direction="EW" />
+              </ShapeType>
+            </Shape>
+            <TextBox Width="8.59989976361719cm" Height="0.500000178813934cm" Left="10.4000989119184cm" Top="0.700199892912709cm" Value="Descripcion" Multiline="False" Name="textBox14">
+              <Style BackgroundColor="224, 224, 224" VerticalAlign="Middle" LineStyle="Dotted">
+                <BorderStyle Default="None" Top="None" Bottom="None" Right="None" />
+                <BorderWidth Default="1pt" />
+                <Font Name="Calibri" Bold="False" />
+              </Style>
+            </TextBox>
+            <TextBox Width="7.79939927424778cm" Height="0.500000178813934cm" Left="2.60020081390379cm" Top="0.700200498495883cm" Value="Dirección" Multiline="False" Name="textBox16">
+              <Style BackgroundColor="224, 224, 224" VerticalAlign="Middle" LineStyle="Dotted">
+                <BorderStyle Default="None" Top="None" Bottom="None" Right="None" />
+                <BorderWidth Default="1pt" />
+                <Font Name="Calibri" Bold="False" />
+              </Style>
+            </TextBox>
+            <TextBox Width="2.60000061988831cm" Height="0.500000178813934cm" Left="0cm" Top="0.700200296634825cm" Value="Número" Multiline="False" Name="textBox11">
+              <Style BackgroundColor="217, 217, 217" VerticalAlign="Middle" LineStyle="Solid">
+                <BorderStyle Default="None" Top="None" Bottom="None" Left="None" />
+                <BorderWidth Default="1pt" />
+                <Font Name="Calibri" Bold="False" />
+              </Style>
+            </TextBox>
+          </Items>
+        </GroupHeaderSection>
+      </GroupHeader>
+      <GroupFooter>
+        <GroupFooterSection Height="0.729166954739218cm" Name="groupFooterSection">
+          <Style>
+            <Font Name="Cambria" />
+          </Style>
+          <Items>
+            <TextBox Width="4.50010252859572cm" Height="0.500000134574039cm" Left="14.4998961929509cm" Top="0.229166803343425cm" Value="=&quot;Cantidad:&quot;+ Count(Fields.NumeroRequerimiento)" Name="textBox3">
+              <Style TextAlign="Right" VerticalAlign="Middle" LineStyle="Dashed">
+                <Font Name="Calibri" Size="9pt" />
+              </Style>
+            </TextBox>
+          </Items>
+        </GroupFooterSection>
+      </GroupFooter>
+      <Groupings>
+        <Grouping Expression="= Fields.idMotivo" />
+      </Groupings>
+      <Sortings>
+        <Sorting Direction="Asc" />
+      </Sortings>
+    </Group>
+  </Groups>
+</Report>

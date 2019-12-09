@@ -1,0 +1,8 @@
+﻿table.dataTable tbody tr {
+    transition: all 0.3s;
+}
+
+
+    table.dataTable tbody tr.seleccionada {
+        background-color: #C8E6C9 !important;
+    }

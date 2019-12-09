@@ -1,0 +1,10 @@
+﻿#contenedor_Info {
+    display: flex;
+    padding: 0.5rem;
+    background-color: lightyellow;
+    margin-bottom: 2rem;
+}
+
+#contenedor_Info i{
+    margin-right:0.5rem;
+}

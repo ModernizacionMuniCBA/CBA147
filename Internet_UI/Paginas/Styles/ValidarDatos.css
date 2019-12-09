@@ -1,0 +1,20 @@
+﻿.contenedor-detalle {
+    max-width: 40rem;
+}
+
+.dialogo-flotante > .content {
+    max-height: 30rem;
+}
+
+    .dialogo-flotante > .content > .content {
+        padding: 1rem;
+    }
+
+        .dialogo-flotante > .content > .content label {
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .dialogo-flotante > .content > .content li {
+            margin-left: 2rem;
+        }

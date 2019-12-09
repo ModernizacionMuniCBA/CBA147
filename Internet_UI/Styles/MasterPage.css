@@ -1,0 +1,196 @@
+﻿:root {
+    --size-imagen-usuario: 3rem;
+}
+
+@media screen and (max-width: 1440px) {
+    :root {
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    :root {
+    }
+}
+
+@media screen and (max-width: 768px) {
+    :root {
+        --size-imagen-usuario: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    :root {
+        --size-imagen-usuario: 2rem;
+    }
+}
+
+#menu {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+#menuMobile {
+    display: none;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+    background: rgba(245,245,245,1);
+    border-radius: 0.4rem;
+    width: -webkit-fill-available;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+    #menuMobile label {
+        font-size: 1.2rem;
+        flex: 1;
+        color: black;
+        cursor: pointer;
+    }
+
+    #menuMobile i {
+        color: black;
+        cursor: pointer;
+    }
+
+#contenedorMenu {
+    margin: 0.5rem;
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+    background: rgba(245,245,245,1);
+    border-radius: 0.4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    width: -webkit-fill-available;
+    overflow: hidden;
+}
+
+
+    #contenedorMenu.visible {
+        display: flex;
+    }
+
+    #contenedorMenu .menuItem {
+    }
+
+        #contenedorMenu .menuItem:not(:last-child) {
+            margin-right: 0.5rem;
+        }
+
+        #contenedorMenu .menuItem:hover {
+            background: rgba(0,0,0,0.05) !important;
+        }
+
+        #contenedorMenu .menuItem div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            #contenedorMenu .menuItem div i {
+                color: black !important;
+            }
+
+        #contenedorMenu .menuItem .texto {
+            color: black !important;
+            padding: 0.2rem;
+            font-size: 1rem;
+            font-weight: 300;
+        }
+
+        #contenedorMenu .menuItem.menuItemSeleccionado {
+            background: white;
+            box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+        }
+
+            #contenedorMenu .menuItem.menuItemSeleccionado i {
+                font-size: 1.3rem;
+                color: black !important;
+            }
+
+            #contenedorMenu .menuItem.menuItemSeleccionado .texto {
+                font-size: 1.1rem;
+                color: black !important;
+            }
+
+            #contenedorMenu .menuItem.menuItemSeleccionado:hover {
+                background: white !important;
+            }
+
+#contenedor-encabezado .usuario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 0.5rem;
+}
+
+    #contenedor-encabezado .usuario:hover {
+        background: rgba(0,0,0,0.1);
+    }
+
+    #contenedor-encabezado .usuario .imagen {
+        width: var(--size-imagen-usuario);
+        background-position: center;
+        background-size: cover;
+        background-image: url('./../Resources/Imagenes/user-male-icon-blanco.png');
+        height: var(--size-imagen-usuario);
+        box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    #contenedor-encabezado .usuario .textos {
+        margin-left: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+        #contenedor-encabezado .usuario .textos label {
+            color: white;
+            cursor: pointer;
+        }
+
+        #contenedor-encabezado .usuario .textos .nombre {
+            font-size: 1.2rem;
+        }
+
+        #contenedor-encabezado .usuario .textos .nivel {
+            font-size: 1rem;
+        }
+
+@media screen and (max-width: 768px) {
+
+    #contenedor-encabezado .usuario .textos {
+        display: none;
+    }
+
+    #menu {
+        width: -webkit-fill-available;
+    }
+
+    #contenedorMenu {
+        display: none;
+        flex-direction: column;
+        width: -webkit-fill-available;
+    }
+
+        #contenedorMenu .menuItem {
+            width: -webkit-fill-available;
+            margin: 0 !important;
+        }
+
+    #menuMobile {
+        display: flex;
+    }
+}

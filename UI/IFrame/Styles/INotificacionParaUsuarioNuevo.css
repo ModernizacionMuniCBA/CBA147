@@ -1,0 +1,57 @@
+﻿html {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+    body form {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+.encabezado {
+    margin-bottom: 1rem;
+}
+
+#contenedorCheckNotificar {
+}
+
+#contenedorEditor {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+#editor {
+    height: initial;
+    flex: 1;
+    background: white;
+    position: inherit;
+    overflow: auto;
+}
+
+.encabezado {
+    display: flex;
+    min-height: fit-content;
+}
+
+#input_Titulo {
+    flex: 1;
+    margin-right: 2rem;
+    align-self: baseline;
+    flex: 1;
+}
+
+#contenedorCheckNotificar {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}

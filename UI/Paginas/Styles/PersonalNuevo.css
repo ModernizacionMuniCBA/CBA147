@@ -1,0 +1,101 @@
+﻿#cardFormulario {
+    transition: all 0.3s;
+    max-height: 10rem;
+    overflow: hidden;
+}
+
+    #cardFormulario .contenedor-main {
+        overflow: hidden;
+    }
+
+    #cardFormulario.invisible {
+        max-height: 0;
+        opacity: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+
+#contenedorFiltros {
+    display: flex;
+    margin: 1rem;
+    margin-left: 1.5rem;
+    margin-bottom: 0;
+}
+
+    #contenedorFiltros label {
+        color: var(--colorTexto);
+        font-size: 1rem;
+    }
+
+        #contenedorFiltros label:not(:first-child) {
+            margin-left: 1rem;
+        }
+
+#cardAgregar {
+    margin: 1rem;
+    padding: 1rem;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 0;
+}
+
+    #cardAgregar > div {
+        margin-right: 1rem;
+        flex: 1;
+    }
+
+#contenedorResultado {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#cardResultado {
+    flex: 1;
+}
+
+#cardResultado > .contenedor-main{
+    padding:0;
+}
+#contenedorFuncionesSeleccionadas {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem;
+}
+
+    #contenedorFuncionesSeleccionadas > .funcionSeleccionada {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        transform: scale(0);
+        opacity: 0;
+        transition: max-width 0.3s 0.3s, max-height 0.3s 0.3s, padding 0.3s 0.3s, margin 0.3s 0.3s, transform 0.3s, opacity 0.3s;
+        height: 3rem;
+        max-height: 0rem;
+        max-width: 0rem;
+    }
+
+        #contenedorFuncionesSeleccionadas > .funcionSeleccionada.visible {
+            transform: scale(1);
+            opacity: 1;
+            max-height: 3rem;
+            max-width: 10rem;
+            margin: 0.5rem;
+            padding: 0.5rem;
+            transition: max-width 0.3s, max-height 0.3s, padding 0.3s, margin 0.3s, transform 0.3s 0.3s, opacity 0.3s 0.3s;
+        }
+
+
+        #contenedorFuncionesSeleccionadas > .funcionSeleccionada > .nombre {
+            font-size: 1rem;
+            color: var(--colorTexto);
+            margin-right: 1rem;
+        }

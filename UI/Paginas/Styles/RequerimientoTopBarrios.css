@@ -1,0 +1,187 @@
+﻿#contenedor_Formulario {
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+}
+
+
+#contenedor_Mapa {
+    flex: 1;
+}
+
+
+#contenedor_Data {
+    padding: 0.5rem;
+    overflow: auto;
+    min-width: 20rem;
+    max-width: 20rem;
+}
+
+.data-barrio {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+    .data-barrio:hover {
+    }
+
+
+
+    .data-barrio:not(:last-child) {
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .data-barrio > .encabezado {
+        display: flex;
+        width: 100%;
+        padding: 0.5rem;
+        border-radius: 0.2rem;
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+
+        .data-barrio > .encabezado:hover {
+            background-color: rgba(0,0,0,0.1);
+        }
+
+
+        .data-barrio > .encabezado > .numero {
+            font-size: 1rem;
+            margin-right: 0.5rem;
+            min-width: 2rem;
+        }
+
+        .data-barrio > .encabezado > .barrio {
+            flex: 1;
+            margin-right: 0.5rem;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .data-barrio > .encabezado > .cantidad {
+            align-self: center;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 10rem;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+            background-color: rgba(0,0,0,0.1);
+        }
+
+    .data-barrio.seleccionada > .encabezado {
+        background-color: rgba(0,0,0,0.1);
+    }
+
+
+.popupLista > .encabezado {
+    padding: 0.5rem;
+}
+
+    .popupLista > .encabezado > .titulo {
+        font-weight: 400;
+    }
+
+.popupLista > .area {
+    padding: 0.5rem;
+    transition: all 0.3s;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    display: flex;
+}
+
+    .popupLista > .area:hover {
+        background-color: rgba(0,0,0,0.1);
+    }
+
+    .popupLista > .area > .nombre {
+        flex: 1;
+        margin-right: 0.5rem;
+        cursor: pointer;
+        flex: 1;
+    }
+
+    .popupLista > .area > .cantidad {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        border-radius: 10rem;
+        background: rgba(0,0,0,0.1);
+        cursor: pointer;
+    }
+
+
+#contenedor_Encabezado {
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    /* width: 100%; */
+    margin-left: 0.5rem;
+    margin-top: 1rem;
+}
+
+#contenedor_Info {
+    background-color: lightyellow;
+    align-self: baseline;
+    /* margin-left: 1rem; */
+    /* margin-top: 1rem; */
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+    margin: 0;
+}
+
+    #contenedor_Info > label {
+        margin-left: 0.5rem;
+    }
+
+
+#contenedor_Filtros {
+    flex: 1;
+    justify-content: flex-end;
+    /* align-items: flex-end; */
+    display: flex;
+}
+
+
+#contenedor_FiltrosContenido {
+    max-height: 0;
+    opacity: 0;
+    padding: 1rem;
+    padding-top:0;
+    padding-bottom:0;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    align-items: center;
+    pointer-events:none;
+}
+
+    #contenedor_FiltrosContenido.visible {
+        pointer-events:all;
+        max-height: 100rem;
+        padding: 1rem;
+        opacity: 1;
+    }
+
+
+.filtros {
+    display: flex;
+}
+
+    .filtros > div {
+        min-width: 10rem;
+    }
+
+        .filtros > div:not(:last-child) {
+            margin-right: 0.5rem;
+        }
+
+#btn_Filtrar {
+    margin-left: 1rem;
+}

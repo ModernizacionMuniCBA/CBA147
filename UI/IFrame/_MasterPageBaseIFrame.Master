@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="_MasterPageBaseIFrame.Master.cs" Inherits="UI._MasterPageBaseIFrame" ClientIDMode="Static" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+    <!-- Let browser know website is optimized for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Titulo -->
+    <title></title>
+
+    <style>
+        html,
+        body {
+            background-color: transparent !important;
+            overflow: hidden;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <script type="text/javascript">
+        var urlCordobaGeoApi = "<%= ConfigurationManager.AppSettings["URL_CORDOBA_GEO_API"] %>"
+        var baseUrl = "<%= ResolveUrl("~/") %>";
+        const KEY_GOOGLE_MAPS = "<%= ConfigurationManager.AppSettings["KEY_GOOGLE_MAPS"] %>";
+    </script>
+
+
+    <form id="form1" runat="server" class="flex direction-vertical full-height no-scroll">
+        <asp:ContentPlaceHolder ID="body" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

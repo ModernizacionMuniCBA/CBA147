@@ -1,0 +1,15 @@
+﻿
+#contenedor_Encabezado {
+    padding: 1rem;
+    background: rgba(0,0,0,0.05);
+}
+
+
+
+#texto_Nombre {
+    font-size: 2rem;
+}
+
+#contenedor_Detalle {
+    padding: 1rem;
+}

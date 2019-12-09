@@ -1,0 +1,16 @@
+﻿#contenedorNumeroReclamo {
+    align-items: baseline;
+    margin-top: 16px;
+}
+
+
+#alertaOk .mail {
+    display: flex;
+    margin-top:1rem;
+    align-items: center;
+}
+
+#alertaOk .mail i{
+    margin-right:0.5rem;
+}
+

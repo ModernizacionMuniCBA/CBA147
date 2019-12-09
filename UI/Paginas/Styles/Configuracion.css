@@ -1,0 +1,52 @@
+﻿#main{
+    padding:2rem;
+}
+
+
+.tituloBoton {
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+    font-size: 1.5rem;
+}
+
+    .tituloBoton:not(:first-child) {
+        margin-top: 2rem;
+    }
+
+.contenedor-botones-paginas {
+    display: flex;
+    padding: 1rem;
+    padding-top:0;
+    flex-wrap: wrap;
+    min-height: min-content;
+}
+
+    .contenedor-botones-paginas .btn-pagina {
+        width: 8rem;
+        height: 8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transition: all 0.3s;
+        cursor: pointer;
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }
+
+        .contenedor-botones-paginas .btn-pagina:hover {
+            box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.3);
+        }
+
+        .contenedor-botones-paginas .btn-pagina i {
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            font-size: 2rem;
+        }
+
+        .contenedor-botones-paginas .btn-pagina label {
+            font-size: 1rem;
+            cursor: pointer;
+            text-align: center;
+            color: black;
+        }
